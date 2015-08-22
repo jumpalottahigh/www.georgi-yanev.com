@@ -17,15 +17,16 @@
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">Georgi Yanev</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">News</a>
+          <a class="mdl-navigation__link" href="">Projects</a>
+          <a class="mdl-navigation__link" href="">Portfolio</a>
+          <a class="mdl-navigation__link" href="">Contact</a>
+          <a class="mdl-navigation__link" href="">About</a>
         </nav>
       </div>
     </header>
@@ -45,6 +46,102 @@
         <!--START WITH A 4-4-4 GRID-->
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--4-col">
+
+
+
+            <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-info btn-block btn-lg" role="button">Ultimate Stalker&trade; (Mobile Web App)</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+        <div class="row">
+        <div class="col-md-12 text-right">
+          <a href="projects/ultimatestalker/" target="_blank" class="btn btn-success btn-lg">Check the web app! <span class="glyphicon glyphicon-new-window"></span></a>
+        </div>
+      </div>
+
+        <div class="row">
+      <img class="img-thumbnail col-md-6" src="assets/img/ultimatestalker_thumb.png" alt="Ultimate Stalker App thumb">
+      <div class="col-md-6">
+      <h4>Project Description: </h4>
+      <p>
+        A bootstrap mobile web app using youtube, facebook and twitch APIs.
+      </p>
+      <p>
+        Implementation time - less than 8 day.
+      </p>
+      <p>
+        Usage - enter a name. Press 'Stalk!'
+      </p>
+      <p>
+        Track the person on the specific service.
+      </p>
+      <p>
+        Your feed gets automatically updated every 1 minute.
+      </p>
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+        <!--Table-->
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th class="bg-warning col-md-3">Question</th>
+              <th class="bg-info text-right col-md-3">Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>What?</td>
+              <td class="text-right"><p>Mobile Web App</p>
+              </td>
+            </tr>
+            <tr>
+              <td>When?</td>
+              <td>
+                <p class="text-right">Start: 15 Feb 2015</p>
+                <p class="text-right">End: 23 Feb 2015</p>
+                <p class="text-right">Deadline: 8 Mar 2015</p>
+              </td>
+            </tr>
+            <tr>
+              <td>How?</td>
+              <td>
+                <p class="text-right">Team Project</p>
+
+              </td>
+            </tr>
+            <tr>
+              <td>Tech:</td>
+              <td>
+                <p class="text-right">HTML5, CSS3, JavaScript, jQuery, Bootstrap, <del>jQueryMobile,</del> Twitch API, Youtube API, <del>Twitter API,</del> Facebook API</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--END OF TABLE -->
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4 text-right">
+          <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#ultimatestalkerMore">Read More <span class="glyphicon glyphicon-modal-window"></span></button>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
             <h2>Cards:</h2>
             <!-- Square card -->
             <style>
@@ -72,6 +169,17 @@
     </a>
               </div>
             </div>
+            <!-- Icon button -->
+            <button class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">mood</i>
+            </button>
+
+            <i class="material-icons">play_for_work</i>
+
+            <!-- Colored icon button -->
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+              <i class="material-icons">mood</i>
+            </button>
           </div>
           <div class="mdl-cell mdl-cell--4-col">
             <h2>Tooltip options</h2>
@@ -87,7 +195,10 @@
             </button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
               Button
+              <i class="material-icons md-48 md-light">file_download</i>
             </button>
+
+            <i class="material-icons md-48 md-dark">file_download</i>
           </div>
           <div class="mdl-cell mdl-cell--4-col">
             <h2>More tooltips</h2>
@@ -144,7 +255,10 @@
               <div class="mdl-tabs__panel is-active" id="starks-panel">
                 <ul>
                   <style>
-                    .material-icons.orange600 { color: #FB8C00; font-size: 48px}
+                    .material-icons.orange600 {
+                      color: #FB8C00;
+                      font-size: 48px
+                    }
                   </style>
                   <li><i class="material-icons">face</i></li>
                   <li><i class="material-icons md-48">face</i></li>
@@ -186,6 +300,7 @@
               <li><a href="#">Help</a></li>
               <li><a href="#">Privacy & Terms</a></li>
             </ul>
+            <p class="text-center">Copyright &copy; 2013-2015 Georgi Yanev &amp; Sofia Lindberg</p>
           </div>
         </footer>
 
