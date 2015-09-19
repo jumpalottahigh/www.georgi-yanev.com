@@ -5,51 +5,20 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <meta charset="UTF-8">
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.light_blue-deep_purple.min.css">
-
-  <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" href="assets/css/styles.css">
   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-  <style>
-    img {
-      width: 100%;
-    }
-    /*MDL ACTIONS LEFT AND RIGHT STYLES*/
-
-    .mdl-card__actions {
-      text-align: right;
-    }
-    /*MDL ICONS SIZING*/
-
-    .material-icons.md-18 {
-      font-size: 18px;
-    }
-
-    .material-icons.md-24 {
-      font-size: 24px;
-    }
-
-    .material-icons.md-36 {
-      font-size: 36px;
-    }
-
-    .material-icons.md-48 {
-      font-size: 48px;
-    }
-  </style>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
-
-
   <!-- Always shows a header, even in smaller screens. -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">Georgi Yanev</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
@@ -64,7 +33,7 @@
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Title</span>
+      <span class="mdl-layout-title">What's on the menu:</span>
       <nav class="mdl-navigation">
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
@@ -76,7 +45,415 @@
     <main class="mdl-layout__content">
       <div class="page-content">
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              </p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
+                Launch
+              </a>
+              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                </div>
+                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
+                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
+                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
+                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                  <table class="mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                      <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>What?</td>
+                        <td>Mobile Web App</td>
+                      </tr>
+                      <tr>
+                        <td>When?</td>
+                        <td>Start: 15 Feb 2015
+                          <br> End: 23 Feb 2015
+                          <br> Deadline: 8 Mar 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tech?</td>
+                        <td>HTML5, CSS3, JavaScript,
+                          <br> jQuery, Bootstrap,
+                          <br> jQueryMobile, Twitch API,
+                          <br> Youtube API, Twitter API, Facebook API</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
             <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
             <div class="mdl-card__title">
               <h3>Ultimate Stalker</h3>
@@ -107,290 +484,12 @@
             </div>
           </div>
 
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
-            <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">expand_more</i>
-              </button>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
-                <i class="material-icons">play_circle_outline</i>
-              </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
-                Launch
-              </a>
-              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
-                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
-                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
-                </div>
-                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
-                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
-                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
-              </div>
-            </div>
-          </div>
 
 
 
 
-
-        </div> <!--END OF GRID-->
+        </div>
+        <!--END OF GRID-->
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">Title</div>
@@ -403,6 +502,7 @@
       </div>
     </main>
   </div>
+  <script src="assets/js/logic.js"></script>
 </body>
 
 </html>
