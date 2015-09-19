@@ -5,28 +5,61 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <meta charset="UTF-8">
   <title>Document</title>
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css"> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.light_blue-deep_orange.min.css" />
-  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.light_blue-deep_purple.min.css">
+
+  <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  <style>
+    img {
+      width: 100%;
+    }
+    /*MDL ACTIONS LEFT AND RIGHT STYLES*/
+
+    .mdl-card__actions {
+      text-align: right;
+    }
+    /*MDL ICONS SIZING*/
+
+    .material-icons.md-18 {
+      font-size: 18px;
+    }
+
+    .material-icons.md-24 {
+      font-size: 24px;
+    }
+
+    .material-icons.md-36 {
+      font-size: 36px;
+    }
+
+    .material-icons.md-48 {
+      font-size: 48px;
+    }
+  </style>
 </head>
 
 <body>
+
 
   <!-- Always shows a header, even in smaller screens. -->
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <span class="mdl-layout-title">Georgi Yanev</span>
+        <span class="mdl-layout-title">Title</span>
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <a class="mdl-navigation__link" href="">News</a>
-          <a class="mdl-navigation__link" href="">Projects</a>
-          <a class="mdl-navigation__link" href="">Portfolio</a>
-          <a class="mdl-navigation__link" href="">Contact</a>
-          <a class="mdl-navigation__link" href="">About</a>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--secondary click">
+            Click
+          </button>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
         </nav>
       </div>
     </header>
@@ -39,279 +72,337 @@
         <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>
+    <!--START MAIN-->
     <main class="mdl-layout__content">
       <div class="page-content">
-        <!-- Your content goes here -->
-
-        <!--START WITH A 4-4-4 GRID-->
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--4-col">
-
-
-
-            <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="btn btn-info btn-block btn-lg" role="button">Ultimate Stalker&trade; (Mobile Web App)</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">
-
-        <div class="row">
-        <div class="col-md-12 text-right">
-          <a href="projects/ultimatestalker/" target="_blank" class="btn btn-success btn-lg">Check the web app! <span class="glyphicon glyphicon-new-window"></span></a>
-        </div>
-      </div>
-
-        <div class="row">
-      <img class="img-thumbnail col-md-6" src="assets/img/ultimatestalker_thumb.png" alt="Ultimate Stalker App thumb">
-      <div class="col-md-6">
-      <h4>Project Description: </h4>
-      <p>
-        A bootstrap mobile web app using youtube, facebook and twitch APIs.
-      </p>
-      <p>
-        Implementation time - less than 8 day.
-      </p>
-      <p>
-        Usage - enter a name. Press 'Stalk!'
-      </p>
-      <p>
-        Track the person on the specific service.
-      </p>
-      <p>
-        Your feed gets automatically updated every 1 minute.
-      </p>
-      </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-12">
-        <!--Table-->
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th class="bg-warning col-md-3">Question</th>
-              <th class="bg-info text-right col-md-3">Answer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>What?</td>
-              <td class="text-right"><p>Mobile Web App</p>
-              </td>
-            </tr>
-            <tr>
-              <td>When?</td>
-              <td>
-                <p class="text-right">Start: 15 Feb 2015</p>
-                <p class="text-right">End: 23 Feb 2015</p>
-                <p class="text-right">Deadline: 8 Mar 2015</p>
-              </td>
-            </tr>
-            <tr>
-              <td>How?</td>
-              <td>
-                <p class="text-right">Team Project</p>
-
-              </td>
-            </tr>
-            <tr>
-              <td>Tech:</td>
-              <td>
-                <p class="text-right">HTML5, CSS3, JavaScript, jQuery, Bootstrap, <del>jQueryMobile,</del> Twitch API, Youtube API, <del>Twitter API,</del> Facebook API</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!--END OF TABLE -->
-      </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8"></div>
-        <div class="col-md-4 text-right">
-          <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#ultimatestalkerMore">Read More <span class="glyphicon glyphicon-modal-window"></span></button>
-        </div>
-      </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-            <h2>Cards:</h2>
-            <!-- Square card -->
-            <style>
-              .demo-card-square.mdl-card {
-                width: 320px;
-                height: 320px;
-              }
-
-              .demo-card-square > .mdl-card__title {
-                color: #fff;
-                background: url('https://www.f-secure.com/documents/10192/982442/IS-left-115x160.png/2137a639-caf7-44f0-a66a-b3346bbdcbfe?t=1424777819000?t=1424777819000') bottom right 15% no-repeat #3F9498;
-              }
-            </style>
-
-            <div class="demo-card-square mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title mdl-card--expand">
-                <h2 class="mdl-card__title-text">Update</h2>
-              </div>
-              <div class="mdl-card__supporting-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenan convallis.
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      View Updates
-    </a>
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
               </div>
             </div>
-            <!-- Icon button -->
-            <button class="mdl-button mdl-js-button mdl-button--icon">
-              <i class="material-icons">mood</i>
-            </button>
-
-            <i class="material-icons">play_for_work</i>
-
-            <!-- Colored icon button -->
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
-              <i class="material-icons">mood</i>
-            </button>
           </div>
-          <div class="mdl-cell mdl-cell--4-col">
-            <h2>Tooltip options</h2>
-            <!-- Simple Tooltip -->
-            <div id="tt1" class="icon material-icons">add</div>
-            <div class="mdl-tooltip" for="tt1">
-              Follow
-            </div>
-            <h2>Button Types</h2>
-            <!-- Accent-colored raised button with ripple -->
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-              Button
-            </button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
-              Button
-              <i class="material-icons md-48 md-light">file_download</i>
-            </button>
 
-            <i class="material-icons md-48 md-dark">file_download</i>
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
           </div>
-          <div class="mdl-cell mdl-cell--4-col">
-            <h2>More tooltips</h2>
-            <!-- Multiline Tooltip -->
-            <div id="tt4" class="icon material-icons">share</div>
-            <div class="mdl-tooltip" for="tt4">
-              Share your content
-              <br>via social media
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
             </div>
-            <h2>Image card</h2>
-            <!-- Image card -->
-            <style>
-              .demo-card-image.mdl-card {
-                width: 256px;
-                height: 256px;
-                background: url('https://www.f-secure.com/documents/10192/982444/icon_128x128.png') center / cover;
-              }
-
-              .demo-card-image > .mdl-card__actions {
-                height: 52px;
-                padding: 16px;
-                background: rgba(0, 0, 0, 0.2);
-              }
-
-              .demo-card-image__filename {
-                color: #fff;
-                font-size: 14px;
-                font-weight: 500;
-              }
-            </style>
-
-            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-              <div class="mdl-card__title mdl-card--expand"></div>
-              <div class="mdl-card__actions">
-                <span class="demo-card-image__filename">Image.jpg</span>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
               </div>
             </div>
-
           </div>
-        </div>
-        <!--END OF 4-4-4 GRID -->
 
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--12-col">
-
-            <!-- TABS CONTENT -->
-            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-              <div class="mdl-tabs__tab-bar">
-                <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
-                <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
-                <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
-              </div>
-
-              <div class="mdl-tabs__panel is-active" id="starks-panel">
-                <ul>
-                  <style>
-                    .material-icons.orange600 {
-                      color: #FB8C00;
-                      font-size: 48px
-                    }
-                  </style>
-                  <li><i class="material-icons">face</i></li>
-                  <li><i class="material-icons md-48">face</i></li>
-                  <li><i class="material-icons md-light">face</i></li>
-                  <li><i class="material-icons orange600">face</i></li>
-                  <li>Rickon</li>
-                </ul>
-              </div>
-              <div class="mdl-tabs__panel" id="lannisters-panel">
-                <ul>
-                  <li>Tywin</li>
-                  <li>Cersei</li>
-                  <li>Jamie</li>
-                  <li>Tyrion</li>
-                </ul>
-              </div>
-              <div class="mdl-tabs__panel" id="targaryens-panel">
-                <ul>
-                  <li>Viserys</li>
-                  <li>Daenerys</li>
-                  <li>Eddard</li>
-                  <li>Catelyn</li>
-                  <li>Robb</li>
-                  <li>Sansa</li>
-                  <li>Brandon</li>
-                  <li>Arya</li>
-                </ul>
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
               </div>
             </div>
-            <!--END OF TABS-->
-
           </div>
-        </div>
 
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-card mdl-shadow--2dp">
+            <img src="assets/img/ultimatestalker_thumb_mini.jpg" alt="ultimate stalker screenshot">
+            <div class="mdl-card__title">
+              <h3>Ultimate Stalker</h3>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum commodi mollitia aliquam similique dolor assumenda facilis odio, dignissimos aperiam dolorum alias iure, incidunt temporibus nemo ipsa dicta architecto quasi maxime!</p>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">expand_more</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_circle_outline</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary right">
+                Launch
+              </a>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#readmore1" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#readmore2" class="mdl-tabs__tab">Slides</a>
+                  <a href="#readmore3" class="mdl-tabs__tab">...</a>
+                </div>
+                <div id="readmore1" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, enim. Repellendus autem magnam accusamus ratione nam, nesciunt dolorum iste, facere ab voluptatem. Itaque pariatur sapiente, dolore cupiditate animi voluptates consectetur.</div>
+                <div id="readmore2" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga perspiciatis reiciendis qui nemo ipsam quo, ab quos? Nihil, illo deleniti, placeat recusandae, doloremque consequatur adipisci dolore aliquid a dolorem reprehenderit!</div>
+                <div id="readmore3" class="mdl-tabs__panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ex dolor, porro culpa commodi labore odit officiis minima soluta, excepturi, explicabo rerum nihil eius. Amet ratione hic saepe quod tempore.</div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div> <!--END OF GRID-->
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
             <div class="mdl-logo">Title</div>
             <ul class="mdl-mini-footer__link-list">
               <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy & Terms</a></li>
+              <li><a href="#">Privacy &amp; Terms</a></li>
             </ul>
-            <p class="text-center">Copyright &copy; 2013-2015 Georgi Yanev &amp; Sofia Lindberg</p>
           </div>
         </footer>
-
-
       </div>
     </main>
   </div>
-
-
-
-
 </body>
 
 </html>
