@@ -23,34 +23,45 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
         <nav class="mdl-navigation mdl-layout--large-screen-only">
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--secondary click">
-            Click
-          </button>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
-          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="#">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--secondary click">
+              Webapps
+            </button>
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--secondary click">
+              GameDev
+            </button>
+          </a>
+          <a class="mdl-navigation__link" href="#">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--secondary click">
+              Participations &amp; Events
+            </button>
+          </a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">What's on the menu:</span>
+      <span class="mdl-layout-title">Filter by:</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="#">Webapps</a>
+        <a class="mdl-navigation__link" href="#">GameDev</a>
+        <a class="mdl-navigation__link" href="#">Participations &amp; Events</a>
       </nav>
     </div>
     <!--START MAIN-->
     <main class="mdl-layout__content">
       <div class="page-content">
+        <h1>Highlights</h1>
         <div class="mdl-grid">
+          <!--ULTIMATE STALKER CARD-->
           <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
             <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
             <div class="mdl-card__title">
               <h3>Ultimate Stalker</h3>
             </div>
             <div class="mdl-card__supporting-text">
+              <h6>/web app/</h6>
               <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
               </p>
             </div>
@@ -103,31 +114,47 @@
             </div>
           </div>
 
+          <!--Rollin' Shark CARD-->
           <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <img src="assets/img/rollinshark_thumb.png" alt="rollin shark screenshot">
             <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
+              <h3>Rollin' Shark</h3>
             </div>
             <div class="mdl-card__supporting-text">
-              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              <h6>/android game/</h6>
+              <p>Rollin' Shark started as a project developed from scratch during the Microsoft DevShark Event in Helsinki on 14th Dec 2014.
               </p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
               <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
                 <i class="material-icons">expand_more</i>
               </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
-                Launch
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">ondemand_video</i>
+              </button>
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">play_arrow</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/rollinshark/rollinshark.apk" target="_blank">
+                Download
+                <i class="material-icons">file_download</i>
               </a>
-              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div id="rollinshark_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
-                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                  <a href="#rollinshark_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#rollinshark_tldr" class="mdl-tabs__tab">TL;DR</a>
+                  <a href="#rollinshark_slideshow" class="mdl-tabs__tab">Slides</a>
+                  <a href="#rollinshark_video" class="mdl-tabs__tab">Video</a>
                 </div>
-                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
-                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
-                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
-                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                <div id="rollinshark_storytime" class="mdl-tabs__panel story_tab">
+                  <p>
+                    We started by brainstorming ideas, game design, UI design and shortly after moved on to developing the game in Unity. Assets and code alike were created on the spot.
+                  </p>
+                  <p>
+                    As stressful as the event was, it was also definitely exciting to try and make a game in 24 hours. The outcome, somewhat satisfying and definitely promising, will be worked on in the near future and soon released on Google Play.
+                  </p>
+                </div>
+                <div id="rollinshark_tldr" class="mdl-tabs__panel">
                   <table class="mdl-data-table mdl-shadow--2dp">
                     <thead>
                       <tr>
@@ -138,54 +165,145 @@
                     <tbody>
                       <tr>
                         <td>What?</td>
-                        <td>Mobile Web App</td>
+                        <td>Android Game (Unity 3D)</td>
                       </tr>
                       <tr>
                         <td>When?</td>
-                        <td>Start: 15 Feb 2015
-                          <br> End: 23 Feb 2015
-                          <br> Deadline: 8 Mar 2015
+                        <td>Start: 14 Dec 2014
+                          <br> End: 15 Dec 2014
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>How?</td>
+                        <td>Team Project: <br>
+                          Balazs Kovacs, <br> Georgi Yanev, <br> James Narraway
                         </td>
                       </tr>
                       <tr>
                         <td>Tech?</td>
-                        <td>HTML5, CSS3, JavaScript,
-                          <br> jQuery, Bootstrap,
-                          <br> jQueryMobile, Twitch API,
-                          <br> Youtube API, Twitter API, Facebook API</td>
+                        <td>Unity 3D, Blender, GIMP
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+
+                <div id="rollinshark_slideshow" class="mdl-tabs__panel story_tab">
+                  <!--REWORK BELOW-->
+                  <div id="RS-gallery">
+                      <div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-example-generic1" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="1"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="2"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="3"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="4"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="5"></li>
+                          <li data-target="#carousel-example-generic1" data-slide-to="6"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                          <div class="item active">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb1.png" style="height: 250px; width: 100%;" alt="Sharks with lasers">
+                            <div class="carousel-caption">
+                              <h4>Sharks with lasers</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb2.png" style="height: 250px; width: 100%;" alt="Brainstorming and drawing">
+                            <div class="carousel-caption">
+                              <h4>Brainstorming and drawing</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb3.png" style="height: 250px; width: 100%;" alt="Dive into Unity">
+                            <div class="carousel-caption">
+                              <h4>Dive into Unity</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb4.png" style="height: 250px; width: 100%;" alt="Georgi Yanev">
+                            <div class="carousel-caption">
+                              <h4>Georgi Yanev</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb5.png" style="height: 250px; width: 100%;" alt="Balazs and James">
+                            <div class="carousel-caption">
+                              <h4>Balazs and James</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb6.png" style="height: 250px; width: 100%;" alt="Finally some gameplay (PC)">
+                            <div class="carousel-caption">
+                              <h4>Finally some gameplay (PC)</h4>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="projects/rollinshark/thumbs/rollinshark_thumb7.png" style="height: 250px; width: 100%;" alt="Android gameplay">
+                            <div class="carousel-caption">
+                              <h4>Android gameplay</h4>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                      <!--END REWORK -->
+                    </div>
+                </div>
+
+                <div id="rollinshark_video" class="mdl-tabs__panel story_tab">
+                  <iframe id="RS-gameplay" height="250" src="https://www.youtube.com/embed/MLw_mVCMOs0" allowfullscreen></iframe>
+                </div>
+
               </div>
             </div>
           </div>
 
+          <!--CONSOLE.LOG CARD-->
           <div class="mdl-cell mdl-color--white mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--2dp">
-            <img src="assets/img/ultimatestalker_thumb.png" alt="ultimate stalker screenshot">
+            <img src="assets/img/console.log_thumb.png" alt="console.log screenshot">
             <div class="mdl-card__title">
-              <h3>Ultimate Stalker</h3>
+              <h3>Console.Log</h3>
             </div>
             <div class="mdl-card__supporting-text">
-              <p>A bootstrap mobile web app using youtube, facebook and twitch APIs. Implementation time - less than 8 day. Usage - enter a name. Press 'Stalk!' Track the person on the specific service. Your feed gets automatically updated every 1 minute.
+              <h6>/PC game/</h6>
+              <p>James and I decided to do our take on the first person puzzle "Portal-like" genre.
+              </p>
+              <p>
+                The project is coming along pretty good, even better than expected. More info will follow up soon enough!
               </p>
             </div>
             <div class="mdl-card__actions mdl-card--border">
               <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary more">
                 <i class="material-icons">expand_more</i>
               </button>
-              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/ultimatestalker/" target="_blank">
-                Launch
+              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--primary">
+                <i class="material-icons">ondemand_video</i>
+              </button>
+              <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary" href="projects/console.log/console.log(earlyPreAlpha).zip" target="_blank">
+                Download
+                <i class="material-icons">file_download</i>
               </a>
-              <div id="ultimatestalker_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div id="consolelog_extra" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
-                  <a href="#ultimatestalker_storytime" class="mdl-tabs__tab is-active">Story Time</a>
-                  <a href="#ultimatestalker_tldr" class="mdl-tabs__tab">TL;DR</a>
+                  <a href="#consolelog_storytime" class="mdl-tabs__tab is-active">Story Time</a>
+                  <a href="#consolelog_tldr" class="mdl-tabs__tab">TL;DR</a>
+                  <a href="#consolelog_slideshow" class="mdl-tabs__tab">Slides</a>
                 </div>
-                <div id="ultimatestalker_storytime" class="mdl-tabs__panel story_tab">Currently in the second semester of the second year we have a mobile web app course in school. The project assignmet as follows: utilise client side technology and 3rd party open APIs to make a mobile (responsive/fluid design) app. The
-                  scope is up to us to decide. I am working with James Narraway on it and we have decided to develop "Ultimate Stalker". What our app will do is basically allow you to get info on a favorite person of yours you are following on a number
-                  of services - Facebook, Twitter, Twitch, Youtube. So that whenever the person releases new content or goes live, you will know immediately from your app, regardless of the service they are using</div>
-                <div id="ultimatestalker_tldr" class="mdl-tabs__panel">
+                <div id="consolelog_storytime" class="mdl-tabs__panel story_tab">
+                  Insert Random Story
+                </div>
+                <div id="consolelog_tldr" class="mdl-tabs__panel">
                   <table class="mdl-data-table mdl-shadow--2dp">
                     <thead>
                       <tr>
@@ -196,24 +314,73 @@
                     <tbody>
                       <tr>
                         <td>What?</td>
-                        <td>Mobile Web App</td>
+                        <td>Unity Game</td>
                       </tr>
                       <tr>
                         <td>When?</td>
-                        <td>Start: 15 Feb 2015
-                          <br> End: 23 Feb 2015
-                          <br> Deadline: 8 Mar 2015
+                        <td>Start: 1 April 2015
+                          <br> End: 22 May 2015
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>How?</td>
+                        <td>
+                          Team Project
                         </td>
                       </tr>
                       <tr>
                         <td>Tech?</td>
-                        <td>HTML5, CSS3, JavaScript,
-                          <br> jQuery, Bootstrap,
-                          <br> jQueryMobile, Twitch API,
-                          <br> Youtube API, Twitter API, Facebook API</td>
+                        <td>Unity 3D, Blender, GIMP</td>
                       </tr>
                     </tbody>
                   </table>
+                </div>
+                <div id="consolelog_slideshow" class="mdl-tabs__panel story_tab">
+                  <div id="carousel-example-generic2" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic2" data-slide-to="3"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner">
+                        <div class="item active">
+                          <img src="projects/console.log/console.log2.png" style="height: 250px; width: 100%;" alt="Space station console">
+                          <div class="carousel-caption">
+                            <h4>Space station console</h4>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="projects/console.log/console.log3.png" style="height: 250px; width: 100%;" alt="Circuit board enemies!">
+                          <div class="carousel-caption">
+                            <h4>Circuit board enemies!</h4>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="projects/console.log/console.log1.png" style="height: 250px; width: 100%;" alt="Crawling circuitry!">
+                          <div class="carousel-caption">
+                            <h4>Crawling circuitry!</h4>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src="projects/console.log/console.log4.png" style="height: 250px; width: 100%;" alt="Developing the enemy model">
+                          <div class="carousel-caption">
+                            <h4>Developing the enemy model</h4>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic2" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic2" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                      </a>
+                    </div>
                 </div>
               </div>
             </div>
@@ -492,7 +659,7 @@
         <!--END OF GRID-->
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
-            <div class="mdl-logo">Title</div>
+            <div class="mdl-logo">Copyright &copy; 2013-2015 Georgi Yanev &amp; Sofia Lindberg</div>
             <ul class="mdl-mini-footer__link-list">
               <li><a href="#">Help</a></li>
               <li><a href="#">Privacy &amp; Terms</a></li>
