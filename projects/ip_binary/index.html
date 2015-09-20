@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IP Binary Calculator</title>
+<meta charset="UTF-8">
+<meta name="author" content="Georgi Yanev">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+@media screen and (min-width: 1050px) {
+	#wrapper {
+		width: 1200px;
+		margin: 50px auto;
+	}
+}
+
+html {
+	background-color: #E5FCC2;
+}
+
+#wrapper {
+	background-color: #45ADA8; 
+	width: 960px;
+	margin: 50px auto;
+	overflow: hidden;
+}
+
+#left_col {
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	float: left;
+  	width: 47%;
+  	background-color: #9DE0AD;
+}
+
+#right_col {
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+  	width: 53%;
+  	float: left;
+  	background-color: #45ADA8;
+}
+
+/**************************
+/******SPANS
+/**/
+#status {
+	display: block;
+	border: 2px solid #FA6900;
+	height: 50px;
+	width: 90%;
+	text-align: center;
+	font-size: 22px;
+	line-height: 44px;
+	margin: 0 auto;
+}
+
+.HF_BAR {
+	display: block;
+	background-color: #F38630;
+	font-size: 24px;
+	line-height: 48px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: right;
+	display: inline-block;
+}
+
+h4 {
+	text-align: center;
+	font-size: 20px;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+#left_col input {
+	width: 35px;
+	height: 30px;
+	border: 2px solid #cc3eaa;
+	font-size: 22px;
+	font-style: bold;
+	padding: 2px;
+}
+
+#right_col input {
+		width: 52px;
+		height: 25px;
+		border: 2px solid #ff3eaa;
+		font-size: 11px;
+		padding: 2px;
+	}
+#footer {
+	background-color: #E5FCC2;
+}
+
+button {
+	width: 85px;
+	height: 45px;
+	background-color: #F38630;
+	font-size: 18px;
+	font-style: bold;
+}
+
+.clear {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.box {
+	display: block;
+	padding-right: 30px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+</style>
+</head>
+
+
+<body>
+<div id="wrapper">
+
+	<h1 class="HF_BAR">
+		Welcome to BinCalc 2014!
+	</h1>
+
+		
+	<div id="left_col">
+		
+		<div class="box">
+			<h2>IP Address: </h2>
+			<input id="ip1" type="text" maxlength="3">.
+			<input id="ip2" type="text" maxlength="3">.
+			<input id="ip3" type="text" maxlength="3">.
+			<input id="ip4" type="text" maxlength="3">
+			<!--
+			NOT IMPLEMENTED YET
+			/<input id="slash" type="text" maxlength="2">
+			-->
+		</div>
+
+		<div class="box">
+			<h2>Subnet Mask: </h2>
+			<input id="sub1" type ="text" maxlength="3">.
+			<input id="sub2" type ="text" maxlength="3">.
+			<input id="sub3" type ="text" maxlength="3">.
+			<input id="sub4" type ="text" maxlength="3">
+		</div>
+
+
+		<div class="box">
+			<h2>Network Address: </h2>
+			<input id="net1" type="text" maxlength="3">.
+			<input id="net2" type="text" maxlength="3">.
+			<input id="net3" type="text" maxlength="3">.
+			<input id="net4" type="text" maxlength="3">
+		</div>
+
+
+		<h4>Calculate: Decimal to Binary</h4>
+		<div class="box">
+			<button onclick="calcBinIP()">Get Bin IP</button>
+			<button onclick="calcBinSub()">Get Bin Subnet</button>
+			<button onclick="netAdd()">Get Bin Net Address</button>
+			<button onclick="bdTest()">Get Dec Net Address</button>
+		</div>
+	</div>
+
+	<div id="right_col">
+		<div class="box">
+			<h2>IP 32bit Binary: </h2>
+			<input id="ipb1" type="text" maxlength="8">.
+			<input id="ipb2" type="text" maxlength="8">.
+			<input id="ipb3" type="text" maxlength="8">.
+			<input id="ipb4" type="text" maxlength="8">
+		</div>
+
+		<div class="box">
+			<h2>Sub 32bit Binary: </h2>
+			<input id="sb1" type="text" maxlength="8">.
+			<input id="sb2" type="text" maxlength="8">.
+			<input id="sb3" type="text" maxlength="8">.
+			<input id="sb4" type="text" maxlength="8">
+		</div>
+
+		<div class="box">
+			<h2>Net Add Binary: </h2>
+			<input id="nab1" type="text" maxlength="8">.
+			<input id="nab2" type="text" maxlength="8">.
+			<input id="nab3" type="text" maxlength="8">.
+			<input id="nab4" type="text" maxlength="8">
+		</div>
+	</div>
+
+
+	<div class="clear"></div>
+
+	<div id="footer">
+	<br>
+	<span id="status">Hello World! Welcome to BinConv 2014!</span>
+	<span class="HF_BAR">Copyright &copy; 2014-2015 Georgi Yanev &amp; Sofia Lindberg</span>
+	</div>
+</div>
+
+<script>
+
+//CALCULATES BINARY FROM DECIMAL
+function decToBin(dec) {
+
+	//Binary IP
+	var binArray = [];
+
+	for (var i=7; i>=0; i--){
+
+		//ONE OCTET AT A TIME
+		if(dec >= Math.pow(2,i)){
+			dec -= Math.pow(2,i);
+			binArray.push("1");
+		} else {
+			binArray.push("0");
+		}
+	}
+	
+	return binArray.join("");
+}
+
+//CALCULATES NETWORK ADDRESS
+function calcNetAddress(binIP, binSub) {
+	var netAddressBin = [];
+
+	for (var i=0; i<8; i++) {
+		if(binIP[i] == 1 && binSub[i] == 1){
+			netAddressBin[i] = 1;
+		} else {
+			netAddressBin[i] = 0;
+		}
+
+	}
+	return netAddressBin.join("");
+	
+}
+
+
+//CALCULATES DECIMAL FROM BINARY
+function binToDec(bin) {
+	var dec = 0;
+	var j = 0;
+	for (var i=7; i>=0; i--) {
+			dec += Math.pow(2,j) * parseInt(bin[i]);
+			j++;
+	}
+	return dec;
+}
+
+function calcBinIP(){
+	//IP variables
+	var ip1 = document.getElementById("ip1").value;
+	var ip2 = document.getElementById("ip2").value;
+	var ip3 = document.getElementById("ip3").value;
+	var ip4 = document.getElementById("ip4").value;
+
+	//IP Bin variables
+	var ipb1 = document.getElementById("ipb1");
+	var ipb2 = document.getElementById("ipb2");
+	var ipb3 = document.getElementById("ipb3");
+	var ipb4 = document.getElementById("ipb4");
+
+	//DO HERE MORE SERIOUS ERROR CHECKING IN THE FUTURE
+
+	//Pass IP address
+	if(ip1>=0 && ip1<=255 && ip1 !=NaN && ip2>=0 && ip2<=255 && ip2 !=NaN && ip3>=0 && ip3<=255 && ip3 !=NaN && ip4>=0 && ip4<=255 && ip4 !=NaN){
+		ipb1.value = decToBin(ip1);
+		ipb2.value = decToBin(ip2);
+		ipb3.value = decToBin(ip3);
+		ipb4.value = decToBin(ip4);
+
+	} else {
+		alert("Error: " +ip1+ip2+ip3+ip4+" are not valid entries!");
+	}
+}
+
+function calcBinSub() {
+	//IF SLASH NOTATION IS PRESENT
+	//slashSubnet();
+	
+	//Subnet variables
+	var sub1 = document.getElementById("sub1").value;
+	var sub2 = document.getElementById("sub2").value;
+	var sub3 = document.getElementById("sub3").value;
+	var sub4 = document.getElementById("sub4").value;
+
+	//Subnet Bin variables
+	var sb1 = document.getElementById("sb1");
+	var sb2 = document.getElementById("sb2");
+	var sb3 = document.getElementById("sb3");
+	var sb4 = document.getElementById("sb4");
+
+	//Pass Subnet mask
+	if(sub1>=0 && sub1<=255 && sub1 !=NaN && sub2>=0 && sub2<=255 && sub2 !=NaN && sub3>=0 && sub3<=255 && sub3 !=NaN && sub4>=0 && sub4<=255 && sub4 !=NaN){
+		sb1.value = decToBin(sub1);
+		sb2.value = decToBin(sub2);
+		sb3.value = decToBin(sub3);
+		sb4.value = decToBin(sub4);
+	} else {
+		alert("Error: " +sub1+sub2+sub3+sub4+" are not valid entries!");
+	}
+
+}
+
+function netAdd() {
+	//Grab BINARY IP variables
+	var ipb1 = document.getElementById("ipb1").value;
+	var ipb2 = document.getElementById("ipb2").value;
+	var ipb3 = document.getElementById("ipb3").value;
+	var ipb4 = document.getElementById("ipb4").value;
+
+	//Grab BINARY sub variables
+	var sb1 = document.getElementById("sb1").value;
+	var sb2 = document.getElementById("sb2").value;
+	var sb3 = document.getElementById("sb3").value;
+	var sb4 = document.getElementById("sb4").value;
+
+	//Grab Network address binary variables
+	var nab1 = document.getElementById("nab1");
+	var nab2 = document.getElementById("nab2");
+	var nab3 = document.getElementById("nab3");
+	var nab4 = document.getElementById("nab4");
+
+	//PASS THOSE FIELDS TO NET ADDRESS CALCULATION FUNCTION
+	nab1.value = calcNetAddress(ipb1, sb1);
+	nab2.value = calcNetAddress(ipb2, sb2);
+	nab3.value = calcNetAddress(ipb3, sb3);
+	nab4.value = calcNetAddress(ipb4, sb4);
+}
+
+function bdTest () {
+	var net1 = document.getElementById("net1");
+	var net2 = document.getElementById("net2");
+	var net3 = document.getElementById("net3");
+	var net4 = document.getElementById("net4");
+
+	var nab1 = document.getElementById("nab1").value;
+	var nab2 = document.getElementById("nab2").value;
+	var nab3 = document.getElementById("nab3").value;
+	var nab4 = document.getElementById("nab4").value;
+
+	net1.value = binToDec(nab1);
+	net2.value = binToDec(nab2);
+	net3.value = binToDec(nab3);
+	net4.value = binToDec(nab4);
+}
+
+</script>
+
+</body>
+</html>
