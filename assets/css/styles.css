@@ -62,6 +62,11 @@ img.avatar {
   font-size: 2rem;
 }
 
+.skillTag {
+  display: inline-block;
+  margin: .7em;
+}
+
 /*
 ** HELPERS
 */
