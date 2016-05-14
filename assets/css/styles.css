@@ -65,6 +65,8 @@ img.avatar {
 .skillTag {
   display: inline-block;
   margin: .7em;
+  cursor: pointer;
+  outline: none!important;
 }
 
 /*
