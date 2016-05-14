@@ -1,3 +1,8 @@
+
+/*
+** MDL Projects Page Styles
+*/
+
 img {
   width: 100%;
 }
@@ -32,4 +37,15 @@ table {
 .story_tab {
   padding: 20px;
   text-align: left;
+}
+
+
+/*
+** BOOTSTRAP 4 FLEX INDEX PAGE STYLES
+*/
+
+img.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
