@@ -237,7 +237,7 @@ $(document).ready(function() {
 
     if (clickCount == 3) {
       //show easter egg -> flip page
-      $('body').addClass("secret-flip").delay(2000).queue(function(next) {
+      $('body').addClass("secret-flip").delay(3000).queue(function(next) {
         $(this).removeClass("secret-flip");
         next();
       });
