@@ -62,11 +62,43 @@ img.avatar {
   font-size: 2rem;
 }
 
+/*Flip*/
+.secret-flip {
+  transform: rotateY(180deg);
+}
+
+#easter-egg-score {
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  font-size: 0.7rem;
+}
+
+/*Skill Tags*/
 .skillTag {
   display: inline-block;
-  margin: .7em;
+  margin: .7rem;
   cursor: pointer;
   outline: none!important;
+}
+
+.navbar .moto {
+  line-height: 2rem;
+  color: #FF9023!important;
+  font-weight: 600;
+}
+
+.navbar .logo {
+  background-color: #FFF!important;
+  width: 2.5rem!important;
+  height: 2.5rem!important;
+}
+
+/*Moto*/
+@media all and (max-width: 600px) {
+  .navbar .moto {
+    display: none;
+  }
 }
 
 /*

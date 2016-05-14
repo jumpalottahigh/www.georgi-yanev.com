@@ -166,6 +166,16 @@ $(document).ready(function() {
     type: "framework",
     url: "http://assemble.io/",
     experience: "1 year"
+  }, {
+    name: "Liferay",
+    type: "CMS",
+    url: "http://liferay.com/",
+    experience: "1 year"
+  }, {
+    name: "Wordpress",
+    type: "CMS",
+    url: "http://wordpress.org/",
+    experience: "2 years"
   }];
 
   //Get all skill tags
@@ -220,4 +230,26 @@ $(document).ready(function() {
   //TODO
   //Make the bottom section also get populated from the main skill data object
 
+
+  //Easter egg
+  $('.logo').click(function() {
+    var clickCount = localStorage.getItem("GY_egg") || 0;
+
+    if (clickCount == 3) {
+      //show easter egg -> flip page
+      $('body').addClass("secret-flip").delay(2000).queue(function(next) {
+        $(this).removeClass("secret-flip");
+        next();
+      });
+
+      $('#easter-egg-score').text("Easter Egg Score: 1/1");
+      $('#easter-egg-score').addClass("text-success");
+
+      //reset click count
+      localStorage.setItem("GY_egg", 0);
+    } else {
+      clickCount++;
+      localStorage.setItem("GY_egg", clickCount);
+    }
+  });
 });
