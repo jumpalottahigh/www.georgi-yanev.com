@@ -41,6 +41,131 @@ $(document).ready(function() {
     type: "framework",
     url: "http://introjs.com/",
     experience: "2 months"
+  }, {
+    name: "Handlebars.js",
+    type: "framework",
+    url: "http://handlebarsjs.com/",
+    experience: "6 months"
+  }, {
+    name: "Moments.js",
+    type: "framework",
+    url: "http://momentjs.com/",
+    experience: "3 months"
+  }, {
+    name: "SQL",
+    type: "language",
+    url: "http://www.w3schools.com/sql/",
+    experience: "3 years"
+  }, {
+    name: "PHP",
+    type: "language",
+    url: "http://php.net/",
+    experience: "2 year"
+  }, {
+    name: "Bootstrap 3",
+    type: "framework",
+    url: "http://getbootstrap.com/",
+    experience: "2 years"
+  }, {
+    name: "Bootstrap 4",
+    type: "framework",
+    url: "http://v4-alpha.getbootstrap.com/getting-started/introduction/",
+    experience: "1 year"
+  }, {
+    name: "Facebook API",
+    type: "API",
+    url: "https://developers.facebook.com/docs/web",
+    experience: "1 year"
+  }, {
+    name: "Twitch API",
+    type: "API",
+    url: "https://github.com/justintv/Twitch-API",
+    experience: "1 year"
+  }, {
+    name: "Git",
+    type: "tool",
+    url: "https://git-scm.com/",
+    experience: "3 years"
+  }, {
+    name: "Trello",
+    type: "tool",
+    url: "https://www.trello.com/",
+    experience: "1 year"
+  }, {
+    name: "JIRA",
+    type: "tool",
+    url: "https://www.jira.com/",
+    experience: "1 year"
+  }, {
+    name: "Agile",
+    type: "methodologies",
+    url: "http://agilemethodology.org/",
+    experience: "1 year"
+  }, {
+    name: "Node.js",
+    type: "library",
+    url: "https://nodejs.org/en/",
+    experience: "2 years"
+  }, {
+    name: "NPM",
+    type: "tool",
+    url: "https://www.npmjs.com/",
+    experience: "2 years"
+  }, {
+    name: "Gulp.js",
+    type: "tool",
+    url: "http://gulpjs.com/",
+    experience: "1 year"
+  }, {
+    name: "Grunt.js",
+    type: "tool",
+    url: "http://gruntjs.com/",
+    experience: "2 years"
+  }, {
+    name: "Firebase",
+    type: "framework",
+    url: "https://www.firebase.com/",
+    experience: "4 months"
+  }, {
+    name: "MongoDB",
+    type: "framework",
+    url: "https://docs.mongodb.com",
+    experience: "2 months"
+  }, {
+    name: "SQL",
+    type: "language",
+    url: "http://www.w3schools.com/sql/",
+    experience: "2 years"
+  }, {
+    name: "Python 3",
+    type: "language",
+    url: "https://docs.python.org/3/",
+    experience: "1 year"
+  }, {
+    name: "Material Design Lite",
+    type: "framework",
+    url: "https://getmdl.io/",
+    experience: "2 years"
+  }, {
+    name: "Hover.css",
+    type: "library",
+    url: "http://ianlunn.github.io/Hover/",
+    experience: "1 year"
+  }, {
+    name: "Animate.css",
+    type: "library",
+    url: "https://daneden.github.io/animate.css/",
+    experience: "1 year"
+  }, {
+    name: "Slack",
+    type: "tool",
+    url: "https://slack.com",
+    experience: "1 year"
+  }, {
+    name: "Assemble",
+    type: "framework",
+    url: "http://assemble.io/",
+    experience: "1 year"
   }];
 
   //Get all skill tags
@@ -79,6 +204,9 @@ $(document).ready(function() {
 
   //Update UI skill tags
   populateSkillTags();
+
+  //TODO
+  //Think of a way to either sort tags alphabetically or something else
 
   //Init popovers
   $('[data-toggle="popover"]').popover({
