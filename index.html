@@ -7,11 +7,9 @@
   <link rel="icon" href="favicon.ico?v=1.1">
   <!-- ROBOTO FONT -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-  <!-- MDL ICONS -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <!-- MDL STYLES -->
-  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css"> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
   <!-- BOOTSTRAP 4 FLEX STYLES -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -51,10 +49,7 @@
           <a class="nav-link" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Lorem</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Lorem</a>
+          <a class="nav-link" href="#">Participations &amp; Events</a>
         </li>
       </ul>
     </nav>
@@ -68,10 +63,7 @@
           <h2 class="text-primary">Skill Tags:</h2>
           <p class="text-muted">A pool of my skills and the technologies I love using</p>
           <div class="row">
-            <p class="bg-success">
-              JavaScript, jQuery, HTML5, CSS3, Bootstrap 4, ...
-            </p>
-            <p class="lead text-primary">
+            <p id="outputSkillTags" class="col-xs-12 lead text-primary">
               JavaScript, jQuery, HTML5, CSS3, Bootstrap 4, ...
             </p>
           </div>
@@ -82,26 +74,118 @@
   <!-- END SKILL TAGS -->
 
   <!-- ABOUT & CONTACTS -->
-  <section class="p-y-3">
+  <section class="p-y-3 about bg-gray">
     <div class="container text-xs-center">
       <div class="row">
         <div class="col-xs-12">
           <h2 class="text-primary">About &amp; Contacts</h2>
-          <img class="avatar" src="https://avatars3.githubusercontent.com/u/4155121?v=3&s=460" alt="Georgi Yanev Github avatar">
+          <img class="avatar m-y-1" src="https://avatars3.githubusercontent.com/u/4155121?v=3&s=460" alt="Georgi Yanev Github avatar">
+          <p class="lead m-b-0">Georgi Yanev</p>
+          <p><i class="fa fa-map-marker"></i> Helsinki, Finland</p>
+          <p class="social">
+            <a href="https://github.com/jumpalottahigh/" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.twitter.com/jumpalottahigh/" target="_blank"><i class="fa fa-twitter m-x-1"></i></a>
+            <a href="https://www.linkedin.com/in/yanevgeorgi/" target="_blank"><i class="fa fa-linkedin"></i></a>
+          </p>
+          <p>
+            <a href="http://www.georgiyanev.me"><i class="fa fa-link"></i> https://georgiyanev.me</a>
+          </p>
         </div>
       </div>
     </div>
   </section>
   <!-- END ABOUT & CONTACTS -->
 
+  <!-- CV SECTION -->
+  <section class="p-y-3">
+    <div class="container">
+      <!-- SKILLS -->
+      <div class="row">
+        <div class="col-xs-3 text-muted text-uppercase">
+          Skills
+        </div>
+        <div class="col-xs-9">
+          <h6 class="text-primary">Languages</h6>
+          <p>JavaScript, jQuery, HTML5, CSS3, SQL, PHP</p>
+          <h6 class="text-primary">Frameworks</h6>
+          <p>Bootstrap 3-4, jQuery, Waypoints</p>
+          <h6 class="text-primary">Libraries/APIs</h6>
+          <p>Facebook API, Twitter API, Twitch API</p>
+          <h6 class="text-primary">Tools/IDEs</h6>
+          <p>Atom, WebStorm, Git, Trello, JIRA</p>
+          <h6 class="text-primary">Paradigms</h6>
+          <p>Test-driven development (TDD), Agile methodologies, Scrum</p>
+          <h6 class="text-primary">Platforms</h6>
+          <p>Windows, Linux, Node.js, Android</p>
+          <h6 class="text-primary">Storage</h6>
+          <p>Firebase, MongoDB, MySQL, NoSQL</p>
+        </div>
+      </div>
+      <!-- END SKILLS -->
+      <hr class="m-b-2">
+      <!-- EDUCATION -->
+      <div class="row">
+        <div class="col-xs-3 text-muted text-uppercase">
+          Education
+        </div>
+        <div class="col-xs-9">
+          <div class="row">
+            <div class="col-xs-9">
+              <h6 class="text-primary">Bachelors degree in Information Technology</h6>
+              <p>Helsinki Metropolia University of Applied Sciences</p>
+            </div>
+            <div class="col-xs-3 text-xs-right">
+              <h6 class="text-muted">2013-2016</h6>
+            </div>
+            <div class="col-xs-9">
+              <h6 class="text-primary">Bachelors degree in Economy</h6>
+              <p>Plovdiv University "Paisii Hilendarski"</p>
+            </div>
+            <div class="col-xs-3 text-xs-right">
+              <h6 class="text-muted">2004-2007</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END EDUCATION -->
+      <hr class="m-b-2">
+      <!-- EXPERIENCE -->
+      <div class="row">
+        <div class="col-xs-3 text-muted text-uppercase">
+          Experience
+        </div>
+        <ul class="col-xs-9 list-bullets-none">
+          <li><span class="text-primary">JavaScript</span>, 4 years</li>
+          <li><span class="text-primary">HTML 5</span>, 5 years</li>
+          <li><span class="text-primary">CSS 3</span>, 5 years</li>
+          <li><span class="text-primary">Java</span>, 2 years</li>
+          <li><span class="text-primary">C#</span>, 1 years</li>
+        </ul>
+      </div>
+      <!-- END EXPERIENCE -->
+    </div>
+  </section>
+  <!-- END CV SECTION -->
+
+  <!-- FOOTER -->
+  <footer class="p-y-3 bg-gray">
+    <div class="container text-xs-center">
+      <div class="row">
+        <div class="col-xs-12">
+          <h5>Copyright &copy; 2016 Georgi Yanev &amp; Sofia Lindberg</h4>
+          <h5><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> for little Anton.</h4>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+
   <!-- jQuery -->
-  <!-- <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  <!-- MDL SCRIPT -->
-  <!-- <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script> -->
-
-  <!-- BOOTSTRAP 4 FLEX SCRIPT -->
-  <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+  <!-- APP SCRIPT -->
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>

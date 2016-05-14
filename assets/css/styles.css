@@ -43,9 +43,32 @@ table {
 /*
 ** BOOTSTRAP 4 FLEX INDEX PAGE STYLES
 */
-
+/*All fonts Roboto*/
+* {
+  font-family: Roboto;
+}
+/*Reset navbar border radius*/
+.navbar {
+  border-radius: 0;
+}
+/*Circle avatar*/
 img.avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
+}
+/*Bump up social icons*/
+.about .social {
+  font-size: 2rem;
+}
+
+/*
+** HELPERS
+*/
+.bg-gray {
+  background-color: #dedede!important;
+}
+
+.list-bullets-none {
+  list-style-type: none;
 }
