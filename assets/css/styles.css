@@ -6,20 +6,6 @@ table {
   width: 100%;
 }
 
-/*.mdl-card__title.h3{
-  margin-bottom: 0!important;
-  padding-bottom: 0!important;
-}*/
-
-.mdl-card__supporting-text {
-  /*max-height: 150px;*/
-}
-
-  /*.mdl-card__supporting-text.h6 {
-    padding-top: 0!important;
-    margin-top: 0!important;
-  }*/
-
 /*MDL ACTIONS LEFT AND RIGHT STYLES*/
 
 .mdl-card__actions {
