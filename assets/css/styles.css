@@ -74,12 +74,25 @@ img.avatar {
   font-size: 0.7rem;
 }
 
+.filter-elevated {
+  text-shadow: 2px 2px 2px #cecece;
+}
+
+.filter-out {
+  opacity: 0.4;
+  font-size: 0.7rem;
+
+  transition: font-size 1s, opacity 1s;
+}
+
 /*Skill Tags*/
 .skillTag {
   display: inline-block;
   margin: .7rem;
   cursor: pointer;
   outline: none!important;
+
+  transition: font-size 1s, opacity 1s;
 }
 
 .navbar .moto {

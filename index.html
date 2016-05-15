@@ -78,7 +78,10 @@
       <div class="row">
         <div class="col-xs-12">
           <h2 class="text-primary">Skill Tags:</h2>
-          <p class="text-muted">A pool of my skills and the technologies I love using</p>
+          <p class="text-muted">A pool of my skills and the technologies I love using.</p>
+          <button data-filter-value="Language" class="btn btn-info btn-tag-filter">Languages</button>
+          <button data-filter-value="Framework" class="btn btn-success btn-tag-filter">Frameworks</button>
+          <button data-filter-value="IDE/Code Editor" class="btn btn-warning btn-tag-filter">IDEs/Code editors</button>
           <div class="row">
             <p id="outputSkillTags" class="col-xs-12 lead text-primary"></p>
           </div>
@@ -122,22 +125,7 @@
         <div class="col-xs-3 text-muted text-uppercase">
           Skills
         </div>
-        <div class="col-xs-9">
-          <h6 class="text-primary">Languages</h6>
-          <p>JavaScript, HTML5, CSS3, SQL, PHP</p>
-          <h6 class="text-primary">Frameworks</h6>
-          <p>Bootstrap 3-4, jQuery, Waypoints</p>
-          <h6 class="text-primary">Libraries/APIs</h6>
-          <p>Facebook API, Twitter API, Twitch API</p>
-          <h6 class="text-primary">Tools/IDEs</h6>
-          <p>Atom, WebStorm, Git, Trello, JIRA</p>
-          <h6 class="text-primary">Paradigms</h6>
-          <p>Test-driven development (TDD), Agile methodologies, Scrum</p>
-          <h6 class="text-primary">Platforms</h6>
-          <p>Windows, Linux, Node.js, Android</p>
-          <h6 class="text-primary">Storage</h6>
-          <p>Firebase, MongoDB, MySQL, NoSQL</p>
-        </div>
+        <div id="outputResumeSkills" class="col-xs-9"></div>
       </div>
       <!-- END SKILLS -->
       <hr class="m-b-2">
