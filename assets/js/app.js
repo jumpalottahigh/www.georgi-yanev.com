@@ -240,8 +240,19 @@ $(document).ready(function() {
       $('body').addClass("secret-flip").delay(3000).queue(function(next) {
         $(this).removeClass("secret-flip");
         next();
+        //Set toast theme and delay and show achievement toast
+        PNotify.prototype.options.styling = "bootstrap3";
+        PNotify.prototype.options.delay = 4000;
+        new PNotify({
+          title: 'Achievement earner!',
+          text: 'You found a secret! <br> Score: 1/1',
+          type: 'success',
+          icon: false
+        });
       });
 
+
+      //Update achivement score
       $('#easter-egg-score').text("Easter Egg Score: 1/1");
       $('#easter-egg-score').addClass("text-success");
 

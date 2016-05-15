@@ -83,7 +83,7 @@ img.avatar {
 }
 
 .navbar .moto {
-  line-height: 2rem;
+  /*line-height: 1.5rem;*/
   color: #FF9023!important;
   font-weight: 600;
 }
@@ -97,7 +97,11 @@ img.avatar {
 /*Moto*/
 @media all and (max-width: 600px) {
   .navbar .moto {
-    display: none;
+    order: -1;
+  }
+
+  .navbar .logo-order {
+    order: -2;
   }
 }
 
