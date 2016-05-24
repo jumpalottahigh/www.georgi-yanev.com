@@ -330,7 +330,7 @@ $(document).ready(function() {
         PNotify.prototype.options.styling = "bootstrap3";
         PNotify.prototype.options.delay = 4000;
         new PNotify({
-          title: 'Achievement earner!',
+          title: 'Achievement earned!',
           text: 'You found a secret! <br> Score: 1/1',
           type: 'success',
           icon: false
