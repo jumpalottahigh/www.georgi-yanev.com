@@ -218,6 +218,15 @@ $(document).ready(function() {
     experience: "3 years"
   }];
 
+  //Init Firebase
+  var config = {
+    apiKey: "AIzaSyD5vdx8pXmflOuMBh3Ddg7rWrf_TU0lFFg",
+    authDomain: "project-7617554044683473970.firebaseapp.com",
+    databaseURL: "https://project-7617554044683473970.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
   //
   //ANALYTICS
   //
