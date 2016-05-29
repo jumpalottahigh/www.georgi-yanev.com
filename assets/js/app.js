@@ -218,6 +218,19 @@ $(document).ready(function() {
     experience: "3 years"
   }];
 
+  //
+  //ANALYTICS
+  //
+  //Skill tags engagement measurement
+  var skillTagInteractionGA = function() {
+    ga('send', {
+      hitType: 'event',
+      eventAction: 'click',
+      eventCategory: 'Skill Tag Filter Click',
+      eventLabel: 'Skill Tag Interaction'
+    });
+  };
+
   //Get all skill tags
   var populateSkillTags = function() {
     //Itirate the tags
@@ -329,6 +342,9 @@ $(document).ready(function() {
     //Toggle correct filtered tags state
     $('.skillTag[data-type="' + filter + '"]').toggleClass("filter-elevated");
     $('.skillTag').not('[data-type="' + filter + '"]').toggleClass("filter-out");
+
+    //Send GA interaction data
+    skillTagInteractionGA();
   });
 
   //
@@ -353,7 +369,6 @@ $(document).ready(function() {
           icon: false
         });
       });
-
 
       //Update achivement score
       $('#easter-egg-score').text("Easter Egg Score: 1/1");
