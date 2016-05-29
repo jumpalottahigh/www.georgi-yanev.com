@@ -128,3 +128,8 @@ img.avatar {
 .list-bullets-none {
   list-style-type: none;
 }
+.twitch-emote {
+  display: inline;
+  width: auto;
+  overflow: hidden;
+}

@@ -30,7 +30,7 @@ $(document).ready(function() {
     name: "CSS3",
     type: "Language",
     url: "http://www.w3schools.com/css/default.asp",
-    experience: "5 year"
+    experience: "5 years"
   }, {
     name: "Atom",
     type: "IDE/Code Editor",
@@ -85,7 +85,7 @@ $(document).ready(function() {
     name: "PHP",
     type: "Language",
     url: "http://php.net/",
-    experience: "2 year"
+    experience: "2 years"
   }, {
     name: "Bootstrap 3",
     type: "Framework",
@@ -288,9 +288,26 @@ $(document).ready(function() {
     $('#outputResumeSkills').html(constructor);
   };
 
+  //Constucts dynamically the language experience section
+  var populateResumeExperience = function() {
+    var constructor = '';
+
+    //Itirate all skills and get the languages and their experience
+    for (var item in skillData) {
+      if (skillData[item].type == 'Language') {
+        constructor += '<li><span class="text-primary">' + skillData[item].name + '</span>, ';
+        constructor += skillData[item].experience + '</li>';
+      }
+    }
+
+    //Populate resume skills section
+    $('#outputResumeExperience').html(constructor);
+  };
+
   //Update UI skill tags
   populateSkillTags();
   populateResumeSKills();
+  populateResumeExperience();
 
   //Init popovers
   $('[data-toggle="popover"]').popover({
