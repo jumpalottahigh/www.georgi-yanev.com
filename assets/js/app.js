@@ -322,6 +322,10 @@ $(document).ready(function() {
   populateResumeSKills();
   populateResumeExperience();
 
+  //Init tooltips
+  $('[data-toggle="tooltip"]').tooltip({
+    html: true
+  });
   //Init popovers
   $('[data-toggle="popover"]').popover({
     html: true
