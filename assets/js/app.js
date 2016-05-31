@@ -83,11 +83,12 @@ $(document).ready(function() {
 
   };
 
+  //Populate docs
   var populateDocs = function() {
     var constructor = '';
 
     for (var doc in docsData) {
-      constructor += '<div class="col-xs-4"><div class="card card-block">';
+      constructor += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="card card-block">';
       constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
       constructor += '<p class="card-text">' + docsData[doc].content + '</p>';
       constructor += '<a href="' + docsData[doc].url + '" class="btn btn-primary">' + docsData[doc].action + '</a>';
