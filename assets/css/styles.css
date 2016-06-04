@@ -115,6 +115,14 @@ img.avatar {
   }
 }
 
+/*OVERWRITE BOOTSTRAP CARD STYLES*/
+.card {
+  min-height: 90%;
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
+}
+
 /*
 ** HELPERS
 */

@@ -87,11 +87,20 @@ $(document).ready(function() {
   var populateDocs = function() {
     var constructor = '';
 
-    for (var doc in docsData) {
+    //Acending order
+    // for (var doc = 0; doc < docsData.length; doc++) {
+    //Descending order
+    for (var doc = docsData.length; doc--;) {
       constructor += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="card card-block">';
       constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
-      constructor += '<p class="card-text">' + docsData[doc].content + '</p>';
-      constructor += '<a href="' + docsData[doc].url + '" class="btn btn-primary">' + docsData[doc].action + '</a>';
+      constructor += '<p class="card-text text-muted m-b-0">/' + docsData[doc].type + ', ' + moment(docsData[doc].date).format('Do MMM YYYY') + '/</p>';
+      constructor += '<p class="card-text text-muted">' + docsData[doc].author + '</p>';
+      constructor += '<p class="card-text text-xs-left">' + docsData[doc].content + '</p>';
+      constructor += '<a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank">' + docsData[doc].action + '</a>';
+      //The card has two action buttons
+      // if (docsData[doc].url2) {
+      //   constructor += '<a href="' + docsData[doc].url2 + '" class="btn btn-primary m-l-1" target="_blank">' + docsData[doc].action2 + '</a>';
+      // }
       constructor += '</div></div>';
     }
 
