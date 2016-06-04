@@ -34,6 +34,9 @@ $(document).ready(function() {
   //Docs and publications
   var fbRef_Docs = firebase.database().ref('docs');
   var docsData = '';
+  //Projetcs
+  var fbRef_Projects = firebase.database().ref('projects');
+  var projectsData = '';
 
   //
   //ANALYTICS
@@ -87,9 +90,7 @@ $(document).ready(function() {
   var populateDocs = function() {
     var constructor = '';
 
-    //Acending order
-    // for (var doc = 0; doc < docsData.length; doc++) {
-    //Descending order
+    //Loop in descending order
     for (var doc = docsData.length; doc--;) {
       constructor += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="card card-block">';
       constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
@@ -97,14 +98,30 @@ $(document).ready(function() {
       constructor += '<p class="card-text text-muted">' + docsData[doc].author + '</p>';
       constructor += '<p class="card-text text-xs-left">' + docsData[doc].content + '</p>';
       constructor += '<a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank">' + docsData[doc].action + '</a>';
-      //The card has two action buttons
-      // if (docsData[doc].url2) {
-      //   constructor += '<a href="' + docsData[doc].url2 + '" class="btn btn-primary m-l-1" target="_blank">' + docsData[doc].action2 + '</a>';
-      // }
       constructor += '</div></div>';
     }
 
     $('#outputDocs').html(constructor);
+  };
+
+  //Populate docs
+  var populateProjects = function() {
+    var constructor = '';
+
+    //Loop in descending order
+    for (var doc = projectsData.length; doc--;) {
+      constructor += '<div class="col-xs-12 col-sm-6 col-md-4">';
+      constructor += '<div class="card card-block">';
+      constructor += '<img class="card-img-top" src="https://placehold.it/450x450.png" alt="Card image cap">';
+      constructor += '<h4 class="card-title">' + projectsData[doc].title + '</h4>';
+      constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[doc].type + ', ' + moment(projectsData[doc].date).format('Do MMM YYYY') + '/</p>';
+      constructor += '<p class="card-text text-muted">' + projectsData[doc].author + '</p>';
+      constructor += '<p class="card-text text-xs-left">' + projectsData[doc].content + '</p>';
+      constructor += '<a href="' + projectsData[doc].url + '" class="btn btn-primary" target="_blank">' + projectsData[doc].action + '</a>';
+      constructor += '</div></div>';
+    }
+
+    $('#outputProjects').html(constructor);
   };
 
   //Get CV and index page data from Firebase
@@ -118,7 +135,7 @@ $(document).ready(function() {
       populateSkillTags();
     }
     //Skills and experience section
-    if (document.getElementById('CV')) {
+    if ($('#CV')) {
       populateResumeSKills();
       populateResumeExperience();
     }
@@ -141,9 +158,23 @@ $(document).ready(function() {
   fbRef_Docs.on('value', function(snap) {
     docsData = snap.val();
 
-    //Populate UI with data
     if ($('#outputDocs')) {
+      //Remove loader
+      $('.loader').remove();
+      //Populate UI with data
       populateDocs();
+    }
+  });
+
+  //Get projects data from Firebase
+  fbRef_Projects.on('value', function(snap) {
+    projectsData = snap.val();
+
+    //Populate UI with data
+    if ($('#outputProjects')) {
+      //Remove loader
+      $('.loader').remove();
+      populateProjects();
     }
   });
 
