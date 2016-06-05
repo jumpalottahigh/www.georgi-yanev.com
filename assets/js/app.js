@@ -1,23 +1,5 @@
 $(document).ready(function() {
 
-  //Sample of the data model coming from Firebase
-  // var skillData = [{
-  //   name: "JavaScript",
-  //   type: "Language",
-  //   url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  //   experience: "5 years"
-  // }, {
-  //   name: "jQuery",
-  //   type: "Framework",
-  //   url: "https://jquery.com/",
-  //   experience: "3 years"
-  // }, {
-  //   name: "HTML5",
-  //   type: "Markup language",
-  //   url: "http://www.w3schools.com/html/html5_intro.asp",
-  //   experience: "5 years"
-  // }];
-
   //Init Firebase
   var config = {
     apiKey: "AIzaSyD5vdx8pXmflOuMBh3Ddg7rWrf_TU0lFFg",
@@ -110,14 +92,18 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var doc = projectsData.length; doc--;) {
-      constructor += '<div class="col-xs-12 col-sm-6 col-md-4">';
+      constructor += '<div class="col-xs-12 col-sm-6">';
+      constructor += '<img class="card-img-top" src="' + projectsData[doc].img + '" alt="' + projectsData[doc].title + '">';
       constructor += '<div class="card card-block">';
-      constructor += '<img class="card-img-top" src="https://placehold.it/450x450.png" alt="Card image cap">';
       constructor += '<h4 class="card-title">' + projectsData[doc].title + '</h4>';
       constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[doc].type + ', ' + moment(projectsData[doc].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + projectsData[doc].author + '</p>';
       constructor += '<p class="card-text text-xs-left">' + projectsData[doc].content + '</p>';
-      constructor += '<a href="' + projectsData[doc].url + '" class="btn btn-primary" target="_blank">' + projectsData[doc].action + '</a>';
+
+      //Loop all actions if card has more actions
+      for (var i in projectsData[doc].buttons) {
+        constructor += '<a href="' + projectsData[doc].buttons[i].url + '" class="btn btn-primary m-r-1" target="_blank">' + projectsData[doc].buttons[i].text + '</a>';
+      }
       constructor += '</div></div>';
     }
 
