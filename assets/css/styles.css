@@ -138,3 +138,6 @@ img.avatar {
   width: auto;
   overflow: hidden;
 }
+.lightbox-item {
+  display: none;
+}

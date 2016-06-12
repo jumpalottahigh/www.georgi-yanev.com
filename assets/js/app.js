@@ -20,6 +20,12 @@ $(document).ready(function() {
   var fbRef_Projects = firebase.database().ref('projects');
   var projectsData = '';
 
+  //Init lightbox
+  $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
   //
   //ANALYTICS
   //
@@ -106,27 +112,47 @@ $(document).ready(function() {
       for (var i in projectsData[p].buttons) {
         //Add correct icon based on button type
         var icon = '';
+        var lightbox_constructor = '';
         if (projectsData[p].buttons[i].type == 'launch') {
           icon = '<i class="fa fa-external-link"></i>';
         } else if (projectsData[p].buttons[i].type == 'download') {
           icon = '<i class="fa fa-download"></i>';
-        } else if (projectsData[p].buttons[i].type == 'video') {
+        } else if (projectsData[p].buttons[i].type == 'videos') {
           icon = '<i class="fa fa-video-camera"></i>';
+          //Loop and append also img urls
+          //Skip first img as its included in the main link
+          for (var vid = 1; vid < projectsData[p].buttons[i].video_urls.length; vid++) {
+            lightbox_constructor += '<a href="' + projectsData[p].buttons[i].video_urls[vid] + '" data-toggle="lightbox" data-gallery="' + projectsData[p].buttons[i].set_name + '" class="lightbox-item"></a>';
+          }
         } else if (projectsData[p].buttons[i].type == 'images') {
           icon = '<i class="fa fa-picture-o"></i>';
+          //Loop and append also img urls
+          //Skip first img as its included in the main link
+          for (var img = 1; img < projectsData[p].buttons[i].image_urls.length; img++) {
+            lightbox_constructor += '<a href="' + projectsData[p].buttons[i].image_urls[img] + '" data-toggle="lightbox" data-gallery="' + projectsData[p].buttons[i].set_name + '" class="lightbox-item"></a>';
+          }
         } else if (projectsData[p].buttons[i].type == 'docs') {
           icon = '<i class="fa fa-file-text"></i>';
         }
 
         //Create CTAs for each button
-        constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary m-r-1" target="_blank">';
+        //Only add target blank if not image and video
+        if (projectsData[p].buttons[i].type == 'videos') {
+          constructor += '<a href="' + projectsData[p].buttons[i].video_urls[0] + '" data-toggle="lightbox" class="btn btn-primary m-r-1"';
+          constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
+        } else if (projectsData[p].buttons[i].type == 'images') {
+          constructor += '<a href="' + projectsData[p].buttons[i].image_urls[0] + '" data-toggle="lightbox" class="btn btn-primary m-r-1"';
+          constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
+        } else {
+          constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary m-r-1"';
+          constructor += 'target="_blank">';
+        }
+
         //Check if the button will have text or it will be a standalone icon
         if (projectsData[p].buttons[i].text) {
           constructor += projectsData[p].buttons[i].text + ' ';
         }
-        constructor += icon + '</a>';
-
-
+        constructor += icon + lightbox_constructor + '</a>';
 
       }
       constructor += '</div></div>';
