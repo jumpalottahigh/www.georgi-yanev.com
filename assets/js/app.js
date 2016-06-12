@@ -35,6 +35,8 @@ $(document).ready(function() {
 
   //Get all skill tags
   var populateSkillTags = function() {
+    //Reset HTML for a complete refresh
+    $('#outputSkillTags').html('');
     //Itirate the tags
     for (var tag in skillData) {
       var rotate = 0;
@@ -63,7 +65,7 @@ $(document).ready(function() {
       element.setAttribute("style", transformString);
 
       //Append the element to skill pool
-      document.getElementById('outputSkillTags').appendChild(element);
+      $('#outputSkillTags').append(element);
     }
 
   };
@@ -86,23 +88,46 @@ $(document).ready(function() {
     $('#outputDocs').html(constructor);
   };
 
-  //Populate docs
+  //Populate projects
   var populateProjects = function() {
     var constructor = '';
 
     //Loop in descending order
-    for (var doc = projectsData.length; doc--;) {
+    for (var p = projectsData.length; p--;) {
       constructor += '<div class="col-xs-12 col-sm-6">';
-      constructor += '<img class="card-img-top" src="' + projectsData[doc].img + '" alt="' + projectsData[doc].title + '">';
+      constructor += '<img class="card-img-top" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '">';
       constructor += '<div class="card card-block">';
-      constructor += '<h4 class="card-title">' + projectsData[doc].title + '</h4>';
-      constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[doc].type + ', ' + moment(projectsData[doc].date).format('Do MMM YYYY') + '/</p>';
-      constructor += '<p class="card-text text-muted">' + projectsData[doc].author + '</p>';
-      constructor += '<p class="card-text text-xs-left">' + projectsData[doc].content + '</p>';
+      constructor += '<h4 class="card-title">' + projectsData[p].title + '</h4>';
+      constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
+      constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
+      constructor += '<p class="card-text text-xs-left">' + projectsData[p].content + '</p>';
 
       //Loop all actions if card has more actions
-      for (var i in projectsData[doc].buttons) {
-        constructor += '<a href="' + projectsData[doc].buttons[i].url + '" class="btn btn-primary m-r-1" target="_blank">' + projectsData[doc].buttons[i].text + '</a>';
+      for (var i in projectsData[p].buttons) {
+        //Add correct icon based on button type
+        var icon = '';
+        if (projectsData[p].buttons[i].type == 'launch') {
+          icon = '<i class="fa fa-external-link"></i>';
+        } else if (projectsData[p].buttons[i].type == 'download') {
+          icon = '<i class="fa fa-download"></i>';
+        } else if (projectsData[p].buttons[i].type == 'video') {
+          icon = '<i class="fa fa-video-camera"></i>';
+        } else if (projectsData[p].buttons[i].type == 'images') {
+          icon = '<i class="fa fa-picture-o"></i>';
+        } else if (projectsData[p].buttons[i].type == 'docs') {
+          icon = '<i class="fa fa-file-text"></i>';
+        }
+
+        //Create CTAs for each button
+        constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary m-r-1" target="_blank">';
+        //Check if the button will have text or it will be a standalone icon
+        if (projectsData[p].buttons[i].text) {
+          constructor += projectsData[p].buttons[i].text + ' ';
+        }
+        constructor += icon + '</a>';
+
+
+
       }
       constructor += '</div></div>';
     }
