@@ -117,6 +117,8 @@ $(document).ready(function() {
           icon = '<i class="fa fa-external-link"></i>';
         } else if (projectsData[p].buttons[i].type == 'download') {
           icon = '<i class="fa fa-download"></i>';
+        } else if (projectsData[p].buttons[i].type == 'github') {
+          icon = '<i class="fa fa-github"></i>';
         } else if (projectsData[p].buttons[i].type == 'videos') {
           icon = '<i class="fa fa-video-camera"></i>';
           //Loop and append also img urls
