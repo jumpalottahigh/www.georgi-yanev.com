@@ -1,4 +1,5 @@
-# <img src="assets/img/logo.png"> www.georgiyanev.me
+<img src="assets/img/logo.png">
+# www.georgiyanev.me
 
 <img src="assets/img/georgiyanev.me-preview.png">
 
