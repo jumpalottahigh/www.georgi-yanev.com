@@ -272,6 +272,9 @@ $(document).ready(function() {
 
   //Filter skill tags by type
   $('.btn-tag-filter').click(function() {
+    //Reset the custom search field
+    $('#customFilter').val('');
+    $('.skillTag').show();
     //Get current filter
     var filter = $(this).data("filter-value");
     //If same button is pressed twice, restore tags to original state
@@ -284,6 +287,28 @@ $(document).ready(function() {
 
     //Send GA interaction data
     skillTagInteractionGA();
+  });
+
+  //Custom filter by text
+  $('#customFilter').on('keyup', function (e) {
+    //Get and normalize current value of filter input
+    var currentFilter = $(this).val().toLowerCase();
+    //We have a keypress, hide all skillTags in prep for filtering
+    $('.skillTag').hide().removeClass('filter-out filter-elevated');
+
+    //Reset the field if user pressed ESC
+    if (e.keyCode == 27) {
+      $(this).val('');
+      $('.skillTag').show();
+    }
+
+    //Do some actual filtering based on searched normalized value
+    $('.skillTag').each(function(index, item) {
+      if ($(item).text().trim().toLowerCase().indexOf(currentFilter) > -1) {
+        //Show items
+        $(item).show();
+      }
+    });
   });
 
   //

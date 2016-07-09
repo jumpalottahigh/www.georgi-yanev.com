@@ -58,6 +58,10 @@ img.avatar {
   transition: font-size 1s, opacity 1s;
 }
 
+#customFilter {
+  display: initial;
+}
+
 .navbar .moto {
   color: #FF9023!important;
   font-weight: 600;
