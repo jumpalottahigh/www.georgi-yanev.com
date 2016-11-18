@@ -1,5 +1,7 @@
-<img src="assets/img/logo.png">
 # www.georgiyanev.me
+
+This holds the source code for my portfolio site.
+Stack: Bootstrap 4 with Flexbox, Firebase for the strings, Custom made spaghetti rendering with JavaScript.
 
 <img src="assets/img/georgiyanev.me-preview.png">
 
