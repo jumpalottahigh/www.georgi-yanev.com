@@ -3,6 +3,7 @@ gulpfile.js
 node_modules/
 .tmp
 dist/
+.vscode
 
 # Compiled source #
 ###################
