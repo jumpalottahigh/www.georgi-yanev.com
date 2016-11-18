@@ -23,7 +23,13 @@ $(document).ready(function() {
   //Init lightbox
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
     event.preventDefault();
-    $(this).ekkoLightbox();
+    $(this).ekkoLightbox(
+      {
+        leftArrow: '<span style="text-decoration: none">&lt;</span>',
+        rightArrow: '<span style="text-decoration: none">&gt;</span>',
+        alwaysShowClose: false
+      }
+    );
   });
 
   //
