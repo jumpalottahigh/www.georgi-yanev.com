@@ -88,12 +88,12 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var doc = docsData.length; doc--;) {
-      constructor += '<div class="col-xs-12 col-sm-6 col-md-4"><div class="card card-block">';
+      constructor += '<div class="col-xs-12 col-sm-6 col-md-4 m-b-3"><div class="card card-block doc-card">';
       constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
       constructor += '<p class="card-text text-muted m-b-0">/' + docsData[doc].type + ', ' + moment(docsData[doc].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + docsData[doc].author + '</p>';
       constructor += '<p class="card-text text-xs-left">' + docsData[doc].content + '</p>';
-      constructor += '<a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank">' + docsData[doc].action + '</a>';
+      constructor += '<div><a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank">' + docsData[doc].action + '</a></div>';
       constructor += '</div></div>';
     }
 
@@ -106,13 +106,16 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var p = projectsData.length; p--;) {
-      constructor += '<div class="col-xs-12 col-sm-6">';
-      constructor += '<img class="card-img-top" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '">';
-      constructor += '<div class="card card-block">';
+      constructor += '<div class="col-xs-12 col-sm-6 m-b-3">';
+      constructor += '<img class="card-img-top project-card-image" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '">';
+      constructor += '<div class="card card-block project-card">';
       constructor += '<h4 class="card-title">' + projectsData[p].title + '</h4>';
       constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
       constructor += '<p class="card-text text-xs-left">' + projectsData[p].content + '</p>';
+
+      //CTA wrapper for flex columns
+      constructor += '<div>';
 
       //Loop all actions if card has more actions
       for (var i in projectsData[p].buttons) {
@@ -163,7 +166,7 @@ $(document).ready(function() {
         constructor += icon + lightbox_constructor + '</a>';
 
       }
-      constructor += '</div></div>';
+      constructor += '</div></div></div>';
     }
 
     $('#outputProjects').html(constructor);
