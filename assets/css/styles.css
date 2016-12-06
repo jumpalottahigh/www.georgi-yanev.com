@@ -118,3 +118,6 @@ img.avatar {
 .lightbox-item {
   display: none;
 }
+.font-smaller {
+  font-size: 0.75rem;
+}
