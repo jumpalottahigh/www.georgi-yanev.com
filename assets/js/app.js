@@ -68,7 +68,17 @@ $(document).ready(function() {
       element.dataset.trigger = "focus";
       element.dataset.placement = "bottom";
       element.dataset.title = skillData[tag].type + " <a target='_blank' href='" + skillData[tag].url + "'><i class='fa fa-link'></i></a>";
-      element.dataset.content = "XP: " + skillData[tag].experience;
+
+      var levelClass = '';
+      if (skillData[tag].level < 33) {
+        levelClass = 'bg-danger';
+      } else if (skillData[tag].level < 66) {
+        levelClass = 'bg-warning';
+      } else {
+        levelClass = 'bg-success';
+      }
+      element.dataset.content = "<div class='progress'><div class='progress-bar " + levelClass + "' role='progressbar' style='width: " + skillData[tag].level + "%' aria-valuenow='" + skillData[tag].level + "' aria-valuemin='0' aria-valuemax='100'>" + skillData[tag].level + "%</div></div>";
+      element.dataset.content += "XP: " + skillData[tag].experience;
 
       //Randomly rotate left or right
       Math.random() > 0.5 ? rotate = Math.random() * 10 : rotate = Math.random() * (-10);
