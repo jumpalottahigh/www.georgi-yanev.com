@@ -10,10 +10,6 @@ img {
   width: 100%;
 }
 
-/*Reset navbar border radius*/
-.navbar {
-  border-radius: 0;
-}
 /*Circle avatar*/
 img.avatar {
   width: 250px;
@@ -62,6 +58,10 @@ img.avatar {
   display: initial;
 }
 
+#easter-egg-score {
+  color: #ffffff;
+}
+
 .navbar .moto {
   color: #FF9023!important;
   font-weight: 600;
@@ -71,7 +71,7 @@ img.avatar {
 }
 
 .navbar .logo {
-  background-color: #FFF!important;
+  background-color: #d6d6d6!important;
   width: 2.5rem!important;
   height: 2.5rem!important;
 }
@@ -128,7 +128,7 @@ img.avatar {
 
 .progress-bar {
   width: 100%;
-  min-height: 10px;
+  min-height: 1.5rem;
   padding: 4px;
 }
 

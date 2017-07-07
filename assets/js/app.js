@@ -64,10 +64,11 @@ $(document).ready(function() {
       element.setAttribute("tabindex", "0");
       //Add pop overs
       element.dataset.type = skillData[tag].type;
+      element.dataset.container = "body";
       element.dataset.toggle = "popover";
       element.dataset.trigger = "focus";
       element.dataset.placement = "bottom";
-      element.dataset.title = skillData[tag].type + " <a target='_blank' href='" + skillData[tag].url + "'><i class='fa fa-link'></i></a>";
+      element.dataset.title = skillData[tag].type + " <a target='_blank' rel='noopener' href='" + skillData[tag].url + "'><i class='fa fa-link'></i></a>";
 
       var levelClass = '';
       if (skillData[tag].level < 33) {
@@ -98,12 +99,12 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var doc = docsData.length; doc--;) {
-      constructor += '<div class="col-xs-12 col-sm-6 col-md-4 m-b-3"><div class="card card-block doc-card">';
+      constructor += '<div class="col-12 col-sm-6 col-md-4 mb-4"><div class="card card-block doc-card">';
       constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
-      constructor += '<p class="card-text text-muted m-b-0">/' + docsData[doc].type + ', ' + moment(docsData[doc].date).format('Do MMM YYYY') + '/</p>';
+      constructor += '<p class="card-text text-muted mb-0">/' + docsData[doc].type + ', ' + moment(docsData[doc].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + docsData[doc].author + '</p>';
-      constructor += '<p class="card-text text-xs-left">' + docsData[doc].content + '</p>';
-      constructor += '<div><a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank">' + docsData[doc].action + '</a></div>';
+      constructor += '<p class="card-text text-left">' + docsData[doc].content + '</p>';
+      constructor += '<div><a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank" rel="noopener">' + docsData[doc].action + '</a></div>';
       constructor += '</div></div>';
     }
 
@@ -116,13 +117,13 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var p = projectsData.length; p--;) {
-      constructor += '<div class="col-xs-12 col-sm-6 m-b-3">';
+      constructor += '<div class="col-12 col-sm-6 mb-4">';
       constructor += '<img class="card-img-top project-card-image" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '">';
       constructor += '<div class="card card-block project-card">';
       constructor += '<h4 class="card-title">' + projectsData[p].title + '</h4>';
-      constructor += '<p class="card-text text-muted m-b-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
+      constructor += '<p class="card-text text-muted mb-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
-      constructor += '<p class="card-text text-xs-left">' + projectsData[p].content + '</p>';
+      constructor += '<p class="card-text text-left">' + projectsData[p].content + '</p>';
 
       //CTA wrapper for flex columns
       constructor += '<div>';
@@ -159,14 +160,14 @@ $(document).ready(function() {
         //Create CTAs for each button
         //Only add target blank if not image and video
         if (projectsData[p].buttons[i].type == 'videos') {
-          constructor += '<a href="' + projectsData[p].buttons[i].video_urls[0] + '" data-toggle="lightbox" class="btn btn-primary m-r-1"';
+          constructor += '<a href="' + projectsData[p].buttons[i].video_urls[0] + '" data-toggle="lightbox" class="btn btn-primary mr-1"';
           constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
         } else if (projectsData[p].buttons[i].type == 'images') {
-          constructor += '<a href="' + projectsData[p].buttons[i].image_urls[0] + '" data-toggle="lightbox" class="btn btn-primary m-r-1"';
+          constructor += '<a href="' + projectsData[p].buttons[i].image_urls[0] + '" data-toggle="lightbox" class="btn btn-primary mr-1"';
           constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
         } else {
-          constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary m-r-1"';
-          constructor += 'target="_blank">';
+          constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary mr-1"';
+          constructor += 'target="_blank" rel="noopener">';
         }
 
         //Check if the button will have text or it will be a standalone icon

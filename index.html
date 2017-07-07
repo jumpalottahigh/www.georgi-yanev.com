@@ -48,63 +48,66 @@
 <body>
   <!-- TOP MENU -->
   <header>
-    <nav class="navbar navbar-dark bg-primary p-y-1">
-      <ul class="nav navbar-nav row">
-        <li class="nav-item col-xs-4 col-sm-1 logo-order">
-          <a class="navbar-brand logo" href="#">
-            <img src="assets/img/logo.png" alt="Georgi Yanev">
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html"><i class="fa fa-code-fork"></i> Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon™"><i class="fa fa-suitcase"></i> Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="docs.html"><i class="fa fa-book"></i> Docs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="http://blog.georgiyanev.me"><i class="fa fa-paragraph"></i> Blog</a>
-        </li>
-      </ul>
-      <h5 class="moto m-b-0 font-italic">
-        Analyze. Execute. Verify
-      </h5>
-      <span id="easter-egg-score">Easter Egg Score: 0/1</span>
+    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-primary">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="assets/img/logo.png" alt="Georgi Yanev">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html"><i class="fa fa-code-fork"></i> Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Coming soon™"><i class="fa fa-suitcase"></i> Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="docs.html"><i class="fa fa-book"></i> Docs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://blog.georgiyanev.me"><i class="fa fa-paragraph"></i> Blog</a>
+          </li>
+        </ul>
+        <h5 class="moto mb-0 font-italic">
+          Analyze. Execute. Verify
+        </h5>
+        <span id="easter-egg-score">Easter Egg Score: 0/1</span>
+      </div>
     </nav>
   </header>
 
   <!-- SKILL TAGS -->
-  <section id="skill-tags" class="p-y-3">
-    <div class="container text-xs-center">
+  <section id="skill-tags" class="py-5">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <h2 class="text-primary">Skill Tags</h2>
           <p class="text-muted">A pool of my skills and the technologies I love using.</p>
-          <button data-filter-value="Language" class="btn btn-info btn-tag-filter m-b-1">Languages</button>
-          <button data-filter-value="Framework" class="btn btn-success btn-tag-filter m-b-1">Frameworks</button>
-          <button data-filter-value="IDE/Code Editor" class="btn btn-warning btn-tag-filter m-b-1">IDEs/Code editors</button>
-          <div class="col-xs-12">
-            <input id="customFilter" class="form-control col-sm-12 col-md-6 col-md-offset-3 m-b-1" type="text" placeholder="find a skill">
+          <button data-filter-value="Language" class="btn btn-info btn-tag-filter mb-3">Languages</button>
+          <button data-filter-value="Framework" class="btn btn-success btn-tag-filter mb-3">Frameworks</button>
+          <button data-filter-value="IDE/Code Editor" class="btn btn-warning btn-tag-filter mb-3">IDEs/Code editors</button>
+          <div class="col-12">
+            <input id="customFilter" class="form-control col-sm-12 col-md-6 col-md-offset-3 mb-3" type="text" placeholder="find a skill">
           </div>
           <div class="row">
-            <p id="outputSkillTags" class="col-xs-12 lead text-primary"></p>
-            <p class="col-xs-12 text-center loader">
+            <p id="outputSkillTags" class="col-12 lead text-primary"></p>
+            <p class="col-12 text-center loader">
               <i class="fa fa-spinner fa-pulse fa-3x fa-fw text-primary"></i>
               <span class="sr-only">Loading...</span>
             </p>
           </div>
         </div>
       </div>
-      <div class="row text-xs-center m-t-1">
-        <div class="col-xs-12">
+      <div class="row text-center mt-3">
+        <div class="col-12">
           <h4 class="text-success">Currently learning:</h4>
-          <p class="text-primary m-b-0">
-            <a href="https://home-assistant.io" target="_blank" rel="noopener">Home Assistant</a>
+          <p class="text-primary mb-0">
+            <a href="https://home-assistant.io" target="_blank" rel="noopener">Home Assistant, React</a>
           </p>
         </div>
       </div>
@@ -113,23 +116,26 @@
   <!-- END SKILL TAGS -->
 
   <!-- ABOUT & CONTACTS -->
-  <section id="about" class="p-y-3 about bg-gray">
-    <div class="container text-xs-center">
+  <section id="about" class="py-5 about bg-gray">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <h2 class="text-primary">About &amp; Contacts</h2>
-          <img class="avatar m-y-1" src="https://avatars3.githubusercontent.com/u/4155121?v=3&s=460" alt="Georgi Yanev Github avatar">
-          <p class="lead m-b-0">Georgi Yanev</p>
-          <p class="m-b-0">Father, Software Engineer,</p>
-          <p class="m-b-0">Web Developer at <a href="https://www.f-secure.com/" target="_blank">F-Secure</a></p>
+          <img class="avatar my-3" src="https://avatars3.githubusercontent.com/u/4155121?v=3&s=460" alt="Georgi Yanev Github avatar">
+          <p class="lead mb-0">Georgi Yanev</p>
+          <p class="mb-0">Father, Software Engineer,</p>
+          <p class="mb-0">Web Developer at <a href="https://www.f-secure.com/" target="_blank">F-Secure</a></p>
           <p><i class="fa fa-map-marker"></i> Helsinki, Finland</p>
           <p class="social">
             <a href="https://github.com/jumpalottahigh/" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.twitter.com/jumpalottahigh/" target="_blank"><i class="fa fa-twitter m-x-1"></i></a>
+            <a href="https://www.twitter.com/jumpalottahigh/" target="_blank"><i class="fa fa-twitter mx-3"></i></a>
             <a href="https://www.linkedin.com/in/yanevgeorgi/" target="_blank"><i class="fa fa-linkedin"></i></a>
           </p>
           <p>
             <a href="https://github.com/jumpalottahigh/" target="_blank"><i class="fa fa-link"></i> https://github.com/jumpalottahigh</a>
+          </p>
+          <p>
+            Create performant and secure systems and apps. Drive adoption of modern technologies.
           </p>
         </div>
       </div>
@@ -138,52 +144,52 @@
   <!-- END ABOUT & CONTACTS -->
 
   <!-- CV SECTION -->
-  <section id="CV" class="p-y-3">
+  <section id="CV" class="py-5">
     <div class="container">
       <!-- SKILLS -->
       <div class="row">
-        <h2 class="col-xs-12 m-b-1 text-primary text-xs-center">Resume</h2>
+        <h2 class="col-12 mb-1 text-primary text-center">Resume</h2>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted text-uppercase">
+        <div class="col-3 text-muted text-uppercase">
           Skills
         </div>
-        <div id="outputResumeSkills" class="col-xs-9"></div>
+        <div id="outputResumeSkills" class="col-9"></div>
       </div>
       <!-- END SKILLS -->
-      <hr class="m-b-2">
+      <hr class="mb-4">
       <!-- EDUCATION -->
       <div class="row">
-        <div class="col-xs-3 text-muted text-uppercase">
+        <div class="col-3 text-muted text-uppercase">
           Education
         </div>
-        <div class="col-xs-9">
+        <div class="col-9">
           <div class="row">
-            <div class="col-xs-9">
+            <div class="col-9">
               <h6 class="text-primary">Bachelors degree in Information Technology</h6>
               <p>Helsinki Metropolia University of Applied Sciences</p>
             </div>
-            <div class="col-xs-3 text-xs-right">
+            <div class="col-3 text-right">
               <h6 class="text-muted">2013-2016</h6>
             </div>
-            <div class="col-xs-9">
+            <div class="col-9">
               <h6 class="text-primary">Bachelors degree in Economy (incomplete)</h6>
               <p>Plovdiv University "Paisii Hilendarski"</p>
             </div>
-            <div class="col-xs-3 text-xs-right">
+            <div class="col-3 text-right">
               <h6 class="text-muted">2004-2007</h6>
             </div>
           </div>
         </div>
       </div>
       <!-- END EDUCATION -->
-      <hr class="m-b-2">
+      <hr class="mb-4">
       <!-- EXPERIENCE -->
       <div class="row">
-        <div class="col-xs-3 text-muted text-uppercase">
+        <div class="col-3 text-muted text-uppercase">
           Experience
         </div>
-        <ul id="outputResumeExperience" class="col-xs-9 list-bullets-none"></ul>
+        <ul id="outputResumeExperience" class="col-9 list-bullets-none"></ul>
       </div>
       <!-- END EXPERIENCE -->
     </div>
@@ -191,15 +197,15 @@
   <!-- END CV SECTION -->
 
   <!-- INTERESTS SECTION -->
-  <section class="p-y-3 bg-gray">
-    <div class="container text-xs-center">
+  <section class="py-5 bg-gray">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <h2 class="text-primary">Interests</h2>
           <p>I spend my free time with my son, reading code, watching DIY videos and tinkering with code and hardware. My current major hobby project is Home Assistant based home automation system - <a href="https://github.com/jumpalottahigh/YAR-Home-Assistant-Configuration"
                 target="_blank" rel="noopener">YAR (Github repo)</a>.</p>
           <p>Other hobbies include:</p>
-          <ul class="col-12 col-sm-6 offset-sm-3 text-xs-left">
+          <ul class="col-12 col-sm-6 offset-sm-3 text-left">
             <li>Gardening</li>
             <li>DIY home improvements</li>
           </ul>
@@ -210,10 +216,10 @@
   <!-- END INTERESTS SECTION -->
 
   <!-- EVENTS SECTION -->
-  <section id="events" class="p-y-3">
-    <div class="container text-xs-center">
+  <section id="events" class="py-5">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <h2 class="text-primary">Events and Participations</h2>
           <ul class="list-bullets-none">
             <li>Junction Hackathon - Nov 2016 - Helsinki, Finland<a href="http://hackjunction.com/" target="_blank"><i class="fa fa-link"></i></a></li>
@@ -228,43 +234,43 @@
   <!-- END EVENTS SECTION -->
 
   <!-- HOBBIES SECTION -->
-  <section class="p-y-3 bg-gray">
-    <div class="container text-xs-left">
+  <section class="py-5 bg-gray">
+    <div class="container">
       <div class="row">
-        <h2 class="col-xs-12 text-primary text-xs-center">Hobbies and Fun</h2>
+        <h2 class="col-12 text-primary text-center">Hobbies and Fun</h2>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Family time
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Spending time with Sofi and little Anton <i class="fa fa-heart"></i></li>
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Coding
           </p>
           <p class="font-smaller">
             /outside of work/
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Working on my smart home automation system based on Home Assistant</li>
           <li>Working on OSS (Open Source Software) projects</li>
           <li>Reading code and browsing GitHub repos</li>
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Hardware fun
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Raspberry PI</li>
           <li>Arduino</li>
           <li>Home automation systems</li>
@@ -272,15 +278,15 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Gaming
           </p>
           <p class="font-smaller">
             /whenever I actully have time.../
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Heroes of the Storm</li>
           <li>Overwatch</li>
           <li>Hearthstone</li>
@@ -289,15 +295,15 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Youtube
           </p>
           <p class="font-smaller">
             /channels I follow/
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Linus Tech Tips</li>
           <li>BRUH Automation</li>
           <li>Andreas Spiess</li>
@@ -317,12 +323,12 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Watching conferen&shy;ces
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Google I/O (2013, 2015, 2016, 2017)</li>
           <li>Microsoft Build (2016, 2017)</li>
           <li>Apple WWDC (2015, 2016, 2017)</li>
@@ -330,15 +336,15 @@
         </ul>
       </div>
       <div class="row">
-        <div class="col-xs-3 text-muted">
-          <p class="text-uppercase m-b-0">
+        <div class="col-3 text-muted">
+          <p class="text-uppercase mb-0">
             Tutorials and courses
           </p>
           <p class="font-smaller">
             /pretty much all the time/
           </p>
         </div>
-        <ul class="col-xs-9 list-bullets-none">
+        <ul class="col-9 list-bullets-none">
           <li>Taking online courses</li>
           <li>Watching tutorials</li>
         </ul>
@@ -348,10 +354,10 @@
   <!-- END HOBBIES SECTION -->
 
   <!-- FOOTER -->
-  <footer class="p-y-3 bg-primary">
-    <div class="container text-xs-center">
+  <footer class="py-5 bg-primary text-white">
+    <div class="container text-center">
       <div class="row">
-        <div class="col-xs-12">
+        <div class="col-12">
           <h5>Copyright &copy; 2013-2017 Georgi Yanev &amp; Sofia Lindberg</h4>
           <h5><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> for little Anton.</h4>
         </div>
