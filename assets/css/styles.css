@@ -149,3 +149,17 @@ img.avatar {
 .popover-content {
   font-size: 10px;
 }
+
+h2:before {
+  content: "{";
+  color: #0275d8;
+  padding-right: .3em;
+  margin-left: -1.5em;
+}
+
+h2:after {
+  content: "}";
+  color: #0275d8;
+  padding-left: .3em;
+  margin-right: -1.5em;
+}
