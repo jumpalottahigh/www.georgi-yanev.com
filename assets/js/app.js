@@ -117,10 +117,14 @@ $(document).ready(function() {
 
     //Loop in descending order
     for (var p = projectsData.length; p--;) {
-      constructor += '<div class="col-12 col-sm-6 mb-4">';
-      constructor += '<img class="card-img-top project-card-image" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '">';
-      constructor += '<div class="card card-block project-card">';
-      constructor += '<h4 class="card-title">' + projectsData[p].title + '</h4>';
+      constructor += '<div class="col-12 mb-4">';
+      if (projectsData[p].legacy) {
+        constructor += '<div class="row py-4 horizontal-card legacy-project">';
+      } else {
+        constructor += '<div class="row py-4 horizontal-card">';
+      }
+      constructor += '<div class="col-5"><img class="project-thumbnail" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '"></div>';
+      constructor += '<div class="col-7"><h4 class="card-title">' + projectsData[p].title + '</h4>';
       constructor += '<p class="card-text text-muted mb-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
       constructor += '<p class="card-text text-left">' + projectsData[p].content + '</p>';
@@ -177,7 +181,7 @@ $(document).ready(function() {
         constructor += icon + lightbox_constructor + '</a>';
 
       }
-      constructor += '</div></div></div>';
+      constructor += '</div></div></div></div>';
     }
 
     $('#outputProjects').html(constructor);
