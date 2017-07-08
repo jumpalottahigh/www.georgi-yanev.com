@@ -120,13 +120,13 @@ $(document).ready(function() {
       constructor += '<div class="col-12 mb-4">';
       if (projectsData[p].legacy) {
         constructor += '<div class="row py-4 horizontal-card legacy-project">';
-        constructor += '<div class="col-12 text-right"><span class="badge badge-pill badge-warning">Legacy / Completed</span></div>';
+        constructor += '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-warning">Legacy/Completed</span></div>';
       } else {
         constructor += '<div class="row py-4 horizontal-card">';
-        constructor += '<div class="col-12 text-right"><span class="badge badge-pill badge-success">Current / On going</span></div>';
+        constructor += '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-success">Current / On going</span></div>';
       }
-      constructor += '<div class="col-5"><img class="project-thumbnail" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '"></div>';
-      constructor += '<div class="col-7"><h4 class="card-title">' + projectsData[p].title + '</h4>';
+      constructor += '<div class="col-12 col-md-5"><img class="project-thumbnail" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '"></div>';
+      constructor += '<div class="col-12 col-md-7"><h4 class="card-title">' + projectsData[p].title + '</h4>';
       constructor += '<p class="card-text text-muted mb-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
       constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
       constructor += '<p class="card-text text-left">' + projectsData[p].content + '</p>';
