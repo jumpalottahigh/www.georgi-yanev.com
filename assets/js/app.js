@@ -120,8 +120,10 @@ $(document).ready(function() {
       constructor += '<div class="col-12 mb-4">';
       if (projectsData[p].legacy) {
         constructor += '<div class="row py-4 horizontal-card legacy-project">';
+        constructor += '<div class="col-12 text-right"><span class="badge badge-pill badge-warning">Legacy / Completed</span></div>';
       } else {
         constructor += '<div class="row py-4 horizontal-card">';
+        constructor += '<div class="col-12 text-right"><span class="badge badge-pill badge-success">Current / On going</span></div>';
       }
       constructor += '<div class="col-5"><img class="project-thumbnail" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '"></div>';
       constructor += '<div class="col-7"><h4 class="card-title">' + projectsData[p].title + '</h4>';
