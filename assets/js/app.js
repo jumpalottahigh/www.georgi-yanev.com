@@ -16,9 +16,12 @@ $(document).ready(function() {
   //Docs and publications
   var fbRef_Docs = firebase.database().ref('docs');
   var docsData = '';
-  //Projetcs
+  //Projects
   var fbRef_Projects = firebase.database().ref('projects');
   var projectsData = '';
+  //Portfolio
+  var fbRef_Portfolio = firebase.database().ref('portfolio');
+  var portfolioData = '';
 
   //Init lightbox
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
@@ -189,6 +192,23 @@ $(document).ready(function() {
     $('#outputProjects').html(constructor);
   };
 
+  //Populate portfolio
+  var populatePortfolio = function() {
+    var constructor = '';
+
+    //Loop in descending order
+    for (var p = portfolioData.length; p--;) {
+      constructor += '<div class="col-12 mb-4">';
+      constructor += '<div class="row py-4 horizontal-card">';
+      constructor += '<div class="col-12 col-md-3"><i aria-hidden="true" class="display-1 ' + portfolioData[p].icon + '"></i></div>';
+      constructor += '<div class="col-12 col-md-9"><h4 class="card-title text-left">' + portfolioData[p].title + '</h4>';
+      constructor += '<p class="card-text text-left">' + portfolioData[p].content + '</p>';
+      constructor += '</div></div></div>';
+    }
+
+    $('#outputPortfolio').html(constructor);
+  };
+
   //Get CV and index page data from Firebase
   fbRef_skillData.on('value', function(snap) {
     skillData = snap.val();
@@ -240,6 +260,18 @@ $(document).ready(function() {
       //Remove loader
       $('.loader').remove();
       populateProjects();
+    }
+  });
+
+  //Get portfolio data from Firebase
+  fbRef_Portfolio.on('value', function(snap) {
+    portfolioData = snap.val();
+
+    //Populate UI with data
+    if ($('#outputPortfolio')) {
+      //Remove loader
+      $('.loader').remove();
+      populatePortfolio();
     }
   });
 
