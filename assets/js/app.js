@@ -386,14 +386,14 @@ $(document).ready(function() {
         PNotify.prototype.options.delay = 4000;
         new PNotify({
           title: 'Achievement earned!',
-          text: 'You found a secret! <br> Score: 1/1',
+          text: 'You found a secret!<br> Score: 1/2',
           type: 'success',
           icon: false
         });
       });
 
       //Update achivement score
-      $('#easter-egg-score').text("Easter Egg Score: 1/1");
+      $('#easter-egg-score').text("Easter Egg Score: 1/2");
       $('#easter-egg-score').addClass("text-success");
 
       //reset click count
@@ -401,6 +401,38 @@ $(document).ready(function() {
     } else {
       clickCount++;
       localStorage.setItem("GY_egg", clickCount);
+    }
+  });
+
+  // Skill tags clicked > 10 easter egg
+  $('body').on('click', '.skillTag', function() {
+    var clickCount = localStorage.getItem("GY_tag_click") || 0;
+
+    if (clickCount == 10) {
+      //show easter egg -> flip page
+      $('body').addClass("secret-shake").delay(1500).queue(function(next) {
+        $(this).removeClass("secret-shake");
+        next();
+        //Set toast theme and delay and show achievement toast
+        PNotify.prototype.options.styling = "bootstrap3";
+        PNotify.prototype.options.delay = 4000;
+        new PNotify({
+          title: 'Achievement earned!',
+          text: 'More than 10 skill tags clicked!<br> Score: 1/2',
+          type: 'success',
+          icon: false
+        });
+      });
+
+      //Update achivement score
+      $('#easter-egg-score').text("Easter Egg Score: 1/2");
+      $('#easter-egg-score').addClass("text-success");
+
+      //reset click count
+      localStorage.setItem("GY_tag_click", 0);
+    } else {
+      clickCount++;
+      localStorage.setItem("GY_tag_click", clickCount);
     }
   });
 });
