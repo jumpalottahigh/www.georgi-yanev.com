@@ -7,7 +7,12 @@
       "**/node_modules/**",
       "CNAME",
       "database.rules.json",
-      "LICENSE"
+      "LICENSE",
+      ".vscode/**",
+      ".firebaserc",
+      "README.md",
+      ".git/**",
+      ".gitignore"
     ]
   }
 }
