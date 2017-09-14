@@ -1,4 +1,4 @@
-# www.georgiyanev.me
+# www.georgi-yanev.com
 
 This holds the source code for my portfolio site.
 Stack: Bootstrap 4 with Flexbox, Firebase for the strings, Custom made spaghetti rendering with JavaScript.
@@ -7,8 +7,8 @@ Stack: Bootstrap 4 with Flexbox, Firebase for the strings, Custom made spaghetti
 
 ## Social Links
 
-- [www.georgi-yanev.com](http://www.georgi-yanev.com)
-- [blog.georgiyanev.me](http://blog.georgiyanev.me)
+- [www.georgi-yanev.com](https://www.georgi-yanev.com)
+- [blog.georgi-yanev.com](https://blog.georgi-yanev.com)
 - [Facebook](https://www.facebook.com/jumpalottahigh/)
 - [Twitter](https://www.twitter.com/jumpalottahigh/)
 - [LinkedIn](https://www.linkedin.com/in/yanevgeorgi/)
