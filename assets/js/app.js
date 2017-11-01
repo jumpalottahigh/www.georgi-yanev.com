@@ -1,39 +1,36 @@
 $(document).ready(function() {
-
   //Init Firebase
   var config = {
-    apiKey: "AIzaSyD5vdx8pXmflOuMBh3Ddg7rWrf_TU0lFFg",
-    authDomain: "project-7617554044683473970.firebaseapp.com",
-    databaseURL: "https://project-7617554044683473970.firebaseio.com",
-    storageBucket: "",
-  };
-  firebase.initializeApp(config);
+    apiKey: 'AIzaSyD5vdx8pXmflOuMBh3Ddg7rWrf_TU0lFFg',
+    authDomain: 'project-7617554044683473970.firebaseapp.com',
+    databaseURL: 'https://project-7617554044683473970.firebaseio.com',
+    storageBucket: ''
+  }
+  firebase.initializeApp(config)
 
   //Get DB hooks
   //Skills and CV data
-  var fbRef_skillData = firebase.database().ref('skillData');
-  var skillData = '';
+  var fbRef_skillData = firebase.database().ref('skillData')
+  var skillData = ''
   //Docs and publications
-  var fbRef_Docs = firebase.database().ref('docs');
-  var docsData = '';
+  var fbRef_Docs = firebase.database().ref('docs')
+  var docsData = ''
   //Projects
-  var fbRef_Projects = firebase.database().ref('projects');
-  var projectsData = '';
+  var fbRef_Projects = firebase.database().ref('projects')
+  var projectsData = ''
   //Portfolio
-  var fbRef_Portfolio = firebase.database().ref('portfolio');
-  var portfolioData = '';
+  var fbRef_Portfolio = firebase.database().ref('portfolio')
+  var portfolioData = ''
 
   //Init lightbox
   $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox(
-      {
-        leftArrow: '<span style="text-decoration: none">&lt;</span>',
-        rightArrow: '<span style="text-decoration: none">&gt;</span>',
-        alwaysShowClose: false
-      }
-    );
-  });
+    event.preventDefault()
+    $(this).ekkoLightbox({
+      leftArrow: '<span style="text-decoration: none">&lt;</span>',
+      rightArrow: '<span style="text-decoration: none">&gt;</span>',
+      alwaysShowClose: false
+    })
+  })
 
   //
   //ANALYTICS
@@ -45,394 +42,499 @@ $(document).ready(function() {
       eventAction: 'click',
       eventCategory: 'Skill Tag Filter Click',
       eventLabel: 'Skill Tag Interaction'
-    });
-  };
+    })
+  }
 
   //Get all skill tags
   var populateSkillTags = function() {
     //Reset HTML for a complete refresh
-    $('#outputSkillTags').html('');
+    $('#outputSkillTags').html('')
     //Itirate the tags
     for (var tag in skillData) {
-      var rotate = 0;
-      var zindex = 0;
-      var transformString = '';
+      var rotate = 0
+      var zindex = 0
+      var transformString = ''
 
       //Create tag nodes
-      var element = document.createElement("a");
-      var elText = document.createTextNode(skillData[tag].name);
-      element.appendChild(elText);
+      var element = document.createElement('a')
+      var elText = document.createTextNode(skillData[tag].name)
+      element.appendChild(elText)
       //Set up attributes
-      element.setAttribute("class", "skillTag");
-      element.setAttribute("tabindex", "0");
-      //Add pop overs
-      element.dataset.type = skillData[tag].type;
-      element.dataset.container = "body";
-      element.dataset.toggle = "popover";
-      element.dataset.trigger = "focus";
-      element.dataset.placement = "bottom";
-      element.dataset.title = skillData[tag].type + " <a target='_blank' rel='noopener' href='" + skillData[tag].url + "'><i class='fa fa-link'></i></a>";
-
-      var levelClass = '';
-      if (skillData[tag].level < 33) {
-        levelClass = 'bg-danger';
-      } else if (skillData[tag].level < 66) {
-        levelClass = 'bg-warning';
+      element.setAttribute('class', 'skillTag')
+      element.setAttribute('tabindex', '0')
+      if (skillData[tag].level > 66) {
+        element.style.fontSize = skillData[tag].level * 0.25 + 'px'
+      } else if (skillData[tag].level < 66 && skillData[tag].level > 33) {
+        element.style.fontSize = skillData[tag].level * 0.33 + 'px'
       } else {
-        levelClass = 'bg-success';
+        element.style.fontSize = skillData[tag].level * 0.45 + 'px'
       }
-      element.dataset.content = "<div class='progress'><div class='progress-bar " + levelClass + "' role='progressbar' style='width: " + skillData[tag].level + "%' aria-valuenow='" + skillData[tag].level + "' aria-valuemin='0' aria-valuemax='100'>" + skillData[tag].level + "%</div></div>";
-      element.dataset.content += "XP: " + skillData[tag].experience;
+      //Add pop overs
+      element.dataset.type = skillData[tag].type
+      element.dataset.container = 'body'
+      element.dataset.toggle = 'popover'
+      element.dataset.trigger = 'focus'
+      element.dataset.placement = 'bottom'
+      element.dataset.title =
+        skillData[tag].type +
+        " <a target='_blank' rel='noopener' href='" +
+        skillData[tag].url +
+        "'><i class='fa fa-link'></i></a>"
+
+      var levelClass = ''
+      if (skillData[tag].level < 33) {
+        levelClass = 'bg-danger'
+      } else if (skillData[tag].level < 66) {
+        levelClass = 'bg-warning'
+      } else {
+        levelClass = 'bg-success'
+      }
+      element.dataset.content =
+        "<div class='progress'><div class='progress-bar " +
+        levelClass +
+        "' role='progressbar' style='width: " +
+        skillData[tag].level +
+        "%' aria-valuenow='" +
+        skillData[tag].level +
+        "' aria-valuemin='0' aria-valuemax='100'>" +
+        skillData[tag].level +
+        '%</div></div>'
+      element.dataset.content += 'XP: ' + skillData[tag].experience
 
       //Randomly rotate left or right
-      Math.random() > 0.5 ? rotate = Math.random() * 10 : rotate = Math.random() * (-10);
-      zindex = Math.floor(Math.random() * 100);
-      transformString = "transform:rotateZ(" + rotate + "deg);-webkit-transform:rotateZ(" + rotate + "deg);-ms-transform:rotateZ(" + rotate + "deg);z-index:" + zindex;
-      element.setAttribute("style", transformString);
+      Math.random() > 0.5
+        ? (rotate = Math.random() * 10)
+        : (rotate = Math.random() * -10)
+      zindex = Math.floor(Math.random() * 100)
+      transformString = 'rotateZ(' + rotate + 'deg)'
+      element.style.transform = transformString
+      element.style.zIndex = zindex
 
       //Append the element to skill pool
-      $('#outputSkillTags').append(element);
+      $('#outputSkillTags').append(element)
     }
-
-  };
+  }
 
   //Populate docs
   var populateDocs = function() {
-    var constructor = '';
+    var constructor = ''
 
     //Loop in descending order
-    for (var doc = docsData.length; doc--;) {
-      constructor += '<div class="col-12 col-sm-6 col-md-4 mb-4"><div class="card card-block doc-card">';
-      constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>';
-      constructor += '<p class="card-text text-muted mb-0">/' + docsData[doc].type + ', ' + moment(docsData[doc].date).format('Do MMM YYYY') + '/</p>';
-      constructor += '<p class="card-text text-muted">' + docsData[doc].author + '</p>';
-      constructor += '<p class="card-text text-left">' + docsData[doc].content + '</p>';
-      constructor += '<div><a href="' + docsData[doc].url + '" class="btn btn-primary" target="_blank" rel="noopener">' + docsData[doc].action + '</a></div>';
-      constructor += '</div></div>';
+    for (var doc = docsData.length; doc--; ) {
+      constructor +=
+        '<div class="col-12 col-sm-6 col-md-4 mb-4"><div class="card card-block doc-card">'
+      constructor += '<h4 class="card-title">' + docsData[doc].title + '</h4>'
+      constructor +=
+        '<p class="card-text text-muted mb-0">/' +
+        docsData[doc].type +
+        ', ' +
+        moment(docsData[doc].date).format('Do MMM YYYY') +
+        '/</p>'
+      constructor +=
+        '<p class="card-text text-muted">' + docsData[doc].author + '</p>'
+      constructor +=
+        '<p class="card-text text-left">' + docsData[doc].content + '</p>'
+      constructor +=
+        '<div><a href="' +
+        docsData[doc].url +
+        '" class="btn btn-primary" target="_blank" rel="noopener">' +
+        docsData[doc].action +
+        '</a></div>'
+      constructor += '</div></div>'
     }
 
-    $('#outputDocs').html(constructor);
-  };
+    $('#outputDocs').html(constructor)
+  }
 
   //Populate projects
   var populateProjects = function() {
-    var constructor = '';
+    var constructor = ''
 
     //Loop in descending order
-    for (var p = projectsData.length; p--;) {
-      constructor += '<div class="col-12 mb-4">';
+    for (var p = projectsData.length; p--; ) {
+      constructor += '<div class="col-12 mb-4">'
       if (projectsData[p].legacy) {
-        constructor += '<div class="row py-4 horizontal-card legacy-project">';
-        constructor += '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-warning">Legacy/Completed</span></div>';
+        constructor += '<div class="row py-4 horizontal-card legacy-project">'
+        constructor +=
+          '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-warning">Legacy/Completed</span></div>'
       } else {
-        constructor += '<div class="row py-4 horizontal-card">';
-        constructor += '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-success">Current / On going</span></div>';
+        constructor += '<div class="row py-4 horizontal-card">'
+        constructor +=
+          '<div class="col-12 text-right"><span class="col-12 col-sm-3 col-md-2 badge badge-pill badge-success">Current / On going</span></div>'
       }
-      constructor += '<div class="col-12 col-md-5"><img class="project-thumbnail" src="' + projectsData[p].img + '" alt="' + projectsData[p].title + '"></div>';
-      constructor += '<div class="col-12 col-md-7"><h4 class="card-title">' + projectsData[p].title + '</h4>';
-      constructor += '<p class="card-text text-muted mb-0">/' + projectsData[p].type + ', ' + moment(projectsData[p].date).format('Do MMM YYYY') + '/</p>';
-      constructor += '<p class="card-text text-muted">' + projectsData[p].author + '</p>';
-      constructor += '<p class="card-text text-left">' + projectsData[p].content + '</p>';
+      constructor +=
+        '<div class="col-12 col-md-5"><img class="project-thumbnail" src="' +
+        projectsData[p].img +
+        '" alt="' +
+        projectsData[p].title +
+        '"></div>'
+      constructor +=
+        '<div class="col-12 col-md-7"><h4 class="card-title">' +
+        projectsData[p].title +
+        '</h4>'
+      constructor +=
+        '<p class="card-text text-muted mb-0">/' +
+        projectsData[p].type +
+        ', ' +
+        moment(projectsData[p].date).format('Do MMM YYYY') +
+        '/</p>'
+      constructor +=
+        '<p class="card-text text-muted">' + projectsData[p].author + '</p>'
+      constructor +=
+        '<p class="card-text text-left">' + projectsData[p].content + '</p>'
 
       //CTA wrapper for flex columns
-      constructor += '<div>';
+      constructor += '<div>'
 
       //Loop all actions if card has more actions
       for (var i in projectsData[p].buttons) {
         //Add correct icon based on button type
-        var icon = '';
-        var lightbox_constructor = '';
+        var icon = ''
+        var lightbox_constructor = ''
         if (projectsData[p].buttons[i].type == 'launch') {
-          icon = '<i class="fa fa-external-link"></i>';
+          icon = '<i class="fa fa-external-link"></i>'
         } else if (projectsData[p].buttons[i].type == 'download') {
-          icon = '<i class="fa fa-download"></i>';
+          icon = '<i class="fa fa-download"></i>'
         } else if (projectsData[p].buttons[i].type == 'github') {
-          icon = '<i class="fa fa-github"></i>';
+          icon = '<i class="fa fa-github"></i>'
         } else if (projectsData[p].buttons[i].type == 'videos') {
-          icon = '<i class="fa fa-video-camera"></i>';
+          icon = '<i class="fa fa-video-camera"></i>'
           //Loop and append also img urls
           //Skip first img as its included in the main link
-          for (var vid = 1; vid < projectsData[p].buttons[i].video_urls.length; vid++) {
-            lightbox_constructor += '<a href="' + projectsData[p].buttons[i].video_urls[vid] + '" data-toggle="lightbox" data-gallery="' + projectsData[p].buttons[i].set_name + '" class="lightbox-item"></a>';
+          for (
+            var vid = 1;
+            vid < projectsData[p].buttons[i].video_urls.length;
+            vid++
+          ) {
+            lightbox_constructor +=
+              '<a href="' +
+              projectsData[p].buttons[i].video_urls[vid] +
+              '" data-toggle="lightbox" data-gallery="' +
+              projectsData[p].buttons[i].set_name +
+              '" class="lightbox-item"></a>'
           }
         } else if (projectsData[p].buttons[i].type == 'images') {
-          icon = '<i class="fa fa-picture-o"></i>';
+          icon = '<i class="fa fa-picture-o"></i>'
           //Loop and append also img urls
           //Skip first img as its included in the main link
-          for (var img = 1; img < projectsData[p].buttons[i].image_urls.length; img++) {
-            lightbox_constructor += '<a href="' + projectsData[p].buttons[i].image_urls[img] + '" data-toggle="lightbox" data-gallery="' + projectsData[p].buttons[i].set_name + '" class="lightbox-item"></a>';
+          for (
+            var img = 1;
+            img < projectsData[p].buttons[i].image_urls.length;
+            img++
+          ) {
+            lightbox_constructor +=
+              '<a href="' +
+              projectsData[p].buttons[i].image_urls[img] +
+              '" data-toggle="lightbox" data-gallery="' +
+              projectsData[p].buttons[i].set_name +
+              '" class="lightbox-item"></a>'
           }
         } else if (projectsData[p].buttons[i].type == 'docs') {
-          icon = '<i class="fa fa-file-text"></i>';
+          icon = '<i class="fa fa-file-text"></i>'
         }
 
         //Create CTAs for each button
         //Only add target blank if not image and video
         if (projectsData[p].buttons[i].type == 'videos') {
-          constructor += '<a href="' + projectsData[p].buttons[i].video_urls[0] + '" data-toggle="lightbox" class="btn btn-primary mr-1"';
-          constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
+          constructor +=
+            '<a href="' +
+            projectsData[p].buttons[i].video_urls[0] +
+            '" data-toggle="lightbox" class="btn btn-primary mr-1"'
+          constructor +=
+            'data-gallery="' + projectsData[p].buttons[i].set_name + '">'
         } else if (projectsData[p].buttons[i].type == 'images') {
-          constructor += '<a href="' + projectsData[p].buttons[i].image_urls[0] + '" data-toggle="lightbox" class="btn btn-primary mr-1"';
-          constructor += 'data-gallery="' + projectsData[p].buttons[i].set_name + '">';
+          constructor +=
+            '<a href="' +
+            projectsData[p].buttons[i].image_urls[0] +
+            '" data-toggle="lightbox" class="btn btn-primary mr-1"'
+          constructor +=
+            'data-gallery="' + projectsData[p].buttons[i].set_name + '">'
         } else {
-          constructor += '<a href="' + projectsData[p].buttons[i].url + '" class="btn btn-primary mr-1"';
-          constructor += 'target="_blank" rel="noopener">';
+          constructor +=
+            '<a href="' +
+            projectsData[p].buttons[i].url +
+            '" class="btn btn-primary mr-1"'
+          constructor += 'target="_blank" rel="noopener">'
         }
 
         //Check if the button will have text or it will be a standalone icon
         if (projectsData[p].buttons[i].text) {
-          constructor += projectsData[p].buttons[i].text + ' ';
+          constructor += projectsData[p].buttons[i].text + ' '
         }
-        constructor += icon + lightbox_constructor + '</a>';
-
+        constructor += icon + lightbox_constructor + '</a>'
       }
-      constructor += '</div></div></div></div>';
+      constructor += '</div></div></div></div>'
     }
 
-    $('#outputProjects').html(constructor);
-  };
+    $('#outputProjects').html(constructor)
+  }
 
   //Populate portfolio
   var populatePortfolio = function() {
-    var constructor = '';
+    var constructor = ''
 
     //Loop in descending order
-    for (var p = portfolioData.length; p--;) {
-      constructor += '<div class="col-12 mb-4">';
-      constructor += '<div class="row py-4 horizontal-card">';
-      constructor += '<div class="col-12 col-md-3"><i aria-hidden="true" class="display-1 ' + portfolioData[p].icon + '"></i></div>';
-      constructor += '<div class="col-12 col-md-9"><h4 class="card-title text-left">' + portfolioData[p].title + '</h4>';
-      constructor += '<p class="card-text text-left">' + portfolioData[p].content + '</p>';
-      constructor += '</div></div></div>';
+    for (var p = portfolioData.length; p--; ) {
+      constructor += '<div class="col-12 mb-4">'
+      constructor += '<div class="row py-4 horizontal-card">'
+      constructor +=
+        '<div class="col-12 col-md-3"><i aria-hidden="true" class="display-1 ' +
+        portfolioData[p].icon +
+        '"></i></div>'
+      constructor +=
+        '<div class="col-12 col-md-9"><h4 class="card-title text-left">' +
+        portfolioData[p].title +
+        '</h4>'
+      constructor +=
+        '<p class="card-text text-left">' + portfolioData[p].content + '</p>'
+      constructor += '</div></div></div>'
     }
 
-    $('#outputPortfolio').html(constructor);
-  };
+    $('#outputPortfolio').html(constructor)
+  }
 
   //Get CV and index page data from Firebase
   fbRef_skillData.on('value', function(snap) {
-    skillData = snap.val();
+    skillData = snap.val()
     //Populate UI elements with data
     //Skill tags section
     if ($('#skill-tags')) {
       //Remove loader
-      $('.loader').remove();
-      populateSkillTags();
+      $('.loader').remove()
+      populateSkillTags()
     }
     //Skills and experience section
     if ($('#CV')) {
-      populateResumeSKills();
-      populateResumeExperience();
+      populateResumeSKills()
+      populateResumeExperience()
     }
 
     //Init tooltips
     $('[data-toggle="tooltip"]').tooltip({
       html: true
-    });
+    })
     //Init popovers
     $('[data-toggle="popover"]').popover({
       html: true
-    });
+    })
     //Make popovers dismissable so less annoying
     $('.popover-dismiss').popover({
       trigger: 'focus'
-    });
-  });
+    })
+  })
 
   //Get docs data from Firebase
   fbRef_Docs.on('value', function(snap) {
-    docsData = snap.val();
+    docsData = snap.val()
 
     if ($('#outputDocs')) {
       //Remove loader
-      $('.loader').remove();
+      $('.loader').remove()
       //Populate UI with data
-      populateDocs();
+      populateDocs()
     }
-  });
+  })
 
   //Get projects data from Firebase
   fbRef_Projects.on('value', function(snap) {
-    projectsData = snap.val();
+    projectsData = snap.val()
 
     //Populate UI with data
     if ($('#outputProjects')) {
       //Remove loader
-      $('.loader').remove();
-      populateProjects();
+      $('.loader').remove()
+      populateProjects()
     }
-  });
+  })
 
   //Get portfolio data from Firebase
   fbRef_Portfolio.on('value', function(snap) {
-    portfolioData = snap.val();
+    portfolioData = snap.val()
 
     //Populate UI with data
     if ($('#outputPortfolio')) {
       //Remove loader
-      $('.loader').remove();
-      populatePortfolio();
+      $('.loader').remove()
+      populatePortfolio()
     }
-  });
-
+  })
 
   //Collect and populate the resume section with the correct skills
   var populateResumeSKills = function() {
-    var itemTypes = [];
-    var constructor = '';
+    var itemTypes = []
+    var constructor = ''
 
     //Itirate all skills and construct all types
     for (var item in skillData) {
       if (itemTypes.indexOf(skillData[item].type) < 0) {
-        itemTypes.push(skillData[item].type);
+        itemTypes.push(skillData[item].type)
       }
     }
 
     //Itirate all types and for each type all items in skills
     for (var i in itemTypes) {
       //Append the type heading
-      constructor += '<h6 class="text-primary">' + itemTypes[i] + '</h6><p>';
-      var firstItem = true;
+      constructor += '<h6 class="text-primary">' + itemTypes[i] + '</h6><p>'
+      var firstItem = true
       for (var j in skillData) {
         //Append all the items that match that type to that sub section
         if (itemTypes[i] == skillData[j].type) {
           //Add commas before all elements except first
           if (!firstItem) {
-            constructor += ', ';
+            constructor += ', '
           }
-          constructor += skillData[j].name;
-          firstItem = false;
+          constructor += skillData[j].name
+          firstItem = false
         }
       }
       //Close the paragraph
-      constructor += '</p>';
+      constructor += '</p>'
     }
 
     //Populate resume skills section
-    $('#outputResumeSkills').html(constructor);
-  };
+    $('#outputResumeSkills').html(constructor)
+  }
 
   //Constucts dynamically the language experience section
   var populateResumeExperience = function() {
-    var constructor = '';
+    var constructor = ''
 
     //Itirate all skills and get the languages and their experience
     for (var item in skillData) {
       if (skillData[item].type == 'Language') {
-        constructor += '<li><span class="text-primary">' + skillData[item].name + '</span>, ';
-        constructor += skillData[item].experience + '</li>';
+        constructor +=
+          '<li><span class="text-primary">' + skillData[item].name + '</span>, '
+        constructor += skillData[item].experience + '</li>'
       }
     }
 
     //Populate resume skills section
-    $('#outputResumeExperience').html(constructor);
-  };
+    $('#outputResumeExperience').html(constructor)
+  }
 
   //Filter skill tags by type
   $('.btn-tag-filter').click(function() {
     //Reset the custom search field
-    $('#customFilter').val('');
-    $('.skillTag').show();
+    $('#customFilter').val('')
+    $('.skillTag').show()
     //Get current filter
-    var filter = $(this).data("filter-value");
+    var filter = $(this).data('filter-value')
     //If same button is pressed twice, restore tags to original state
     if ($('.filter-elevated').data('type') != filter) {
-      $('.skillTag').removeClass("filter-elevated filter-out");
+      $('.skillTag').removeClass('filter-elevated filter-out')
     }
     //Toggle correct filtered tags state
-    $('.skillTag[data-type="' + filter + '"]').toggleClass("filter-elevated");
-    $('.skillTag').not('[data-type="' + filter + '"]').toggleClass("filter-out");
+    $('.skillTag[data-type="' + filter + '"]').toggleClass('filter-elevated')
+    $('.skillTag')
+      .not('[data-type="' + filter + '"]')
+      .toggleClass('filter-out')
 
     //Send GA interaction data
-    skillTagInteractionGA();
-  });
+    skillTagInteractionGA()
+  })
 
   //Custom filter by text
-  $('#customFilter').on('keyup', function (e) {
+  $('#customFilter').on('keyup', function(e) {
     //Get and normalize current value of filter input
-    var currentFilter = $(this).val().toLowerCase();
+    var currentFilter = $(this)
+      .val()
+      .toLowerCase()
     //We have a keypress, hide all skillTags in prep for filtering
-    $('.skillTag').hide().removeClass('filter-out filter-elevated');
+    $('.skillTag')
+      .hide()
+      .removeClass('filter-out filter-elevated')
 
     //Reset the field if user pressed ESC
     if (e.keyCode == 27) {
-      $(this).val('');
-      $('.skillTag').show();
+      $(this).val('')
+      $('.skillTag').show()
     }
 
     //Do some actual filtering based on searched normalized value
     $('.skillTag').each(function(index, item) {
-      if ($(item).text().trim().toLowerCase().indexOf(currentFilter) > -1) {
+      if (
+        $(item)
+          .text()
+          .trim()
+          .toLowerCase()
+          .indexOf(currentFilter) > -1
+      ) {
         //Show items
-        $(item).show();
+        $(item).show()
       }
-    });
-  });
+    })
+  })
 
   //
   //SECRETS
   //
   //Logo easter egg
   $('.logo').click(function() {
-    var clickCount = localStorage.getItem("GY_egg") || 0;
+    var clickCount = localStorage.getItem('GY_egg') || 0
 
     if (clickCount == 3) {
       //show easter egg -> flip page
-      $('body').addClass("secret-flip").delay(3000).queue(function(next) {
-        $(this).removeClass("secret-flip");
-        next();
-        //Set toast theme and delay and show achievement toast
-        PNotify.prototype.options.styling = "bootstrap3";
-        PNotify.prototype.options.delay = 4000;
-        new PNotify({
-          title: 'Achievement earned!',
-          text: 'You found a secret!<br> Score: 1/2',
-          type: 'success',
-          icon: false
-        });
-      });
+      $('body')
+        .addClass('secret-flip')
+        .delay(3000)
+        .queue(function(next) {
+          $(this).removeClass('secret-flip')
+          next()
+          //Set toast theme and delay and show achievement toast
+          PNotify.prototype.options.styling = 'bootstrap3'
+          PNotify.prototype.options.delay = 4000
+          new PNotify({
+            title: 'Achievement earned!',
+            text: 'You found a secret!<br> Score: 1/2',
+            type: 'success',
+            icon: false
+          })
+        })
 
       //Update achivement score
-      $('#easter-egg-score').text("Easter Egg Score: 1/2");
-      $('#easter-egg-score').addClass("text-success");
+      $('#easter-egg-score').text('Easter Egg Score: 1/2')
+      $('#easter-egg-score').addClass('text-success')
 
       //reset click count
-      localStorage.setItem("GY_egg", 0);
+      localStorage.setItem('GY_egg', 0)
     } else {
-      clickCount++;
-      localStorage.setItem("GY_egg", clickCount);
+      clickCount++
+      localStorage.setItem('GY_egg', clickCount)
     }
-  });
+  })
 
   // Skill tags clicked > 10 easter egg
   $('body').on('click', '.skillTag', function() {
-    var clickCount = localStorage.getItem("GY_tag_click") || 0;
+    var clickCount = localStorage.getItem('GY_tag_click') || 0
 
     if (clickCount == 10) {
       //show easter egg -> flip page
-      $('body').addClass("secret-shake").delay(1500).queue(function(next) {
-        $(this).removeClass("secret-shake");
-        next();
-        //Set toast theme and delay and show achievement toast
-        PNotify.prototype.options.styling = "bootstrap3";
-        PNotify.prototype.options.delay = 4000;
-        new PNotify({
-          title: 'Achievement earned!',
-          text: 'More than 10 skill tags clicked!<br> Score: 1/2',
-          type: 'success',
-          icon: false
-        });
-      });
+      $('body')
+        .addClass('secret-shake')
+        .delay(1500)
+        .queue(function(next) {
+          $(this).removeClass('secret-shake')
+          next()
+          //Set toast theme and delay and show achievement toast
+          PNotify.prototype.options.styling = 'bootstrap3'
+          PNotify.prototype.options.delay = 4000
+          new PNotify({
+            title: 'Achievement earned!',
+            text: 'More than 10 skill tags clicked!<br> Score: 1/2',
+            type: 'success',
+            icon: false
+          })
+        })
 
       //Update achivement score
-      $('#easter-egg-score').text("Easter Egg Score: 1/2");
-      $('#easter-egg-score').addClass("text-success");
+      $('#easter-egg-score').text('Easter Egg Score: 1/2')
+      $('#easter-egg-score').addClass('text-success')
 
       //reset click count
-      localStorage.setItem("GY_tag_click", 0);
+      localStorage.setItem('GY_tag_click', 0)
     } else {
-      clickCount++;
-      localStorage.setItem("GY_tag_click", clickCount);
+      clickCount++
+      localStorage.setItem('GY_tag_click', clickCount)
     }
-  });
-});
+  })
+})
