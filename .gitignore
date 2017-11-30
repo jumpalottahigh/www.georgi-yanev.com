@@ -4,6 +4,7 @@ node_modules/
 .tmp
 dist/
 .vscode
+build
 
 # Compiled source #
 ###################
