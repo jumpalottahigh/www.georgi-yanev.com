@@ -1,0 +1,11 @@
+.header {
+  background-color: cornflowerblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+}
+
+img {
+  width: 35%;
+  border-radius: 3px;
+}

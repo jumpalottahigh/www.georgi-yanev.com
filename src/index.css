@@ -16,11 +16,3 @@ h1,
 p {
   margin: 0 0 1em 0;
 }
-
-/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
-/* @supports (display: grid) {
-  .wrapper > * {
-    width: auto;
-    margin: 0;
-  }
-} */
