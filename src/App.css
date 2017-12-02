@@ -4,18 +4,14 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 10px;
-}
-
-.wrapper > * {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 150%;
+  /* grid-gap: 1rem; */
 }
 
 .header,
 .footer {
   grid-column: 1 / -1;
+}
+
+section {
+  padding: 2rem 1rem;
 }

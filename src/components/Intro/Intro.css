@@ -1,0 +1,17 @@
+.intro {
+  background-color: cadetblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+}
+
+.intro img {
+  width: 35%;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}

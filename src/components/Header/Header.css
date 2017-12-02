@@ -1,11 +1,37 @@
 .header {
   background-color: cornflowerblue;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-img {
-  width: 35%;
-  border-radius: 3px;
+.header h4 {
+  display: inline-block;
+  color: #fff;
+  margin: 0;
+}
+.header img {
+  height: 35px;
+}
+
+.header nav.main a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header nav.main a:hover {
+  border: 1px solid #000;
+  transition: 475ms;
+}
+
+/* TODO: Fix */
+.header nav.social a:hover {
+  transform: rotateZ(45deg);
+  transition: 475ms;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
 }
