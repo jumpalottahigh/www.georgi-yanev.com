@@ -5,6 +5,7 @@ import fire from './fire'
 // UI Components
 import Header from './components/Header/Header'
 import Intro from './components/Intro/Intro'
+import GithubActivity from './components/GithubActivity/GithubActivity'
 
 class App extends Component {
   constructor(props) {
@@ -81,7 +82,8 @@ class App extends Component {
             location={this.state.githubUserData.location}
             name={this.state.githubUserData.name}
           />
-          <section className="content">
+          <GithubActivity />
+          <section>
             <h1>Statements:</h1>
             <ul>
               <li>
