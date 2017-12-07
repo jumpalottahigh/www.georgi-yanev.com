@@ -9,11 +9,14 @@ class Header extends Component {
     return (
       <header className="header">
         <nav className="brand">
-          <img src={logo} alt="Georgi Yanev logo" />
-          <h4>@jumpalottahigh</h4>
+          <a href="/">
+            <img src={logo} alt="Georgi Yanev logo" />
+            <h4>@jumpalottahigh</h4>
+          </a>
         </nav>
         <nav className="main">
           <a href="/">Home</a>
+          {/* /about (goes to old page full length) */}
           <a href="/about">About</a>
           <a href="/blog">Blog</a>
         </nav>

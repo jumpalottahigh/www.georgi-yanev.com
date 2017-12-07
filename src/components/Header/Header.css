@@ -5,33 +5,51 @@
   padding: 1rem;
 }
 
-.header h4 {
-  display: inline-block;
-  color: #fff;
-  margin: 0;
+.header > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .header img {
   height: 35px;
+}
+
+.header nav.brand a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header nav.brand h4 {
+  color: #fff;
+  margin: 0 0 0 1rem;
 }
 
 .header nav.main a {
   color: #fff;
   text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
 }
 
 .header nav.main a:hover {
-  border: 1px solid #000;
   transition: 475ms;
+  border-bottom: 1px solid orangered;
+  transform: scale(1.15);
 }
 
-/* TODO: Fix */
-.header nav.social a:hover {
-  transform: rotateZ(45deg);
-  transition: 475ms;
+.header nav.social a {
+  margin: 0 1rem;
 }
 
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
+  }
+
+  nav {
+    margin-bottom: 0.5rem;
   }
 }
