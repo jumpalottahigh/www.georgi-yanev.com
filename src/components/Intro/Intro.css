@@ -1,5 +1,5 @@
 .intro {
-  background-color: cadetblue;
+  background-color: lightsteelblue;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column: 1 / 2;

@@ -14,3 +14,15 @@ h1,
 p {
   margin: 0 0 1rem 0;
 }
+
+.todo {
+  position: absolute;
+  padding: 2px;
+  background-color: orangered;
+  color: #fff;
+}
+
+.todo::before {
+  color: #000;
+  content: '// TODO: ';
+}

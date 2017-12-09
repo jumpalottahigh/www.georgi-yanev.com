@@ -32,7 +32,8 @@ class GithubActivity extends Component {
   render() {
     return (
       <section className="github-activity">
-        <p>// TODO: implement lazy loading for this</p>
+        <p className="todo">Do with lazy loading in production</p>
+        <p />
         <button onClick={this.handleGithub}>Latest Github Activity</button>
         {/* TODO: Output data here */}
         {/* <ul>

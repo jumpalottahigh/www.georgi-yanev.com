@@ -5,6 +5,7 @@ class Intro extends Component {
   render() {
     return (
       <section className="intro">
+        <p className="todo">Rework main info section</p>
         <img src={this.props.image} alt={this.props} />
         <h2>{this.props.name}</h2>
         <p>{this.props.company}</p>

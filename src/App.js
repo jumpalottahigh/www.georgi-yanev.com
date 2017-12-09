@@ -91,16 +91,21 @@ class App extends Component {
               </li>
               <li>I make things happen on the web</li>
               <li>I fight the performance battle 1 small win at a time</li>
+              <li>
+                <a href="https://jamstack.org/">JAMstack</a> developer
+              </li>
             </ul>
-            <p>Add a 1 sentece recap of different pages?</p>
-            <p>
-              TODO: 1. Wire up Firebase 2. Add Github and Twitter feeds in a non
-              intrusive manner 3. Includes skills somehow 4. Copy 5. Buttons
-              with click tracking to expand sections?
-            </p>
           </section>
           <section>
-            <h2>Here are some skill tags</h2>
+            <p className="todo">Sort these in their correct place</p>
+            <br />
+            <br />
+            <h1>Ideas</h1>
+            <p>clean with expandable sections / additional info</p>
+            <p>involvement with OSS and interesting projects</p>
+          </section>
+          <section>
+            <h2>Here are some skill tags (pulled from Firebase)</h2>
             {/* <ul>
             {this.state.messages.map(message, index => (
               <li key={index}>{message}</li>
