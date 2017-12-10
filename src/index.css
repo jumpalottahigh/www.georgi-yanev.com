@@ -15,14 +15,25 @@ p {
   margin: 0 0 1rem 0;
 }
 
+/* DEV AND DEBUGGING */
 .todo {
   position: absolute;
   padding: 2px;
   background-color: orangered;
   color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.todo:hover .todo-description {
+  display: block;
 }
 
 .todo::before {
   color: #000;
   content: '// TODO: ';
+}
+
+.todo-description {
+  display: none;
 }

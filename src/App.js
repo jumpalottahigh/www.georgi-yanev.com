@@ -97,7 +97,11 @@ class App extends Component {
             </ul>
           </section>
           <section>
-            <p className="todo">Sort these in their correct place</p>
+            <p className="todo">
+              <p className="todo-description">
+                - Sort these in their correct place
+              </p>
+            </p>
             <br />
             <br />
             <h1>Ideas</h1>
