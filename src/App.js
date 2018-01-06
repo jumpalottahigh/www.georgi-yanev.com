@@ -98,9 +98,9 @@ class App extends Component {
           </section>
           <section>
             <p className="todo">
-              <p className="todo-description">
+              <span className="todo-description">
                 - Sort these in their correct place
-              </p>
+              </span>
             </p>
             <br />
             <br />

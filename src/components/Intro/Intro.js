@@ -6,7 +6,7 @@ class Intro extends Component {
     return (
       <section className="intro">
         <p className="todo">
-          <p className="todo-description">- Rework this section</p>
+          <span className="todo-description">- Rework this section</span>
         </p>
         <img src={this.props.image} alt={this.props} />
         <h2>{this.props.name}</h2>
