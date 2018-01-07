@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 import logo from './logo.png'
 import github from './github.svg'
@@ -15,9 +16,9 @@ class Header extends Component {
           </a>
         </nav>
         <nav className="main">
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
           {/* /about (goes to old page full length) */}
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
           <a href="/blog">Blog</a>
         </nav>
         <nav className="social">
