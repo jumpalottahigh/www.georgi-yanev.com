@@ -1,17 +1,14 @@
 .intro {
-  background-color: lightsteelblue;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column: 1 / 2;
+  background-color: lightsteelblue;
+  grid-template-columns: 1fr 5fr;
 }
 
 .intro img {
-  width: 35%;
+  width: 12rem;
   border-radius: 3px;
 }
 
-@media (max-width: 600px) {
-  .intro {
-    grid-template-columns: 1fr;
-  }
+.intro div {
+  padding-left: 1rem;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import fire from '../../fire'
+import fire from '../../../fire'
 
 export default class About extends Component {
   constructor(props) {

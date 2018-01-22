@@ -1,12 +1,5 @@
 .github-activity {
   background-color: aliceblue;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-column: 1 / 2;
-}
-
-@media (max-width: 600px) {
-  .github-activity {
-    grid-template-columns: 1fr;
-  }
+  grid-column: 1 / -1;
 }

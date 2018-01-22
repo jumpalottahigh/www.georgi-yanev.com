@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
-
+import Button from '../_Elements/Button/Button'
 class GithubActivity extends Component {
   constructor(props) {
     super(props)
     this.state = {
       githubPublicActivity: [''],
-      loadAll: false
+      showAll: false
     }
     this.handleGithub = this.handleGithub.bind(this)
   }
@@ -36,9 +36,13 @@ class GithubActivity extends Component {
 
     // render all 30 items, may consider a modal for the UI?
     this.setState({
-      loadAll: true
+      showAll: true
     })
-    console.log(this.state.githubPublicActivity)
+  }
+
+  componentDidMount() {
+    // Ideally this initial call should happen after page load as it is not crucial
+    this.handleGithub()
   }
 
   render() {
@@ -47,18 +51,19 @@ class GithubActivity extends Component {
         <p className="todo">
           <span className="todo-description">
             - Do with lazy loading in production<br />
+            - Animation on button click<br />
           </span>
         </p>
         <p />
-        <button onClick={this.handleGithub}>Initial load (last 3 items)</button>
+        <Button onClick={this.handleGithub}>Initial load (last 3 items)</Button>
 
-        {this.state.loadAll === false ? (
-          <React.Fragment>
+        {this.state.showAll === false ? (
+          <Fragment>
             <GithubEvent data={this.state.githubPublicActivity[0]} />
             <GithubEvent data={this.state.githubPublicActivity[1]} />
             <GithubEvent data={this.state.githubPublicActivity[2]} />
-            <button onClick={this.displayMoreItems}>Show more</button>
-          </React.Fragment>
+            <Button onClick={this.displayMoreItems}>Show more</Button>
+          </Fragment>
         ) : (
           this.state.githubPublicActivity.map(item => (
             <GithubEvent key={item.id} data={item} />
