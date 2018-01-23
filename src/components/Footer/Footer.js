@@ -5,8 +5,11 @@ export default class Footer extends Component {
     return (
       <footer>
         <h5>
-          Copyright &copy; 2013-2018 Georgi Yanev &amp; Sofia Lindberg coded
-          with love for little Anton
+          Copyright &copy; 2013-2018 Georgi Yanev. Dedicated to Sofi and little
+          Anton{' '}
+          <span role="img" aria-label="heart">
+            ❤️
+          </span>
         </h5>
       </footer>
     )

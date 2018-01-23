@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
 import Button from '../_Elements/Button/Button'
+import H2 from '../_Elements/H2/H2'
 class GithubActivity extends Component {
   constructor(props) {
     super(props)
@@ -9,7 +10,7 @@ class GithubActivity extends Component {
       githubPublicActivity: [''],
       showAll: false
     }
-    this.handleGithub = this.handleGithub.bind(this)
+    this.fetchGithub = this.fetchGithub.bind(this)
   }
 
   setStateAsync(state) {
@@ -18,7 +19,7 @@ class GithubActivity extends Component {
     })
   }
 
-  async handleGithub() {
+  async fetchGithub() {
     // fetch basic user info from Github API
     let userPublicActivityUrl =
       'https://api.github.com/users/jumpalottahigh/events/public'
@@ -42,21 +43,15 @@ class GithubActivity extends Component {
 
   componentDidMount() {
     // Ideally this initial call should happen after page load as it is not crucial
-    this.handleGithub()
+    setTimeout(() => {
+      this.fetchGithub()
+    }, 2000)
   }
 
   render() {
     return (
       <section className="github-activity">
-        <p className="todo">
-          <span className="todo-description">
-            - Do with lazy loading in production<br />
-            - Animation on button click<br />
-          </span>
-        </p>
-        <p />
-        <Button onClick={this.handleGithub}>Initial load (last 3 items)</Button>
-
+        <H2>Latest GitHub Activity:</H2>
         {this.state.showAll === false ? (
           <Fragment>
             <GithubEvent data={this.state.githubPublicActivity[0]} />

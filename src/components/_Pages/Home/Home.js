@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 // UI Components
 import Intro from '../../Intro/Intro'
+import Statements from '../../Statements/Statements'
 import GithubActivity from '../../GithubActivity/GithubActivity'
 
 class Home extends Component {
@@ -30,18 +31,8 @@ class Home extends Component {
           location={this.state.githubUserData.location}
           name={this.state.githubUserData.name}
         />
+        <Statements />
         <GithubActivity />
-        <section>
-          <h1>Statements:</h1>
-          <ul>
-            <li>I love writing JavaScript and designing systems for the web</li>
-            <li>I make things happen on the web</li>
-            <li>I fight the performance battle 1 small win at a time</li>
-            <li>
-              <a href="https://jamstack.org/">JAMstack</a> developer
-            </li>
-          </ul>
-        </section>
         <section>
           <p className="todo">
             <span className="todo-description">

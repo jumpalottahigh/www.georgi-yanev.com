@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Moment from 'react-moment'
 
 export default class GithubEvent extends Component {
   render() {
@@ -15,9 +16,9 @@ export default class GithubEvent extends Component {
 
     switch (event.type) {
       case 'PushEvent':
-        eventData.payloadText = `pushed commit ${
+        eventData.payloadText = `pushed commit '${
           event.payload.commits[0].message
-        } to`
+        }' to`
         break
       case 'IssueCommentEvent':
         eventData.payloadText = `commented: "${
@@ -49,7 +50,7 @@ export default class GithubEvent extends Component {
 
     return (
       <div>
-        <p>{eventData.date}</p>
+        <Moment date={eventData.date} format="Do MMM YYYY HH:mm" />
         <h5>{eventData.actorName}</h5>
         <p>{eventData.payloadText}</p>
         <p>
