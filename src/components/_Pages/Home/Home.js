@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 
 // UI Components
-import Intro from '../../Intro/Intro'
-import Statements from '../../Statements/Statements'
-import GithubActivity from '../../GithubActivity/GithubActivity'
+import Intro from './Intro/Intro'
+import Statements from './Statements/Statements'
+import GithubActivity from './GithubActivity/GithubActivity'
 
 class Home extends Component {
   constructor(props) {

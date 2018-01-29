@@ -1,55 +1,19 @@
-import React, { Component } from 'react'
-import fire from '../../../fire'
+import React, { Component, Fragment } from 'react'
+
+import Intro from './Intro/Intro'
+import Education from './Education/Education'
+import SkillTags from './SkillTags/SkillTags'
+import HobbiesEvents from './HobbiesEvents/HobbiesEvents'
 
 export default class About extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      messages: []
-    }
-  }
-
-  async componentWillMount() {
-    /* Create reference to messages in Firebase Database */
-    let messagesRef = fire
-      .database()
-      .ref('skills')
-      .orderByKey()
-      .limitToLast(100)
-    messagesRef.on('child_added', snapshot => {
-      /* Update React state when message is added at Firebase Database */
-      let message = { text: snapshot.val(), id: snapshot.key }
-      this.setState({ messages: [message].concat(this.state.messages) })
-    })
-  }
-
-  addMessage(e) {
-    e.preventDefault() // <- prevent form submit from reloading the page
-    /* Send the message to Firebase */
-    fire
-      .database()
-      .ref('skills')
-      .push(this.inputEl.value)
-    this.inputEl.value = '' // <- clear the input
-  }
-
   render() {
     return (
-      <section>
-        <h2>About</h2>
-        <p>Here are some skill tags (pulled from Firebase)</p>
-        <form onSubmit={this.addMessage.bind(this)}>
-          <input type="text" ref={el => (this.inputEl = el)} />
-          <input type="submit" />
-          <ul>
-            {/* Render the list of messages */
-            this.state.messages.map(message => (
-              <li key={message.id}>{message.text}</li>
-            ))}
-          </ul>
-        </form>
-      </section>
+      <Fragment>
+        <Intro />
+        <Education />
+        <SkillTags />
+        <HobbiesEvents />
+      </Fragment>
     )
   }
 }

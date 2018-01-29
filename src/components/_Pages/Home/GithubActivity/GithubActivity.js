@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
-import Button from '../_Elements/Button/Button'
-import H2 from '../_Elements/H2/H2'
+import Button from '../../../_Elements/Button/Button'
+import H2 from '../../../_Elements/H2/H2'
 class GithubActivity extends Component {
   constructor(props) {
     super(props)

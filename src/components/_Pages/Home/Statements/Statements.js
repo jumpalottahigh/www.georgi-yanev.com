@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import H2 from '../_Elements/H2/H2'
+import H2 from '../../../_Elements/H2/H2'
 
 export default class Statements extends Component {
   render() {
