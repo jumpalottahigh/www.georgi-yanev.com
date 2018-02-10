@@ -17,9 +17,10 @@ class Header extends Component {
         </nav>
         <nav className="main">
           <Link to="/">Home</Link>
-          {/* /about (goes to old page full length) */}
           <Link to="/about">About</Link>
-          <a href="/blog">Blog</a>
+          <a className="blog" href="/blog">
+            Blog
+          </a>
         </nav>
         <nav className="social">
           <a href="https://github.com/jumpalottahigh">
