@@ -1,11 +1,30 @@
 .wrapper {
   display: grid;
   grid-column: 1 / -1;
-  /* grid-gap: 1rem; */
 }
 
 header,
 section,
 footer {
-  padding: 2rem;
+  padding: 2rem 1rem;
+}
+
+section {
+  display: grid;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: royalblue;
+}
+
+a:hover {
+  color: tomato;
+}
+
+.highlight {
+  font-weight: bold;
 }

@@ -11,14 +11,14 @@ const UL = styled.ul`
 const LI = styled.li`
   display: grid;
   font-size: 1.2rem;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 5fr 3fr;
   border-bottom: 1px solid #cecece;
 `
 const Description = styled.span`
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2px;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   font-size: 0.6rem;
 `
 
@@ -64,8 +64,8 @@ export default class SkillTags extends Component {
 
   render() {
     return (
-      <section>
-        <H2>Skills</H2>
+      <section id="skills">
+        <H2>&#123; Skills &#125;</H2>
         <UL>
           {this.state.skills.map(skill => (
             <LI key={skill.id}>
@@ -74,8 +74,10 @@ export default class SkillTags extends Component {
                   {skill.name}
                 </span>
                 <span style={{ gridColumn: '1/2' }}>{skill.type}</span>
-                <span style={{ gridColumn: '2/3' }}>{skill.experience}</span>
-                <span style={{ gridColumn: '3/-1' }}>{skill.url}</span>
+                <span style={{ gridColumn: '2/4' }}>{skill.experience}</span>
+                <span style={{ gridColumn: '1/-1', wordWrap: 'break-word' }}>
+                  {skill.url}
+                </span>
               </Description>
               <ProgressBar>
                 <Progress style={{ width: `${skill.level}%` }} />

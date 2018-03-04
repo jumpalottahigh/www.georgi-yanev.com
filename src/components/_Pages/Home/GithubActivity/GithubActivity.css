@@ -1,5 +1,4 @@
 .github-activity {
-  background-color: aliceblue;
-  display: grid;
+  background-color: #dedede;
   grid-column: 1 / -1;
 }

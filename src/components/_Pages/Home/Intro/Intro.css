@@ -1,12 +1,12 @@
 .intro {
-  display: grid;
-  background-color: lightsteelblue;
-  grid-template-columns: 1fr 5fr;
+  background-color: #dedede;
+  grid-template-columns: 1fr;
 }
 
 .intro img {
   width: 12rem;
-  border-radius: 3px;
+  border-radius: 50%;
+  justify-self: center;
 }
 
 .intro div {

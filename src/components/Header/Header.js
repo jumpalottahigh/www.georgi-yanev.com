@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.css'
 import logo from './logo.png'
 import github from './github.svg'
@@ -16,8 +16,8 @@ class Header extends Component {
           </a>
         </nav>
         <nav className="main">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
           <a className="blog" href="/blog">
             Blog
           </a>

@@ -5,6 +5,9 @@ export default class Statements extends Component {
   render() {
     return (
       <section>
+        <p className="todo">
+          <span className="todo-description">- Copy and design</span>
+        </p>
         <H2>Statements:</H2>
         <ul>
           <li>I love writing JavaScript and designing systems for the web</li>
