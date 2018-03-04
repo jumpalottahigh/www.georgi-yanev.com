@@ -5,6 +5,7 @@ import Intro from './Intro/Intro'
 import SkillsOverview from './SkillsOverview/SkillsOverview'
 import Statements from './Statements/Statements'
 import GithubActivity from './GithubActivity/GithubActivity'
+import Inspirational from './Inspirational/Inspirational'
 
 class Home extends Component {
   render() {
@@ -14,6 +15,7 @@ class Home extends Component {
         <SkillsOverview />
         <Statements />
         <GithubActivity />
+        <Inspirational />
       </Fragment>
     )
   }

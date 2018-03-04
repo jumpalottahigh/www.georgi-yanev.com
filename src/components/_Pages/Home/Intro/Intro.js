@@ -6,7 +6,7 @@ class Intro extends Component {
     image: 'https://avatars2.githubusercontent.com/u/4155121?s=460&v=4',
     bio:
       'Father, Software Engineer, Smart Home Automation Enthusiast, FPV drone pilot',
-    position: 'F-Secure',
+    position: 'Web Developer @ F-Secure',
     location: 'Helsinki, Finland',
     name: 'Georgi Yanev'
   }
@@ -17,7 +17,7 @@ class Intro extends Component {
     return (
       <section className="intro">
         <img src={image} alt={name} />
-        <div>
+        <div className="intro__inner">
           <h2>{name}</h2>
           <p>{position}</p>
           <p>{location}</p>

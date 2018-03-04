@@ -1,363 +1,364 @@
-{
-  "-L42UC5NENwdx97luYiH": {
+[
+  {
     "experience": "8 years",
     "level": 90,
     "name": "JavaScript",
     "type": "Language",
     "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
-  "-L42UC5T_mEg0_0PMkD8": {
+  {
     "experience": "7 years",
     "level": 90,
     "name": "jQuery",
     "type": "Framework",
     "url": "https://jquery.com/"
   },
-  "-L42UC5WxAb09vx1hWDr": {
-    "experience": "6 years",
+  {
+    "experience": "8 years",
     "level": 100,
     "name": "HTML5",
     "type": "Markup language",
     "url": "http://www.w3schools.com/html/html5_intro.asp"
   },
-  "-L42UC5Y8Kum6oMPi2Zg": {
+  {
     "experience": "3 years",
     "level": 90,
     "name": "XML",
     "type": "Markup language",
     "url": "http://www.w3schools.com/xml/"
   },
-  "-L42UC5atvDPyGRPo-9b": {
+  {
     "experience": "2 years",
     "level": 100,
     "name": "Markdown",
     "type": "Markup language",
     "url": "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
   },
-  "-L42UC5bKUOhKHqJUf4g": {
-    "experience": "6 years",
+  {
+    "experience": "8 years",
     "level": 100,
     "name": "CSS3",
     "type": "Language",
     "url": "http://www.w3schools.com/css/default.asp"
   },
-  "-L42UC5dltjfvkWtoZqe": {
+  {
     "experience": "2 years",
     "level": 100,
     "name": "Atom",
     "type": "IDE/Code Editor",
     "url": "https://atom.io/"
   },
-  "-L42UC5eUlL_WGBVHNsB": {
+  {
     "experience": "1 year",
     "level": 50,
     "name": "WebStorm",
     "type": "IDE/Code Editor",
     "url": "https://www.jetbrains.com/webstorm/"
   },
-  "-L42UC5fuZJRyLA_Ha8E": {
+  {
     "experience": "1 year",
     "level": 50,
     "name": "PyCharm",
     "type": "IDE/Code Editor",
     "url": "https://www.jetbrains.com/pycharm/"
   },
-  "-L42UC5hPs6l8pj7Us_f": {
+  {
     "experience": "1 year",
     "level": 40,
     "name": "Android Studio",
     "type": "IDE/Code Editor",
     "url": "http://developer.android.com/tools/studio/index.html"
   },
-  "-L42UC5kwCTjvZoCVkS0": {
+  {
     "experience": "2 years",
     "level": 70,
     "name": "Sublime Text 3",
     "type": "IDE/Code Editor",
     "url": "https://www.sublimetext.com/3"
   },
-  "-L42UC5qHGOu3BYWKCqr": {
+  {
     "experience": "5 months",
     "level": 90,
     "name": "Waypoints",
     "type": "Framework",
     "url": "http://imakewebthings.com/waypoints/"
   },
-  "-L42UC5rE1LSmA46FAJn": {
+  {
     "experience": "2 months",
     "level": 75,
     "name": "Intro.js",
     "type": "Framework",
     "url": "http://introjs.com/"
   },
-  "-L42UC5sXwhJK7RpG6FP": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 100,
     "name": "Handlebars.js",
     "type": "Framework",
     "url": "http://handlebarsjs.com/"
   },
-  "-L42UC5sXwhJK7RpG6FQ": {
-    "experience": "6 months",
+  {
+    "experience": "2 years",
     "level": 90,
     "name": "Moments.js",
     "type": "Framework",
     "url": "http://momentjs.com/"
   },
-  "-L42UC5tXhCdxZV5bXhE": {
+  {
     "experience": "3 years",
     "level": 80,
     "name": "SQL",
     "type": "Language",
     "url": "http://www.w3schools.com/sql/"
   },
-  "-L42UC5uuGkBWAJkvR8Q": {
+  {
     "experience": "2 years",
     "level": 60,
     "name": "PHP",
     "type": "Language",
     "url": "http://php.net/"
   },
-  "-L42UC5uuGkBWAJkvR8R": {
-    "experience": "3 years",
+  {
+    "experience": "4 years",
     "level": 100,
     "name": "Bootstrap 3",
     "type": "Framework",
     "url": "http://getbootstrap.com/"
   },
-  "-L42UC5vBC9CBHxBDywl": {
+  {
     "experience": "2 years",
     "level": 100,
     "name": "Bootstrap 4",
     "type": "Framework",
     "url": "http://v4-alpha.getbootstrap.com/getting-started/introduction/"
   },
-  "-L42UC5wRn4ByPRVm4-l": {
+  {
     "experience": "1 year",
     "level": 25,
     "name": "Facebook API",
     "type": "API",
     "url": "https://developers.facebook.com/docs/web"
   },
-  "-L42UC5wRn4ByPRVm4-m": {
+  {
     "experience": "1 year",
     "level": 25,
     "name": "Twitch API",
     "type": "API",
     "url": "https://github.com/justintv/Twitch-API"
   },
-  "-L42UC5x1C3l76MLZWL5": {
-    "experience": "4 years",
+  {
+    "experience": "5 years",
     "level": 90,
     "name": "Git",
     "type": "Tools",
     "url": "https://git-scm.com/"
   },
-  "-L42UC5x1C3l76MLZWL6": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 100,
     "name": "Trello",
     "type": "Tools",
     "url": "https://www.trello.com/"
   },
-  "-L42UC5yLKYS_r19RhRu": {
+  {
     "experience": "2 years",
     "level": 85,
     "name": "JIRA",
     "type": "Tools",
     "url": "https://www.jira.com/"
   },
-  "-L42UC5yLKYS_r19RhRv": {
-    "experience": "1 year",
-    "level": 80,
+  {
+    "experience": "3 year",
+    "level": 90,
     "name": "Agile",
     "type": "Methodologies",
     "url": "http://agilemethodology.org/"
   },
-  "-L42UC5z_N8Ie_beAZRw": {
-    "experience": "2 years",
-    "level": 60,
+  {
+    "experience": "3 years",
+    "level": 70,
     "name": "Node.js",
     "type": "Framework",
     "url": "https://nodejs.org/en/"
   },
-  "-L42UC6-0TDLUrTd9liH": {
-    "experience": "3 years",
+  {
+    "experience": "4 years",
     "level": 90,
     "name": "NPM",
     "type": "Tools",
     "url": "https://www.npmjs.com/"
   },
-  "-L42UC6-0TDLUrTd9liI": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 100,
     "name": "Gulp.js",
     "type": "Tools",
     "url": "http://gulpjs.com/"
   },
-  "-L42UC6-0TDLUrTd9liJ": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 85,
     "name": "Grunt.js",
     "type": "Tools",
     "url": "http://gruntjs.com/"
   },
-  "-L42UC60x4-kzRYWR6pT": {
-    "experience": "1 year",
+  {
+    "experience": "3 years",
     "level": 90,
     "name": "Firebase",
     "type": "Service",
     "url": "https://www.firebase.com/"
   },
-  "-L42UC60x4-kzRYWR6pU": {
+  {
     "experience": "2 months",
     "level": 40,
     "name": "MongoDB",
     "type": "Service",
     "url": "https://docs.mongodb.com"
   },
-  "-L42UC61ScA8sYmHwcMh": {
+  null,
+  {
     "experience": "1 year",
     "level": 80,
     "name": "Python 3",
     "type": "Language",
     "url": "https://docs.python.org/3/"
   },
-  "-L42UC63F1SLY1AKnDgY": {
+  {
     "experience": "2 years",
     "level": 70,
     "name": "Material Design Lite",
     "type": "Framework",
     "url": "https://getmdl.io/"
   },
-  "-L42UC64e5y9HrTzK4v-": {
+  {
     "experience": "1 year",
     "level": 80,
     "name": "Hover.css",
     "type": "Library",
     "url": "http://ianlunn.github.io/Hover/"
   },
-  "-L42UC64e5y9HrTzK4v0": {
+  {
     "experience": "2 years",
     "level": 100,
     "name": "Animate.css",
     "type": "Library",
     "url": "https://daneden.github.io/animate.css/"
   },
-  "-L42UC65lD-jd92e9l9y": {
+  {
     "experience": "2 years",
     "level": 100,
     "name": "Slack",
     "type": "Tools",
     "url": "https://slack.com"
   },
-  "-L42UC65lD-jd92e9l9z": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 100,
     "name": "Assemble",
     "type": "Framework",
     "url": "http://assemble.io/"
   },
-  "-L42UC65lD-jd92e9lA-": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 100,
     "name": "Liferay",
     "type": "CMS",
     "url": "http://liferay.com/"
   },
-  "-L42UC663626UPRuJgS6": {
+  {
     "experience": "2 years",
     "level": 40,
     "name": "Wordpress",
     "type": "CMS",
     "url": "http://wordpress.org/"
   },
-  "-L42UC663626UPRuJgS7": {
+  {
     "experience": "3 years",
     "level": 40,
     "name": "Java",
     "type": "Language",
     "url": "https://docs.oracle.com/javase/7/docs/api/"
   },
-  "-L42UC663626UPRuJgS8": {
+  {
     "experience": "3 years",
     "level": 35,
     "name": "Unity C#",
     "type": "Language",
     "url": "http://docs.unity3d.com/540/Documentation/Manual/"
   },
-  "-L42UC67MWRBKhEG8F17": {
+  {
     "experience": "3 years",
     "level": 60,
     "name": "Blender",
     "type": "3D modeling",
     "url": "https://www.blender.org/"
   },
-  "-L42UC67MWRBKhEG8F18": {
-    "experience": "6 months",
-    "level": 60,
+  {
+    "experience": "1 year",
+    "level": 90,
     "name": "Google Analytics",
     "type": "Service",
     "url": "https://analytics.google.com/analytics/web/"
   },
-  "-L42UC68DCVl3ZX_LUfx": {
-    "experience": "4 years",
+  {
+    "experience": "5 years",
     "level": 100,
     "name": "JSON",
     "type": "Language",
     "url": "http://www.json.org/"
   },
-  "-L42UC68DCVl3ZX_LUfy": {
+  {
     "experience": "1 year",
     "level": 70,
     "name": "Scrum",
     "type": "Methodologies",
     "url": "https://en.wikipedia.org/wiki/Scrum_(software_development)"
   },
-  "-L42UC69f0dsGqSZldU9": {
-    "experience": "2 years",
+  {
+    "experience": "3 years",
     "level": 70,
     "name": "Adobe Analytics",
     "type": "Service",
     "url":
       "http://www.adobe.com/marketing-cloud/web-analytics/marketing-analytics-capabilities.html"
   },
-  "-L42UC6AD_2eEaatLJ-x": {
+  {
     "experience": "2 years",
     "level": 80,
     "name": "Heroku",
     "type": "Service",
     "url": "https://dashboard.heroku.com/apps"
   },
-  "-L42UC6AD_2eEaatLJ-y": {
+  {
     "experience": "3 years",
     "level": 70,
     "name": "Bash",
     "type": "Tools",
     "url": "https://www.gnu.org/software/bash/"
   },
-  "-L42UC6AD_2eEaatLJ-z": {
+  {
     "experience": "6 months",
     "level": 85,
     "name": "Beautiful Soup",
     "type": "Framework",
     "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/"
   },
-  "-L42UC6BPD93BXuZTGAq": {
+  {
     "experience": "3 years",
     "level": 40,
     "name": "Eclipse",
     "type": "IDE/Code Editor",
     "url": "http://www.eclipse.org/"
   },
-  "-L42UC6CvJgsNHsFhqtN": {
+  {
     "experience": "1 year",
     "level": 75,
     "name": "SASS",
     "type": "Framework",
     "url": "http://sass-lang.com/"
   },
-  "-L42UC6CvJgsNHsFhqtO": {
+  {
     "experience": "2 years",
     "level": 90,
     "name": "ES6",
@@ -365,116 +366,116 @@
     "url":
       "https://developer.mozilla.org/en/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla"
   },
-  "-L42UC6CvJgsNHsFhqtP": {
+  {
     "experience": "6 months",
     "level": 30,
     "name": "Webpack",
     "type": "Tools",
     "url": "https://webpack.js.org/"
   },
-  "-L42UC6DpNmYpk8E-22v": {
-    "experience": "6 months",
-    "level": 60,
+  {
+    "experience": "1 year",
+    "level": 80,
     "name": "React.js",
     "type": "Framework",
     "url": "https://facebook.github.io/react/"
   },
-  "-L42UC6DpNmYpk8E-22w": {
-    "experience": "1 year",
+  {
+    "experience": "2 years",
     "level": 100,
     "name": "YAML",
     "type": "Language",
     "url": "http://yaml.org/"
   },
-  "-L42UC6DpNmYpk8E-22x": {
+  {
     "experience": "6 months",
     "level": 100,
     "name": "MQTT",
     "type": "Protocol",
     "url": "http://mqtt.org/"
   },
-  "-L42UC6Eb6fvIA4k8Kyj": {
-    "experience": "1 year",
+  {
+    "experience": "2 years",
     "level": 90,
     "name": "Raspberry Pi",
     "type": "Hardware",
     "url": "https://www.raspberrypi.org/"
   },
-  "-L42UC6Eb6fvIA4k8Kyk": {
-    "experience": "1 year",
+  {
+    "experience": "2 years",
     "level": 90,
     "name": "Arduino",
     "type": "Hardware",
     "url": "https://www.arduino.cc/"
   },
-  "-L42UC6Eb6fvIA4k8Kyl": {
-    "experience": "6 months",
+  {
+    "experience": "1 year",
     "level": 90,
     "name": "Home Assistant",
     "type": "Platform",
     "url": "https://home-assistant.io"
   },
-  "-L42UC6Eb6fvIA4k8Kym": {
-    "experience": "6 months",
+  {
+    "experience": "1 year",
     "level": 100,
     "name": "Visual Studio Code",
     "type": "IDE/Code Editor",
     "url": "https://code.visualstudio.com/"
   },
-  "-L42UC6F0RQ0RMJIU4_8": {
-    "experience": "1 month",
+  {
+    "experience": "3 months",
     "level": 60,
     "name": "Chart.js",
     "type": "Framework",
     "url": "http://www.chartjs.org/"
   },
-  "-L42UC6F0RQ0RMJIU4_9": {
-    "experience": "6 months",
+  {
+    "experience": "1 year",
     "level": 60,
     "name": "Vue.js",
     "type": "Framework",
     "url": "https://vuejs.org/"
   },
-  "-L42UC6F0RQ0RMJIU4_A": {
+  {
     "experience": "3 months",
     "level": 45,
     "name": "Lighthouse",
     "type": "Tools",
     "url": "https://developers.google.com/web/tools/lighthouse/"
   },
-  "-L42UC6Gp01E2xZbeZwp": {
+  {
     "experience": "3 months",
     "level": 60,
     "name": "VueMaterial",
     "type": "Library",
     "url": "http://vuematerial.io"
   },
-  "-L42UC6HSme6YkHBwhSp": {
+  {
     "experience": "1 month",
     "level": 50,
     "name": "New Relic",
     "type": "Tools",
     "url": "https://newrelic.com/"
   },
-  "-L42UC6J3H-n6RaVLQUW": {
+  {
     "experience": "1 month",
     "level": 40,
     "name": "Re:dash",
     "type": "Tools",
     "url": "https://redash.io/"
   },
-  "-L42UC6KS452dzbU_4qK": {
+  {
     "experience": "3 months",
     "level": 75,
     "name": "AMP",
     "type": "Framework",
     "url": "https://www.ampproject.org/"
   },
-  "-L42UC6KS452dzbU_4qL": {
-    "experience": "3 months",
+  {
+    "experience": "6 months",
     "level": 45,
     "name": "GraphQL",
     "type": "Language",
     "url": "http://graphql.org/"
   }
-}
+]

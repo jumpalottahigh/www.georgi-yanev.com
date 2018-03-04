@@ -8,15 +8,12 @@ export default class SkillsOverview extends Component {
   render() {
     return (
       <section className="skillsOverview">
-        <p className="todo">
-          <span className="todo-description">- Design &amp; Copy</span>
-        </p>
-        <p>Currently mostly using:</p>
-        <h4>React.js, Vue.js</h4>
-        <p>Other recently used:</p>
-        <h4>Handlebars, Gulp, Grunt</h4>
+        <p>Currently working with:</p>
+        <h4>React.js, ES6, PWA, Gatsby</h4>
+        <p>Other recent worthy mentions:</p>
+        <h4>Vue.js, Nuxt, AMP, Handlebars, Gulp, Grunt</h4>
         <Link smooth to="/about#skills">
-          <Button>More about my skills</Button>
+          <Button>See my skills</Button>
         </Link>
       </section>
     )

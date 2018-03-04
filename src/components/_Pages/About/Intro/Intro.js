@@ -7,7 +7,7 @@ export default class Intro extends Component {
   render() {
     return (
       <section>
-        <H2>&#123; Who is Georgi Yanev &#125;</H2>
+        <H2>&#123; Who &#125;</H2>
         <p>
           Here's a{' '}
           <a href="https://blog.georgi-yanev.com/general/how-i-got-into-software-development/">
@@ -15,8 +15,8 @@ export default class Intro extends Component {
           </a>.
         </p>
         <p>
-          I maintain this blog and write about life, goals, software and flying
-          FPV drones. Check it out!
+          I maintain a blog where I write about life, goals, software and flying
+          FPV drones.
         </p>
         <a
           href="https://blog.georgi-yanev.com"

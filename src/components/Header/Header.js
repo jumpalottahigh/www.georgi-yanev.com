@@ -18,7 +18,7 @@ class Header extends Component {
         <nav className="main">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          <a className="blog" href="/blog">
+          <a className="blog" href="https://blog.georgi-yanev.com">
             Blog
           </a>
         </nav>

@@ -11,7 +11,7 @@ const UL = styled.ul`
 export default class Education extends Component {
   render() {
     return (
-      <section style={{ backgroundColor: 'beige' }}>
+      <section>
         <H2>&#123; Education &#125;</H2>
         <p className="highlight">
           I believe strongly in life-long education and therefor regularly
@@ -22,8 +22,7 @@ export default class Education extends Component {
             Udacity's Google Developer Challenge Scholarship holder for Advanced
             Mobile Web (2017-2018)
           </li>
-          <li>Google Analytics advanced (2017-2018)</li>
-          <li>Google Analytics basics (2017-2018)</li>
+          <li>Google Analytics certified (2017-2018)</li>
           <li>
             React for Beginners on Egghead.io, CSS grid by Wesbos, The Vue book
           </li>

@@ -15,6 +15,11 @@ section {
 
 footer {
   text-align: center;
+  background-color: royalblue;
+}
+
+footer h5 {
+  margin: 0;
 }
 
 a {
@@ -27,4 +32,15 @@ a:hover {
 
 .highlight {
   font-weight: bold;
+}
+
+@media (min-width: 1100px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'intro skills'
+      'statements github'
+      'inspirational inspirational';
+  }
 }
