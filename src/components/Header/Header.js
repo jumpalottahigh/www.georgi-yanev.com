@@ -10,14 +10,18 @@ class Header extends Component {
     return (
       <header className="header">
         <nav className="brand">
-          <a href="/">
+          <NavLink to="/" activeStyle={{ color: 'orangered' }}>
             <img src={logo} alt="Georgi Yanev logo" />
             <h4>@jumpalottahigh</h4>
-          </a>
+          </NavLink>
         </nav>
         <nav className="main">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/home" activeStyle={{ color: 'orangered' }}>
+            Home
+          </NavLink>
+          <NavLink to="/about" activeStyle={{ color: 'orangered' }}>
+            About
+          </NavLink>
           <a className="blog" href="https://blog.georgi-yanev.com">
             Blog
           </a>

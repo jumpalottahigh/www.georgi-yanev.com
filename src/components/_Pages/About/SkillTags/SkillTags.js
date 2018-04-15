@@ -7,6 +7,7 @@ import data from './skillsData.json'
 const UL = styled.ul`
   display: grid;
   padding: 0;
+  justify-self: center;
 `
 const LI = styled.li`
   display: grid;

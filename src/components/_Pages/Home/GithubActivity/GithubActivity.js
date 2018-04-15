@@ -43,27 +43,29 @@ class GithubActivity extends Component {
 
   componentDidMount() {
     // Ideally this initial call should happen after page load as it is not crucial
-    setTimeout(() => {
+    window.addEventListener('load', () => {
       this.fetchGithub()
-    }, 2000)
+    })
   }
 
   render() {
     return (
       <section className="github-activity">
         <H2>Latest GitHub Activity:</H2>
-        {this.state.showAll === false ? (
-          <Fragment>
-            <GithubEvent data={this.state.githubPublicActivity[0]} />
-            <GithubEvent data={this.state.githubPublicActivity[1]} />
-            <GithubEvent data={this.state.githubPublicActivity[2]} />
-            <Button onClick={this.displayMoreItems}>Show more</Button>
-          </Fragment>
-        ) : (
-          this.state.githubPublicActivity.map(item => (
-            <GithubEvent key={item.id} data={item} />
-          ))
-        )}
+        <div style={{ justifySelf: 'center', paddingTop: '10px' }}>
+          {this.state.showAll === false ? (
+            <Fragment>
+              <GithubEvent data={this.state.githubPublicActivity[0]} />
+              <GithubEvent data={this.state.githubPublicActivity[1]} />
+              <GithubEvent data={this.state.githubPublicActivity[2]} />
+              <Button onClick={this.displayMoreItems}>Show more</Button>
+            </Fragment>
+          ) : (
+            this.state.githubPublicActivity.map(item => (
+              <GithubEvent key={item.id} data={item} />
+            ))
+          )}
+        </div>
       </section>
     )
   }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-// import { HashLink as Link } from 'react-router-dom'
-import { HashLink as Link } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 import Button from '../../../_Elements/Button/Button'
 import './SkillsOverview.css'
 
@@ -12,7 +11,7 @@ export default class SkillsOverview extends Component {
         <h4>React.js, ES6, PWA, Gatsby</h4>
         <p>Other recent worthy mentions:</p>
         <h4>Vue.js, Nuxt, AMP, Handlebars, Gulp, Grunt</h4>
-        <Link smooth to="/about#skills">
+        <Link to="/skills">
           <Button>See my skills</Button>
         </Link>
       </section>

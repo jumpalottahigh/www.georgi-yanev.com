@@ -7,6 +7,12 @@
   width: 12rem;
   border-radius: 50%;
   justify-self: center;
+  align-self: center;
+}
+
+.intro ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .intro__inner h2 {
