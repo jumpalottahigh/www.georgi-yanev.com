@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CenteredDiv from '../../../../components/_Elements/CenteredDiv/CenteredDiv'
 import './Intro.css'
 
 class Intro extends Component {
@@ -20,13 +21,15 @@ class Intro extends Component {
 
     return (
       <section className="intro">
-        <img src={image} alt={name} />
-        <div className="intro__inner">
-          <h2>{name}</h2>
-          <h4>{position}</h4>
-          <h5>{location}</h5>
-          <ul>{bio.map((item, index) => <li key={index}>{item}</li>)}</ul>
-        </div>
+        <CenteredDiv className="intro__container">
+          <img src={image} alt={name} />
+          <div className="intro__inner">
+            <h2>{name}</h2>
+            <h4>{position}</h4>
+            <h5>{location}</h5>
+            <ul>{bio.map((item, index) => <li key={index}>{item}</li>)}</ul>
+          </div>
+        </CenteredDiv>
       </section>
     )
   }

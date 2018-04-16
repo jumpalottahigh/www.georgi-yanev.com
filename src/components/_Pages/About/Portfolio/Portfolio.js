@@ -1,8 +1,15 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
+
 import H2 from '../../../_Elements/H2/H2'
 import CenteredDiv from '../../../../components/_Elements/CenteredDiv/CenteredDiv'
 
 export default class Portfolio extends Component {
+  componentDidMount = () => {
+    ReactGA.initialize('UA-43588334-2')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }
+
   render() {
     return (
       <section style={{ backgroundColor: 'beige' }}>

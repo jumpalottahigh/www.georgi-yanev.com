@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import ReactGA from 'react-ga'
+
 import H2 from '../../../_Elements/H2/H2'
 
 import data from './skillsData.json'
@@ -43,6 +45,11 @@ const Label = styled.span`
 export default class SkillTags extends Component {
   state = {
     skills: [...data]
+  }
+
+  componentDidMount = () => {
+    ReactGA.initialize('UA-43588334-2')
+    ReactGA.pageview(window.location.pathname + window.location.search)
   }
 
   render() {
