@@ -12,7 +12,7 @@ export default class Portfolio extends Component {
 
   render() {
     return (
-      <section style={{ backgroundColor: 'beige' }}>
+      <section style={{ backgroundColor: '#dedede' }}>
         <H2>&#123; Latest projects &#125;</H2>
         <CenteredDiv>
           <ul>

@@ -42,7 +42,13 @@ class GithubActivity extends Component {
   }
 
   componentDidMount() {
-    // Ideally this initial call should happen after page load as it is not crucial
+    // On subsequent visits just fetch the data
+    if (document.readyState === 'complete') {
+      this.fetchGithub()
+      return
+    }
+
+    // On first load wait for page to finish loading before fetching data
     window.addEventListener('load', () => {
       this.fetchGithub()
     })
@@ -51,21 +57,24 @@ class GithubActivity extends Component {
   render() {
     return (
       <section className="github-activity">
-        <H2>Latest GitHub Activity:</H2>
-        <div style={{ justifySelf: 'center', paddingTop: '10px' }}>
-          {this.state.showAll === false ? (
-            <Fragment>
-              <GithubEvent data={this.state.githubPublicActivity[0]} />
-              <GithubEvent data={this.state.githubPublicActivity[1]} />
-              <GithubEvent data={this.state.githubPublicActivity[2]} />
-              <Button onClick={this.displayMoreItems}>Show more</Button>
-            </Fragment>
-          ) : (
-            this.state.githubPublicActivity.map(item => (
-              <GithubEvent key={item.id} data={item} />
-            ))
-          )}
-        </div>
+        <H2 style={{ gridColumn: '1/-1' }}>Latest GitHub Activity:</H2>
+        {this.state.showAll === false ? (
+          <Fragment>
+            <GithubEvent data={this.state.githubPublicActivity[0]} />
+            <GithubEvent data={this.state.githubPublicActivity[1]} />
+            <GithubEvent data={this.state.githubPublicActivity[2]} />
+            <Button
+              style={{ gridColumn: '1/-1' }}
+              onClick={this.displayMoreItems}
+            >
+              Show more
+            </Button>
+          </Fragment>
+        ) : (
+          this.state.githubPublicActivity.map(item => (
+            <GithubEvent key={item.id} data={item} />
+          ))
+        )}
       </section>
     )
   }

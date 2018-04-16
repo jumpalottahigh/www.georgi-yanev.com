@@ -4,7 +4,7 @@ import H2 from '../../../_Elements/H2/H2'
 export default class Statements extends Component {
   render() {
     return (
-      <section style={{ backgroundColor: 'beige' }}>
+      <section style={{ backgroundColor: '#dedede' }}>
         <H2>Statements:</H2>
         <div style={{ justifySelf: 'center' }}>
           <ul>

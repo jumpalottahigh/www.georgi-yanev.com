@@ -1,3 +1,23 @@
-.github-activity {
-  background-color: #dedede;
+.github-event {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+  .github-event {
+    margin-bottom: 0;
+  }
+
+  .github-activity {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .github-activity {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+  }
 }

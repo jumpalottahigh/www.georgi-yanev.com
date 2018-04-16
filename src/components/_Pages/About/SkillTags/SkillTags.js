@@ -29,7 +29,8 @@ const ProgressBar = styled.span`
   display: grid;
   align-items: center;
   position: relative;
-  background: burlywood;
+  background: #dedede;
+  border: 1px solid #bbb;
 `
 const Progress = styled.span`
   position: absolute;

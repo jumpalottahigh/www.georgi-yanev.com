@@ -29,7 +29,7 @@ export default class HobbiesEvents extends Component {
             </ul>
           </CenteredDiv>
         </section>
-        <section style={{ backgroundColor: 'beige' }}>
+        <section style={{ backgroundColor: '#dedede' }}>
           <H2>&#123; Event participation &#125;</H2>
           <CenteredDiv>
             <ul>

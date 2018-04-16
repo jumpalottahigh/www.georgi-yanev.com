@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
 
+import Card from '../../../../components/_Elements/Card/Card'
+
 export default class GithubEvent extends Component {
   render() {
     const event = this.props.data
@@ -49,15 +51,14 @@ export default class GithubEvent extends Component {
     }
 
     return (
-      <div>
+      <Card className="github-event">
         <Moment date={eventData.date} format="Do MMM YYYY HH:mm" />
         <h5>{eventData.actorName}</h5>
         <p>{eventData.payloadText}</p>
         <p>
           <a href={eventData.repoLink}>{eventData.repoName}</a>
         </p>
-        <hr />
-      </div>
+      </Card>
     )
   }
 }
