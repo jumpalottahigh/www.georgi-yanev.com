@@ -1,0 +1,40 @@
+.intro {
+  background-color: #dedede;
+}
+
+.intro img {
+  width: 12rem;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.intro ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.intro__container {
+  display: grid;
+}
+
+.intro__inner h2 {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .intro__container {
+    grid-gap: 10px;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .intro__inner h2 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1100px) {
+  .intro__inner {
+    padding: 0 1rem;
+  }
+}

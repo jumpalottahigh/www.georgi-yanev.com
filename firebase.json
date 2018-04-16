@@ -1,18 +1,6 @@
 {
   "hosting": {
-    "public": ".",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "CNAME",
-      "database.rules.json",
-      "LICENSE",
-      ".vscode/**",
-      ".firebaserc",
-      "README.md",
-      ".git/**",
-      ".gitignore"
-    ]
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
