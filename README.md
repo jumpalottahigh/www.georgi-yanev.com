@@ -4,6 +4,9 @@ React.js + CSS Grid = <3
 
 <img src="georgi-yanev.com-preview.png">
 
+Lighthouse scores 90+ across the board.
+<img src="georgi-yanev.com-lighthouse-scores.png">
+
 ## Social Links
 
 * [www.georgi-yanev.com](https://www.georgi-yanev.com)
