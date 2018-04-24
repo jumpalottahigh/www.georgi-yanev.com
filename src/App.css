@@ -51,6 +51,17 @@ a:hover {
   font-weight: bold;
 }
 
+.inspirational {
+  max-width: 420px;
+  justify-self: center;
+}
+
+@media (min-width: 800px) {
+  .inspirational {
+    max-width: 620px;
+  }
+}
+
 @media (min-width: 1100px) {
   main {
     display: flex;
