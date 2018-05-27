@@ -416,7 +416,7 @@
     "url": "https://home-assistant.io"
   },
   {
-    "experience": "1 year",
+    "experience": "2 years",
     "level": 100,
     "name": "Visual Studio Code",
     "type": "IDE/Code Editor",
@@ -477,5 +477,40 @@
     "name": "GraphQL",
     "type": "Language",
     "url": "http://graphql.org/"
+  },
+  {
+    "experience": "1 year",
+    "level": 60,
+    "name": "IntelliJ IDEA",
+    "type": "IDE/Code Editor",
+    "url": "https://www.jetbrains.com/idea/"
+  },
+  {
+    "experience": "6 months",
+    "level": 70,
+    "name": "Sentient Ascend",
+    "type": "Service",
+    "url": "https://www.ascend.ai/"
+  },
+  {
+    "experience": "6 months",
+    "level": 90,
+    "name": "Google Tag Manager",
+    "type": "Service",
+    "url": "https://tagmanager.google.com/"
+  },
+  {
+    "experience": "2 years",
+    "level": 90,
+    "name": "Adobe Dynamic Tag Manager",
+    "type": "Service",
+    "url": "https://dtm.adobe.com/"
+  },
+  {
+    "experience": "1 month",
+    "level": 20,
+    "name": "Adobe Experience Manager",
+    "type": "Service",
+    "url": "https://www.adobe.com/marketing-cloud/experience-manager.html"
   }
 ]
