@@ -4,6 +4,7 @@ import Intro from './Intro/Intro'
 import Portfolio from './Portfolio/Portfolio'
 import Education from './Education/Education'
 import SkillTags from './SkillTags/SkillTags'
+import Uses from './Uses/Uses'
 import HobbiesEvents from './HobbiesEvents/HobbiesEvents'
 import ReactGA from 'react-ga'
 
@@ -20,6 +21,7 @@ export default class About extends Component {
         <Portfolio />
         <Education />
         <SkillTags />
+        <Uses />
         <HobbiesEvents />
       </Fragment>
     )

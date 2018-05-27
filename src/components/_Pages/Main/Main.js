@@ -5,6 +5,7 @@ import About from '../About/About'
 import NotFound from '../NotFound/NotFound'
 import Portfolio from '../About/Portfolio/Portfolio'
 import SkillTags from '../About/SkillTags/SkillTags'
+import Uses from '../About/Uses/Uses'
 
 const Main = () => (
   <main>
@@ -14,6 +15,7 @@ const Main = () => (
       <Route path="/about" component={About} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/skills" component={SkillTags} />
+      <Route path="/uses" component={Uses} />
       <Route path="*" component={NotFound} />
     </Switch>
   </main>

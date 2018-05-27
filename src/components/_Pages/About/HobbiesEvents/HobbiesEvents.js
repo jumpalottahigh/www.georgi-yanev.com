@@ -27,6 +27,17 @@ export default class HobbiesEvents extends Component {
               </li>
               <li>I try to grow veggies in the summer.</li>
             </ul>
+            <CenteredDiv style={{ textAlign: 'center' }}>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/cVTpELazrD8?rel=0"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                title="Flying FPV quads"
+                allowFullScreen
+              />
+            </CenteredDiv>
           </CenteredDiv>
         </section>
         <section style={{ backgroundColor: '#dedede' }}>
@@ -52,7 +63,7 @@ export default class HobbiesEvents extends Component {
           <H2>&#123; Conferences I follow &#125;</H2>
           <CenteredDiv>
             <ul>
-              <li>Google I/O (2013, 2015, 2016, 2017)</li>
+              <li>Google I/O (2013, 2015, 2016, 2017, 2018)</li>
               <li>Microsoft Build (2016, 2017)</li>
               <li>Apple WWDC (2015, 2016, 2017)</li>
               <li>Facebook F8 (2016, 2017)</li>
