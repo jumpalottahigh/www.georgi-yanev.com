@@ -17,7 +17,10 @@ export default class Portfolio extends Component {
         <CenteredDiv>
           <ul>
             <li>
-              <strong>PWA prototype with React.js</strong>
+              <strong>Progressive Web Apps</strong>
+            </li>
+            <li>
+              <strong>Work with Adobe Experience Manager CMS</strong>
             </li>
             <li>
               Most pages on{' '}
@@ -29,7 +32,7 @@ export default class Portfolio extends Component {
                 www.f-secure.com
               </a>
             </li>
-            <li>AMP prototype</li>
+            <li>AMP prototypes</li>
             <li>Gatsby and Nuxt evaluation</li>
             <li>Static site generated pages tests with Grunt</li>
             <li>Puppeteer (headless Chrome) screenshots and tests</li>

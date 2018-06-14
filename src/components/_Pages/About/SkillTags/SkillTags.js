@@ -46,7 +46,7 @@ const Label = styled.span`
 
 export default class SkillTags extends Component {
   state = {
-    expandSkills: false,
+    expandSkills: this.props.collapse === 'yes' ? false : true,
     skills: [...data]
   }
 
@@ -86,6 +86,8 @@ export default class SkillTags extends Component {
   }
 
   componentDidMount = () => {
+    // this.props.collapse
+
     ReactGA.initialize('UA-43588334-2')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
@@ -94,7 +96,9 @@ export default class SkillTags extends Component {
     return (
       <section id="skills" style={{ gridColumn: '1/-1' }}>
         <H2>&#123; Skills &#125;</H2>
-        <Button onClick={this.handleExpandSkills}>Stats for nerds</Button>
+        {!this.state.expandSkills && (
+          <Button onClick={this.handleExpandSkills}>Show all</Button>
+        )}
         {this.state.expandSkills === true ? (
           <UL>
             {this.state.skills.map((skill, id) => {

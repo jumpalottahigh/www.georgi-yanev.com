@@ -12,7 +12,7 @@ export default class Intro extends Component {
         <CenteredDiv>
           <p>
             Here's a{' '}
-            <a href="https://blog.georgi-yanev.com/general/how-i-got-into-software-development/">
+            <a href="https://blog.georgi-yanev.com/learning/how-i-got-into-software-development/">
               short article recapping the last 18 years of my professional life
             </a>.
           </p>

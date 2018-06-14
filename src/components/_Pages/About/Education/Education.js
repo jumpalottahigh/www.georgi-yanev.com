@@ -21,8 +21,8 @@ export default class Education extends Component {
           </p>
           <UL>
             <li>
-              Udacity's Google Developer Challenge Scholarship holder for
-              Advanced Mobile Web (2017-2018)
+              Udacity's Google Developer Challenge Scholarship holder for Mobile
+              Web Specialist nanodegree (2017-2018)
             </li>
             <li>Google Analytics certified (2017-2018)</li>
             <li>

@@ -20,7 +20,7 @@ export default class About extends Component {
         <Intro />
         <Portfolio />
         <Education />
-        <SkillTags />
+        <SkillTags collapse="yes" />
         <Uses />
         <HobbiesEvents />
       </Fragment>
