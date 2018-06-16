@@ -1,0 +1,16 @@
+/* TODO: write some styles and make pretty */
+.react-tabs__tab-list {
+  list-style-type: none;
+}
+
+.react-tabs__tab {
+}
+
+.react-tabs__tab--selected {
+}
+
+.react-tabs__tab-panel {
+}
+
+.react-tabs__tab-panel--selected {
+}

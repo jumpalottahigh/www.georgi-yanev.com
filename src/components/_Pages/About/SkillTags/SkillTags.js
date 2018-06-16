@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import ReactGA from 'react-ga'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 import Button from '../../../_Elements/Button/Button'
 import H2 from '../../../_Elements/H2/H2'
 
-import data from './skillsData.json'
+import dataSource from './skillsData.json'
+import graph from './skillGraph.svg'
+import './SkillTags.css'
 
 const UL = styled.ul`
   display: grid;
@@ -47,36 +50,21 @@ const Label = styled.span`
 export default class SkillTags extends Component {
   state = {
     expandSkills: this.props.collapse === 'yes' ? false : true,
-    skills: [...data]
+    skills: [...dataSource],
+    filteredSkills: null
   }
 
   filter(skillData) {
-    // TODO: this needs work
-    // let skillsByType = []
-    //
-    // Filter the data
-    // skillData.map(skill => {
-    //   switch (skill.type) {
-    //     case 'skillsByType':
-    //       skillsByType.push(skill)
-    //       break
-    //     case 'smart home':
-    //       smarthome.push(skill)
-    //       break
-    //     case 'software':
-    //       software.push(skill)
-    //       break
-    //     case 'fpv':
-    //       fpv.push(skill)
-    //       break
-    //   }
-    // })
-    // this.setState({
-    //   general,
-    //   fpv,
-    //   software,
-    //   smarthome
-    // })
+    let filtered = {}
+
+    skillData.forEach(skill => {
+      if (!filtered.hasOwnProperty(skill.type)) {
+        filtered[skill.type] = []
+      }
+      filtered[skill.type].push(skill)
+    })
+
+    return filtered
   }
 
   handleExpandSkills = () => {
@@ -85,9 +73,13 @@ export default class SkillTags extends Component {
     }))
   }
 
-  componentDidMount = () => {
-    // this.props.collapse
+  componentWillMount = () => {
+    this.setState({
+      filteredSkills: this.filter(dataSource)
+    })
+  }
 
+  componentDidMount = () => {
     ReactGA.initialize('UA-43588334-2')
     ReactGA.pageview(window.location.pathname + window.location.search)
   }
@@ -96,6 +88,29 @@ export default class SkillTags extends Component {
     return (
       <section id="skills" style={{ gridColumn: '1/-1' }}>
         <H2>&#123; Skills &#125;</H2>
+
+        <Tabs>
+          <TabList>
+            {Object.keys(this.state.filteredSkills).map((item, index) => (
+              <Tab key={index}>{item}</Tab>
+            ))}
+          </TabList>
+
+          {Object.keys(this.state.filteredSkills).map((item, index) => (
+            <TabPanel key={index}>
+              {this.state.filteredSkills[item].map((skill, i) => (
+                <h2 key={i}>{skill.name}</h2>
+              ))}
+            </TabPanel>
+          ))}
+        </Tabs>
+
+        <img
+          src={graph}
+          alt="skill static graph"
+          style={{ justifySelf: 'center' }}
+        />
+
         {!this.state.expandSkills && (
           <Button onClick={this.handleExpandSkills}>Show all</Button>
         )}
