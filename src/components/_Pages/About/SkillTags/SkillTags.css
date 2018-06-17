@@ -1,16 +1,43 @@
-/* TODO: write some styles and make pretty */
+.react-tabs {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 3fr;
+}
+
 .react-tabs__tab-list {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .react-tabs__tab {
+  cursor: pointer;
+}
+
+.react-tabs__tab:hover {
+  color: tomato;
 }
 
 .react-tabs__tab--selected {
+  border-bottom: 1px solid tomato;
+  color: tomato;
 }
 
 .react-tabs__tab-panel {
+  padding-left: 1rem;
+  display: grid;
+  border-left: 1px solid tomato;
+  grid-auto-columns: max-content;
+  grid-auto-rows: max-content;
 }
 
 .react-tabs__tab-panel--selected {
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+}
+
+.skill-tag {
+  margin: 0.25rem;
+  max-height: 2rem;
+  border-bottom: 1px solid tomato;
 }
