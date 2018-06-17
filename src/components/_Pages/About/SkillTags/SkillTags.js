@@ -108,7 +108,7 @@ export default class SkillTags extends Component {
         <img
           src={graph}
           alt="skill static graph"
-          style={{ justifySelf: 'center' }}
+          style={{ justifySelf: 'center', maxWidth: '100%' }}
         />
 
         {!this.state.expandSkills && (

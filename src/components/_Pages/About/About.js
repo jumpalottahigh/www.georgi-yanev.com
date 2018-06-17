@@ -7,6 +7,7 @@ import SkillTags from './SkillTags/SkillTags'
 import Uses from './Uses/Uses'
 import HobbiesEvents from './HobbiesEvents/HobbiesEvents'
 import ReactGA from 'react-ga'
+import Certificates from './Certificates/Certificates'
 
 export default class About extends Component {
   componentDidMount = () => {
@@ -20,6 +21,7 @@ export default class About extends Component {
         <Intro />
         <Portfolio />
         <Education />
+        <Certificates />
         <SkillTags collapse="yes" />
         <Uses />
         <HobbiesEvents />
