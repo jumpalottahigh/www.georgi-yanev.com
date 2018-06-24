@@ -10,9 +10,11 @@ export default class SkillsOverview extends Component {
         <h4>React.js, ES6, PWA, Gatsby</h4>
         <p>Other recent worthy mentions:</p>
         <h4>Vue.js, Nuxt, AMP, Handlebars, Gulp, Grunt</h4>
-        <Link to="/skills">
-          <Button>More</Button>
-        </Link>
+        <div>
+          <Link to="/skills">
+            <Button>More</Button>
+          </Link>
+        </div>
       </section>
     )
   }

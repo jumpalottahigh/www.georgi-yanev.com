@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Layout from '../components/Layout/layout.js'
 
@@ -12,13 +12,15 @@ import HobbiesEvents from '../components/About/HobbiesEvents/HobbiesEvents.js'
 
 const AboutPage = () => (
   <Layout>
-    <Intro />
-    <Portfolio />
-    <Education />
-    <Certificates />
-    <SkillTags collapse="yes" />
-    <Uses />
-    <HobbiesEvents />
+    <Fragment>
+      <Intro />
+      <Portfolio />
+      <Education />
+      <Certificates />
+      <SkillTags collapse="yes" />
+      <Uses />
+      <HobbiesEvents />
+    </Fragment>
   </Layout>
 )
 

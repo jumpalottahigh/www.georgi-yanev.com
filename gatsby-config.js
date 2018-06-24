@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: '@jumpalottahigh',
+    title: 'Georgi Yanev',
     siteUrl: `https://www.georgi-yanev.com`,
     author: `Georgi Yanev`,
     description: `Georgi Yanev's Portfolio`,

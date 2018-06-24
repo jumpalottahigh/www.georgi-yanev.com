@@ -15,16 +15,17 @@
   height: 35px;
 }
 
+.header nav.brand {
+  background: #fff;
+  padding: 5px 20px;
+}
+
 .header nav.brand a {
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-}
-
-.header nav.brand h4 {
-  color: #fff;
-  margin: 0 0 0 1rem;
+  filter: drop-shadow(0 0 0.75rem #999);
 }
 
 .header nav.main a {
@@ -64,5 +65,11 @@
 
   nav {
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .header nav.brand {
+    margin-left: -20px;
   }
 }

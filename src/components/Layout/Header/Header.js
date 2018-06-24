@@ -9,8 +9,7 @@ const Header = ({ siteTitle }) => (
   <header className="header">
     <nav className="brand">
       <Link exact to="/" activeStyle={{ color: 'orangered' }}>
-        <img src={logo} alt="Georgi Yanev logo" />
-        <h4>{siteTitle}</h4>
+        <img src={logo} alt="Georgi Yanev logo" style={{ height: '40px' }} />
       </Link>
     </nav>
     <nav className="main">

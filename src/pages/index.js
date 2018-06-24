@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Layout from '../components/Layout/layout.js'
 
@@ -10,11 +10,13 @@ import Inspirational from './../components/Home/Inspirational/Inspirational'
 
 const IndexPage = () => (
   <Layout>
-    <Intro />
-    <SkillsOverview />
-    <Statements />
-    <GithubActivity />
-    <Inspirational />
+    <Fragment>
+      <Intro />
+      <SkillsOverview />
+      <Statements />
+      <GithubActivity />
+      <Inspirational />
+    </Fragment>
   </Layout>
 )
 
