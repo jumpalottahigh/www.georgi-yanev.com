@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://www.gyanev.com/* https://www.georgi-yanev.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://georgi.netlify.com/* https://www.georgi-yanev.com/:splat 301!
