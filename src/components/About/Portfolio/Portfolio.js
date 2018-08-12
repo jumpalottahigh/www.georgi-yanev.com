@@ -44,7 +44,7 @@ export default class Portfolio extends Component {
             }}
           >
             <li>
-              <a href="https://youtube-screenshot.georgi-yanev.com/">
+              <a href="https://youtube-screenshot.netlify.com/">
                 YouTube Timestamp Screenshot PWA
               </a>
             </li>

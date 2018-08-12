@@ -12,7 +12,7 @@ export default class SkillsOverview extends Component {
         <h4>Vue.js, Nuxt, AMP, Handlebars, Gulp, Grunt</h4>
         <div>
           <Link to="/skills">
-            <Button>More</Button>
+            <Button>More about my skills</Button>
           </Link>
         </div>
       </section>

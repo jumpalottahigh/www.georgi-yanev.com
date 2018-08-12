@@ -38,7 +38,7 @@
 
 .header nav.main a:hover {
   transition: 275ms;
-  border-bottom: 2px solid orangered;
+  border-bottom: 2px solid #000;
 }
 
 .header nav.main a.blog {
@@ -49,7 +49,7 @@
 }
 
 .header nav.main a.blog:hover {
-  color: orangered;
+  color: #000;
   background-color: rgba(220, 220, 220, 0.9);
   border-bottom: 2px solid transparent;
 }

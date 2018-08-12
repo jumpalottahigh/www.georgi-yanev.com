@@ -8,15 +8,15 @@ import twitter from './twitter.svg'
 const Header = ({ siteTitle }) => (
   <header className="header">
     <nav className="brand">
-      <Link exact="true" to="/" activeStyle={{ color: 'orangered' }}>
+      <Link exact="true" to="/" activeStyle={{ color: '#000' }}>
         <img src={logo} alt="Georgi Yanev logo" style={{ height: '40px' }} />
       </Link>
     </nav>
     <nav className="main">
-      <Link exact="true" to="/" activeStyle={{ color: 'orangered' }}>
+      <Link exact="true" to="/" activeStyle={{ color: '#000' }}>
         Home
       </Link>
-      <Link to="/about" activeStyle={{ color: 'orangered' }}>
+      <Link to="/about" activeStyle={{ color: '#000' }}>
         About
       </Link>
       <a className="blog" href="https://blog.georgi-yanev.com">
