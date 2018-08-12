@@ -8,12 +8,12 @@ import twitter from './twitter.svg'
 const Header = ({ siteTitle }) => (
   <header className="header">
     <nav className="brand">
-      <Link exact to="/" activeStyle={{ color: 'orangered' }}>
+      <Link exact="true" to="/" activeStyle={{ color: 'orangered' }}>
         <img src={logo} alt="Georgi Yanev logo" style={{ height: '40px' }} />
       </Link>
     </nav>
     <nav className="main">
-      <Link exact to="/" activeStyle={{ color: 'orangered' }}>
+      <Link exact="true" to="/" activeStyle={{ color: 'orangered' }}>
         Home
       </Link>
       <Link to="/about" activeStyle={{ color: 'orangered' }}>

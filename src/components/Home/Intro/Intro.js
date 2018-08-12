@@ -8,8 +8,8 @@ class Intro extends Component {
     bio: [
       '🍼 Father',
       '💻 Software Engineer',
-      '🏡 Smart Home Automation Enthusiast',
       '🚁 FPV drone pilot',
+      '🏡 Smart Home Automation Enthusiast',
     ],
     position: 'Web Developer @ F-Secure',
     location: 'Helsinki, Finland',
@@ -27,7 +27,11 @@ class Intro extends Component {
             <h2>{name}</h2>
             <h4>{position}</h4>
             <h5>{location}</h5>
-            <ul>{bio.map((item, index) => <li key={index}>{item}</li>)}</ul>
+            <ul>
+              {bio.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
         </CenteredDiv>
       </section>

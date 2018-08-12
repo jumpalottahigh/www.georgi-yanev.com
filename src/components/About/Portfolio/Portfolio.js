@@ -11,7 +11,7 @@ export default class Portfolio extends Component {
         <CenteredDiv>
           <ul>
             <li>
-              <strong>Progressive Web Apps</strong>
+              <strong>Progressive Web Apps (PWA)</strong>
             </li>
             <li>
               <strong>Work with Adobe Experience Manager CMS</strong>
@@ -26,11 +26,35 @@ export default class Portfolio extends Component {
                 www.f-secure.com
               </a>
             </li>
-            <li>AMP prototypes</li>
-            <li>Gatsby and Nuxt evaluation</li>
+            <li>Static sites with Gatsby and Nuxt</li>
             <li>Static site generated pages tests with Grunt</li>
             <li>Puppeteer (headless Chrome) screenshots and tests</li>
             <li>New components and templates</li>
+            <li>AMP projects</li>
+          </ul>
+        </CenteredDiv>
+        <CenteredDiv>
+          <h5 style={{ textAlign: 'center' }}>Some examples:</h5>
+          <ul
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              display: 'grid',
+              gridGap: '10px',
+            }}
+          >
+            <li>
+              <a href="https://youtube-screenshot.georgi-yanev.com/">
+                YouTube Timestamp Screenshot PWA
+              </a>
+            </li>
+            <li>
+              <a href="https://baehrbg.netlify.com/">BAEHR BG</a>
+            </li>
+            <li>
+              Blogging regularly at{' '}
+              <a href="https://blog.georgi-yanev.com/">blog.georgi-yanev.com</a>
+            </li>
           </ul>
         </CenteredDiv>
       </section>

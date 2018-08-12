@@ -6,11 +6,11 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.5.1",
     "gatsby": "next",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-manifest": "^1.0.27",
+    "gatsby-plugin-google-analytics": "next",
+    "gatsby-plugin-manifest": "next",
     "gatsby-plugin-react-helmet": "next",
-    "gatsby-plugin-sitemap": "^1.2.25",
-    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-plugin-sitemap": "next",
+    "gatsby-plugin-styled-components": "next",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
@@ -23,12 +23,12 @@
   ],
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf .cache && rm -rf public/",
     "build": "gatsby build",
     "dev": "gatsby develop",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build && firebase deploy"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "prettier": "^1.12.0"
