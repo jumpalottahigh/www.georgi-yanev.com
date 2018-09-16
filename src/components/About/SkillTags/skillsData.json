@@ -319,8 +319,7 @@
     "level": 70,
     "name": "Adobe Analytics",
     "type": "Service",
-    "url":
-      "http://www.adobe.com/marketing-cloud/web-analytics/marketing-analytics-capabilities.html"
+    "url": "http://www.adobe.com/marketing-cloud/web-analytics/marketing-analytics-capabilities.html"
   },
   {
     "experience": "2 years",
@@ -362,8 +361,7 @@
     "level": 90,
     "name": "ES6",
     "type": "Language",
-    "url":
-      "https://developer.mozilla.org/en/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla"
+    "url": "https://developer.mozilla.org/en/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla"
   },
   {
     "experience": "6 months",
@@ -511,5 +509,19 @@
     "name": "Adobe Experience Manager",
     "type": "Service",
     "url": "https://www.adobe.com/marketing-cloud/experience-manager.html"
+  },
+  {
+    "experience": "1 year",
+    "level": 90,
+    "name": "Contentful",
+    "type": "Service",
+    "url": "https://www.contentful.com/"
+  },
+  {
+    "experience": "1 year",
+    "level": 90,
+    "name": "Netlify",
+    "type": "Service",
+    "url": "https://www.netlify.com/"
   }
 ]

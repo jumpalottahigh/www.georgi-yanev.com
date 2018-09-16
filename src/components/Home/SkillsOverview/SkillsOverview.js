@@ -9,7 +9,7 @@ export default class SkillsOverview extends Component {
         <p>Currently working with:</p>
         <h4>React.js, ES6, PWA, Gatsby</h4>
         <p>Other recent worthy mentions:</p>
-        <h4>Vue.js, Nuxt, AMP, Handlebars, Gulp, Grunt</h4>
+        <h4>Vue.js, Netlify, Contentful, Firebase, Gulp, Grunt</h4>
         <div>
           <Link to="/skills">
             <Button>More about my skills</Button>

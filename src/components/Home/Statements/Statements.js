@@ -7,14 +7,20 @@ export default class Statements extends Component {
       <section style={{ backgroundColor: '#dedede' }}>
         <H2>Statements:</H2>
         <div style={{ justifySelf: 'center' }}>
+          <h4>I love making things work on the web, usually by:</h4>
           <ul>
-            <li>I love writing JavaScript and designing systems for the web</li>
-            <li>I am very excited about Web Components</li>
-            <li>I like to make things work on the web</li>
-            <li>I fight the performance battle one small win at a time</li>
             <li>
-              <a href="https://jamstack.org/">JAMstack</a> developer
+              Writing JavaScript, designing and connecting systems and services
             </li>
+            <li>Focusing on performance as I go and not as an after thought</li>
+          </ul>
+          <h4>Am looking forward to and excited about the future of:</h4>
+          <ul>
+            <li>Web Components</li>
+            <li>
+              <a href="https://jamstack.org/">JAMstack</a>
+            </li>
+            <li>AR</li>
           </ul>
         </div>
       </section>

@@ -34,7 +34,7 @@ export default class Portfolio extends Component {
           </ul>
         </CenteredDiv>
         <CenteredDiv>
-          <h5 style={{ textAlign: 'center' }}>Some examples:</h5>
+          <h5 style={{ textAlign: 'center' }}>Some things I've built:</h5>
           <ul
             style={{
               listStyle: 'none',
@@ -47,6 +47,9 @@ export default class Portfolio extends Component {
               <a href="https://youtube-screenshot.netlify.com/">
                 YouTube Timestamp Screenshot PWA
               </a>
+            </li>
+            <li>
+              <a href="https://fpvtips.com/">FPVTIPS.COM</a>
             </li>
             <li>
               <a href="https://baehrbg.netlify.com/">BAEHR BG</a>
