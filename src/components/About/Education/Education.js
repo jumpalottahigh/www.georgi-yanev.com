@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
+import VideoBackground from '../../elements/VideoBackground/VideoBackground'
 
 const UL = styled.ul`
   display: grid;
@@ -14,6 +15,7 @@ export default class Education extends Component {
   render() {
     return (
       <section>
+        <VideoBackground videoId="W_TeQMJbjgM" />
         <H2>&#123; Education &#125;</H2>
         <CenteredDiv>
           <p className="highlight">

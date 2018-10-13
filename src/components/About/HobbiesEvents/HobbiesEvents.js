@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
+import VideoBackground from '../../elements/VideoBackground/VideoBackground'
 
 export default class HobbiesEvents extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class HobbiesEvents extends Component {
         <section style={{ gridColumn: '1/-1' }}>
           <H2>&#123; Hobbies &#125;</H2>
           <CenteredDiv>
+            {/* <VideoBackground videoId="W_TeQMJbjgM" /> */}
             <ul>
               <li>I love spending time with my son.</li>
               <li>I regularly read and write (or think about) code.</li>
@@ -27,7 +29,7 @@ export default class HobbiesEvents extends Component {
               </li>
               <li>I try to grow veggies in the summer.</li>
             </ul>
-            <CenteredDiv style={{ textAlign: 'center' }}>
+            {/* <CenteredDiv style={{ textAlign: 'center' }}>
               <iframe
                 width="100%"
                 height="315"
@@ -37,7 +39,7 @@ export default class HobbiesEvents extends Component {
                 title="Flying FPV quads"
                 allowFullScreen
               />
-            </CenteredDiv>
+            </CenteredDiv> */}
           </CenteredDiv>
         </section>
         <section style={{ backgroundColor: '#dedede' }}>
@@ -45,9 +47,16 @@ export default class HobbiesEvents extends Component {
           <CenteredDiv>
             <ul>
               <li>
+                React Helsinki - Aug 2018 - Helsinki, Finland @{' '}
+                <a href="https://www.smartly.io/">Smartly.io</a>
+              </li>
+              <li>
                 Google Page Speed Hackathon - Mar 2018 - Helsinki, Finland
               </li>
-              <li>HelsinkiJS - Jan 2018 - Helsinki, Finland</li>
+              <li>
+                HelsinkiJS - Jan 2018 - Helsinki, Finland @{' '}
+                <a href="https://uusi.op.fi">OP</a>
+              </li>
               <li>Junction Hackathon - Nov 2017 - Helsinki, Finland</li>
               <li>Junction Hackathon - Nov 2016 - Helsinki, Finland</li>
               <li>
@@ -65,7 +74,7 @@ export default class HobbiesEvents extends Component {
             <ul>
               <li>Google I/O (2013, 2015, 2016, 2017, 2018)</li>
               <li>Microsoft Build (2016, 2017)</li>
-              <li>Apple WWDC (2015, 2016, 2017)</li>
+              <li>Apple WWDC (2015, 2016, 2017, 2018)</li>
               <li>Facebook F8 (2016, 2017)</li>
             </ul>
           </CenteredDiv>
