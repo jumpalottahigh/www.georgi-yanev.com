@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
-import VideoBackground from '../../elements/VideoBackground/VideoBackground'
+
+import diploma from './metropolia-university-of-applied-sciences.jpg'
 
 const UL = styled.ul`
   display: grid;
@@ -11,11 +12,25 @@ const UL = styled.ul`
   padding-left: 20px;
 `
 
+const Diploma = styled.div`
+  display: flex;
+
+  img {
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+    align-self: center;
+  }
+`
+
 export default class Education extends Component {
   render() {
     return (
       <section>
-        <VideoBackground videoId="W_TeQMJbjgM" />
         <H2>&#123; Education &#125;</H2>
         <CenteredDiv>
           <p className="highlight">
@@ -37,11 +52,17 @@ export default class Education extends Component {
               Vue, JavaScript, WebComponents, Stencil, Polymer, etc.
             </li>
           </UL>
-          <p className="highlight">
-            Bachelor of Engineering (B.E.), Computer Software Engineering
-            <br />
-            Helsinki Metropolia University of Applied Sciences
-          </p>
+          <Diploma>
+            <img
+              src={diploma}
+              alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
+            />
+            <p>
+              Bachelor of Engineering (B.E.), Computer Software Engineering
+              <br />
+              Helsinki Metropolia University of Applied Sciences
+            </p>
+          </Diploma>
         </CenteredDiv>
       </section>
     )

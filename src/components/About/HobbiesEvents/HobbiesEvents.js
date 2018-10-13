@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
-import VideoBackground from '../../elements/VideoBackground/VideoBackground'
 
 export default class HobbiesEvents extends Component {
   render() {
@@ -11,9 +10,7 @@ export default class HobbiesEvents extends Component {
         <section style={{ gridColumn: '1/-1' }}>
           <H2>&#123; Hobbies &#125;</H2>
           <CenteredDiv>
-            {/* <VideoBackground videoId="W_TeQMJbjgM" /> */}
             <ul>
-              <li>I love spending time with my son.</li>
               <li>I regularly read and write (or think about) code.</li>
               <li>
                 I enjoy flying FPV drones and tinkering with electronics and DIY
@@ -29,17 +26,17 @@ export default class HobbiesEvents extends Component {
               </li>
               <li>I try to grow veggies in the summer.</li>
             </ul>
-            {/* <CenteredDiv style={{ textAlign: 'center' }}>
+            <CenteredDiv style={{ textAlign: 'center' }}>
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/cVTpELazrD8?rel=0"
+                src="https://www.youtube.com/embed/W_TeQMJbjgM?rel=0"
                 frameBorder="0"
                 allow="autoplay; encrypted-media"
                 title="Flying FPV quads"
                 allowFullScreen
               />
-            </CenteredDiv> */}
+            </CenteredDiv>
           </CenteredDiv>
         </section>
         <section style={{ backgroundColor: '#dedede' }}>

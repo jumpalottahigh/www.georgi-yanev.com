@@ -52,10 +52,9 @@ export default class Portfolio extends Component {
               <a href="https://fpvtips.com/">FPVTIPS.COM</a>
             </li>
             <li>
-              <a href="https://baehrbg.netlify.com/">BAEHR BG</a>
+              <a href="https://baehrbg.com/">BAEHR BG</a>
             </li>
             <li>
-              Blogging regularly at{' '}
               <a href="https://blog.georgi-yanev.com/">blog.georgi-yanev.com</a>
             </li>
           </ul>
