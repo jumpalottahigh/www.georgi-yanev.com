@@ -10,21 +10,14 @@ import landingAQuad from './landing-a-quad-1.mp4'
 
 const VideoWrapper = styled.div`
   video {
-    display: none;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
     z-index: -100;
     max-width: 70ch;
-  }
-
-  @media (min-width: 800px) {
-    video {
-      display: block;
-    }
   }
 `
 
