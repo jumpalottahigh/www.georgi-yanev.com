@@ -24,7 +24,7 @@ const VideoWrapper = styled.div`
 export default class Intro extends Component {
   render() {
     return (
-      <section>
+      <section style={{ backgroundColor: this.props.bgColor || '#fff' }}>
         <H2>&#123; Hi &#125;</H2>
         <CenteredDiv>
           <p>

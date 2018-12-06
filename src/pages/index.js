@@ -4,16 +4,17 @@ import Layout from '../components/Layout/layout.js'
 
 import Intro from '../components/Home/Intro/Intro.js'
 import SkillsOverview from '../components/Home/SkillsOverview/SkillsOverview'
-import Statements from './../components/Home/Statements/Statements'
 import GithubActivity from './../components/Home/GithubActivity/GithubActivity'
 import Inspirational from './../components/Home/Inspirational/Inspirational'
+import AboutIntro from '../components/About/Intro/Intro.js'
 
 const IndexPage = () => (
   <Layout>
     <Fragment>
       <Intro />
       <SkillsOverview />
-      <Statements />
+      <AboutIntro bgColor="#dedede" />
+      {/* <Statements /> */}
       <GithubActivity />
       <Inspirational />
     </Fragment>

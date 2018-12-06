@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 
 import H2 from '../../elements/H2/H2.js'
@@ -7,6 +8,24 @@ import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
 import dataSource from './skillsData.json'
 import graph from './skillGraph.svg'
 import './SkillTags.css'
+
+const Section = styled.section`
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr;
+
+    .heading {
+      grid-column: 1 / -1;
+    }
+
+    .subsection {
+      align-self: center;
+    }
+  }
+`
 
 export default class SkillTags extends Component {
   state = {
@@ -41,16 +60,16 @@ export default class SkillTags extends Component {
 
   render() {
     return (
-      <section id="skills" style={{ gridColumn: '1/-1' }}>
-        <H2>&#123; Skills &#125;</H2>
-
-        <img
-          src={graph}
-          alt="skill static graph"
-          style={{ justifySelf: 'center', maxWidth: '100%' }}
-        />
-
-        <CenteredDiv>
+      <Section id="skills">
+        <H2 className="heading">&#123; Skills &#125;</H2>
+        <CenteredDiv className="subsection">
+          <img
+            src={graph}
+            alt="skill static graph"
+            style={{ justifySelf: 'center', maxWidth: '100%' }}
+          />
+        </CenteredDiv>
+        <CenteredDiv className="subsection">
           <Tabs>
             <TabList>
               {Object.keys(this.state.filteredSkills).map((item, index) => (
@@ -69,7 +88,7 @@ export default class SkillTags extends Component {
             ))}
           </Tabs>
         </CenteredDiv>
-      </section>
+      </Section>
     )
   }
 }

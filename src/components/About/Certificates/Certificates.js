@@ -1,34 +1,25 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import H2 from '../../elements/H2/H2.js'
+import H2 from '../../elements/H2/H2'
+import Grid from '../../elements/Grid/Grid'
 
 import udacityMWS350 from './udacity-mobile-web-specialist-350.png'
 import adobeAEM350 from './adobe-aem-certificate-350.png'
 import googleAnalytics350 from './google-analytics-individual-qualification-350.png'
 
-const ImgFrameContainer = styled.div`
-  display: flex;
-  flex-flow: column wrap;
-  padding: 1rem 0;
-
-  @media (min-width: 1100px) {
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
+const ImgFrameContainer = styled(Grid)`
+  padding: 1rem 2rem;
+  grid-gap: 2rem;
 `
 
 const ImgFrame = styled.a`
   text-align: center;
-  margin-bottom: 2rem;
-
-  @media (min-width: 1100px) {
-    max-width: 33%;
-  }
 `
 
 const Img = styled.img`
   margin-bottom: 1rem;
   border-radius: 4px;
+  max-width: 100%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: 225ms;
 
@@ -42,7 +33,7 @@ export default class Certificates extends Component {
     return (
       <section style={{ backgroundColor: '#dedede' }}>
         <H2>&#123; Certificates &#125;</H2>
-        <ImgFrameContainer>
+        <ImgFrameContainer col1200="3">
           <ImgFrame
             href="https://confirm.udacity.com/KSG5UP2N"
             target="_blank"
