@@ -1,7 +1,26 @@
 import React, { Component, Fragment } from 'react'
+import styled from 'styled-components'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
+import BaseGrid from '../../elements/Grid/Grid'
+
+import imgNasaInsightGeorgi from './nasa-insight-georgi-yanev.png'
+import imgNasaParkerGeorgi from './nasa-parker-solar-probe-georgi-yanev.png'
+
+const Grid = styled(BaseGrid)`
+  padding-bottom: 1rem;
+
+  .grid-image-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+`
 
 export default class HobbiesEvents extends Component {
   render() {
@@ -11,38 +30,75 @@ export default class HobbiesEvents extends Component {
           <H2>&#123; Hobbies &#125;</H2>
           <CenteredDiv>
             <ul>
+              <li>
+                I enjoy{' '}
+                <a
+                  href="https://blog.georgi-yanev.com/fpv/build-a-quad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  building
+                </a>{' '}
+                and{' '}
+                <a
+                  href="https://www.youtube.com/watch?v=aASDUpVy3zM&list=PLxuusHIzi2UoSYK9fHSvJF_fUiVeo35ka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  flying FPV drones
+                </a>{' '}
+                <CenteredDiv style={{ textAlign: 'center', margin: '2rem 0' }}>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/W_TeQMJbjgM?rel=0"
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    title="Flying FPV quads"
+                    allowFullScreen
+                  />
+                </CenteredDiv>
+              </li>
               <li>I regularly read and write (or think about) code.</li>
               <li>
-                I enjoy flying FPV drones and tinkering with electronics and DIY
-                projects.
+                I try to contribute to open source software whenever I get the
+                chance.
               </li>
               <li>
-                I love open source software and try to get involved whenever I
-                get the chance.
+                I maintain a{' '}
+                <a
+                  href="https://github.com/jumpalottahigh/YAR-Home-Assistant-Configuration"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  smart home automation system
+                </a>{' '}
+                based on Home Assistant
               </li>
-              <li>
-                Working on my smart home automation system based on Home
-                Assistant
-              </li>
-              <li>I try to grow veggies in the summer.</li>
+              <li>I like NASA, Space X and all sorts of space stuff</li>
             </ul>
-            <CenteredDiv style={{ textAlign: 'center' }}>
-              <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/W_TeQMJbjgM?rel=0"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                title="Flying FPV quads"
-                allowFullScreen
-              />
-            </CenteredDiv>
           </CenteredDiv>
+          <Grid col600="1" col900="1" col1200="1">
+            <div className="grid-image-container">
+              <img src={imgNasaInsightGeorgi} alt="NASA InSight Georgi Yanev" />
+            </div>
+            <div className="grid-image-container">
+              <img
+                src={imgNasaParkerGeorgi}
+                alt="NASA Parker Solar Probe Georgi Yanev"
+              />
+            </div>
+          </Grid>
         </section>
         <section style={{ backgroundColor: '#dedede' }}>
           <H2>&#123; Event participation &#125;</H2>
           <CenteredDiv>
             <ul>
+              <li>
+                HelsinkiJS - Dec 2018 - Helsinki, Finland @{' '}
+                <a href="https://www.citrus.fi/">Citrus</a>
+              </li>
+              <li>Junction Hackathon - Nov 2018 - Helsinki, Finland</li>
               <li>
                 React Helsinki - Aug 2018 - Helsinki, Finland @{' '}
                 <a href="https://www.smartly.io/">Smartly.io</a>

@@ -15,7 +15,7 @@ const Section = styled.section`
   grid-template-columns: 1fr;
 
   @media (min-width: 900px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
     .heading {
       grid-column: 1 / -1;
