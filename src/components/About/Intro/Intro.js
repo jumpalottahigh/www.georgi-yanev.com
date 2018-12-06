@@ -35,7 +35,7 @@ export default class Intro extends Component {
             . You can find me on{' '}
             <a href="https://twitter.com/jumpalottahigh">twitter</a>,{' '}
             <a href="https://github.com/jumpalottahigh">github</a>,{' '}
-            <a href="https://twitch.com/jumpalottahigh">twitch</a> and{' '}
+            <a href="https://twitch.tv/jumpalottahigh">twitch</a> and{' '}
             <a href="https://www.linkedin.com/in/yanevgeorgi">linkedin</a>.
             <br />
             <br />I <strong>write code</strong>, solve problems and sometimes
