@@ -1,12 +1,10 @@
 import React, { Component, Fragment } from 'react'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
 import BaseGrid from '../../elements/Grid/Grid'
-
-import imgNasaInsightGeorgi from './nasa-insight-georgi-yanev.png'
-import imgNasaParkerGeorgi from './nasa-parker-solar-probe-georgi-yanev.png'
 
 const Grid = styled(BaseGrid)`
   padding-bottom: 1rem;
@@ -16,7 +14,7 @@ const Grid = styled(BaseGrid)`
     margin: 0 auto;
   }
 
-  img {
+  .img-wrapper {
     max-width: 100%;
     margin: 1rem 0;
   }
@@ -24,6 +22,8 @@ const Grid = styled(BaseGrid)`
 
 export default class HobbiesEvents extends Component {
   render() {
+    const { images } = this.props
+
     return (
       <Fragment>
         <section style={{ gridColumn: '1/-1' }}>
@@ -79,15 +79,13 @@ export default class HobbiesEvents extends Component {
             </ul>
           </CenteredDiv>
           <Grid col600="1" col900="1" col1200="1">
-            <div className="grid-image-container">
-              <img src={imgNasaInsightGeorgi} alt="NASA InSight Georgi Yanev" />
-            </div>
-            <div className="grid-image-container">
-              <img
-                src={imgNasaParkerGeorgi}
-                alt="NASA Parker Solar Probe Georgi Yanev"
-              />
-            </div>
+            {images.map(({ node }) => (
+              <div key={node.id} className="grid-image-container">
+                <div className="img-wrapper">
+                  <Img fixed={node.childImageSharp.fixed} alt={node.name} />
+                </div>
+              </div>
+            ))}
           </Grid>
         </section>
         <section style={{ backgroundColor: '#dedede' }}>
