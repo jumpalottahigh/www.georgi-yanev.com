@@ -84,7 +84,6 @@ export default () => (
       }
     `}
     render={data => {
-      console.log(data)
       // Mutate image data to include link and text information
       let portfolio = []
 

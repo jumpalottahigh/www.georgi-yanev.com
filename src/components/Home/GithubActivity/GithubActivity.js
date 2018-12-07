@@ -26,7 +26,6 @@ class GithubActivity extends Component {
       'https://api.github.com/users/jumpalottahigh/events/public'
     const publicActivityResponse = await fetch(userPublicActivityUrl)
     const publicActivityJSON = await publicActivityResponse.json()
-    console.log(publicActivityJSON)
     await this.setStateAsync({
       githubPublicActivity: publicActivityJSON,
     })
