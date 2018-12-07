@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/Layout/layout.js'
 
 import Intro from '../components/About/Intro/Intro.js'
@@ -12,7 +11,7 @@ import Certificates from '../components/About/Certificates/Certificates.js'
 import Uses from '../components/About/Uses/Uses.js'
 import HobbiesEvents from '../components/About/HobbiesEvents/HobbiesEvents.js'
 
-const AboutPage = ({ data }) => (
+const AboutPage = () => (
   <Layout>
     <Fragment>
       <Intro />
@@ -23,30 +22,9 @@ const AboutPage = ({ data }) => (
       <Certificates />
       <SkillTags collapse="yes" />
       <Uses />
-      <HobbiesEvents images={data.allFile.edges} />
+      <HobbiesEvents />
     </Fragment>
   </Layout>
 )
 
 export default AboutPage
-
-export const query = graphql`
-  query {
-    allFile(filter: { relativePath: { regex: "hobbies/" } }) {
-      edges {
-        node {
-          id
-          name
-          relativePath
-          childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
-            fixed(width: 700) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-  }
-`

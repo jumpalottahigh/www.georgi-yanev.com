@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { graphql, StaticQuery } from 'gatsby'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
-
-import diploma from './metropolia-university-of-applied-sciences.jpg'
 
 const UL = styled.ul`
   display: grid;
@@ -15,7 +15,8 @@ const UL = styled.ul`
 const Diploma = styled.div`
   display: flex;
 
-  img {
+  .diploma-image {
+    width: 74px;
     height: 100px;
     margin-right: 20px;
   }
@@ -27,9 +28,28 @@ const Diploma = styled.div`
   }
 `
 
-export default class Education extends Component {
-  render() {
-    return (
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allFile(filter: { relativePath: { regex: "/education/" } }) {
+          edges {
+            node {
+              id
+              name
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fluid(maxWidth: 74) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
       <section>
         <H2>&#123; Education &#125;</H2>
         <CenteredDiv>
@@ -53,10 +73,12 @@ export default class Education extends Component {
             </li>
           </UL>
           <Diploma>
-            <img
-              src={diploma}
-              alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
-            />
+            <div className="diploma-image">
+              <Img
+                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+                alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
+              />
+            </div>
             <p>
               Bachelor of Engineering (B.E.), Computer Software Engineering
               <br />
@@ -65,6 +87,6 @@ export default class Education extends Component {
           </Diploma>
         </CenteredDiv>
       </section>
-    )
-  }
-}
+    )}
+  />
+)

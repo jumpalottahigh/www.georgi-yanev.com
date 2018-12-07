@@ -3,7 +3,8 @@ import styled from 'styled-components'
 const CenteredDiv = styled.div`
   justify-self: center;
 
-  p {
+  p,
+  & > div {
     max-width: 70ch;
   }
 `

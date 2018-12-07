@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from 'react'
-import Img from 'gatsby-image'
+import React from 'react'
 import styled from 'styled-components'
+import { graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
@@ -11,6 +12,7 @@ const Grid = styled(BaseGrid)`
 
   .grid-image-container {
     max-width: 700px;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -20,12 +22,29 @@ const Grid = styled(BaseGrid)`
   }
 `
 
-export default class HobbiesEvents extends Component {
-  render() {
-    const { images } = this.props
-
-    return (
-      <Fragment>
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allFile(filter: { relativePath: { regex: "/hobbies/" } }) {
+          edges {
+            node {
+              id
+              name
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
         <section style={{ gridColumn: '1/-1' }}>
           <H2>&#123; Hobbies &#125;</H2>
           <CenteredDiv>
@@ -79,10 +98,10 @@ export default class HobbiesEvents extends Component {
             </ul>
           </CenteredDiv>
           <Grid col600="1" col900="1" col1200="1">
-            {images.map(({ node }) => (
+            {data.allFile.edges.map(({ node }) => (
               <div key={node.id} className="grid-image-container">
                 <div className="img-wrapper">
-                  <Img fixed={node.childImageSharp.fixed} alt={node.name} />
+                  <Img fluid={node.childImageSharp.fluid} alt={node.name} />
                 </div>
               </div>
             ))}
@@ -130,7 +149,7 @@ export default class HobbiesEvents extends Component {
             </ul>
           </CenteredDiv>
         </section>
-      </Fragment>
-    )
-  }
-}
+      </>
+    )}
+  />
+)
