@@ -49,7 +49,7 @@ const portfolioData = {
     text: 'www.georgi-yanev.com',
   },
   udacityMWS: {
-    link: 'https://udacity-mws-georgi.netlify.com/',
+    link: 'https://github.com/jumpalottahigh/mws-restaurant-stage-1',
     text: 'udacity-mws-georgi.netlify.com',
   },
   youtubeScreenshot: {
