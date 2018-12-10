@@ -20,6 +20,10 @@ const Grid = styled(BaseGrid)`
     max-width: 100%;
     margin: 1rem 0;
   }
+
+  @media(min-width: 1100px) {
+    height: 875px;
+  }
 `
 
 export default () => (
