@@ -9,6 +9,19 @@ import H2 from '../../elements/H2/H2.js'
 const ImgLinkContainer = styled(Grid)`
   padding: 1rem 2rem;
   grid-gap: 2rem;
+
+  @media (min-width: 1100px) {
+    height: 1575px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 975px;
+  }
+
+  @media (min-width: 1500px) {
+    width: 74%;
+    height: 1010px;
+  }
 `
 
 const ImgLink = styled.a`

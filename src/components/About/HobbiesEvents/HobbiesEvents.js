@@ -21,7 +21,7 @@ const Grid = styled(BaseGrid)`
     margin: 1rem 0;
   }
 
-  @media(min-width: 1100px) {
+  @media (min-width: 1100px) {
     height: 875px;
   }
 `
