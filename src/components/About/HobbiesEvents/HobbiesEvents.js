@@ -22,7 +22,7 @@ const Grid = styled(BaseGrid)`
   }
 
   @media (min-width: 1100px) {
-    height: 875px;
+    height: 1275px;
   }
 `
 
@@ -30,14 +30,15 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { relativePath: { regex: "/hobbies/" } }) {
+        allFile(
+          filter: { relativePath: { regex: "/hobbies/" } }
+          sort: { fields: name, order: ASC }
+        ) {
           edges {
             node {
               id
               name
               childImageSharp {
-                # Specify the image processing specifications right in the query.
-                # Makes it trivial to update as your page's design changes.
                 fluid(maxWidth: 700) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
