@@ -69,7 +69,7 @@ export default ({ bgColor }) => (
               />
             </div>
             <br />
-            <br />I also <strong>love flying FPV drones</strong>, 3D printing,
+            <br />I <strong>love flying FPV drones</strong>, 3D printing,
             contributing to open source, and working on side projects such as{' '}
             <a href="https://fpvtips.com">fpvtips.com</a>.<br />
             <br />
