@@ -58,13 +58,17 @@
   margin: 0 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .header {
     flex-direction: column;
   }
 
   nav {
     margin-bottom: 0.5rem;
+  }
+
+  .header nav.social {
+    display: none;
   }
 }
 

@@ -1,0 +1,14 @@
+footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+}
+
+footer .social img {
+  height: 35px;
+}
