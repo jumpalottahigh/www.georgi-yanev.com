@@ -6,7 +6,7 @@ import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
 export default class Projects extends Component {
   render() {
     return (
-      <section style={{ backgroundColor: '#dedede' }}>
+      <section style={{ backgroundColor: '#fafafa' }}>
         <H2>&#123; Latest projects &#125;</H2>
         <CenteredDiv>
           <ul>

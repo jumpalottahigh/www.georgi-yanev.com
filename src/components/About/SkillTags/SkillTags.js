@@ -73,7 +73,9 @@ export default class SkillTags extends Component {
           <Tabs>
             <TabList>
               {Object.keys(this.state.filteredSkills).map((item, index) => (
-                <Tab key={index}>{item}</Tab>
+                <Tab key={index} style={{ color: '#204CCF' }}>
+                  {item}
+                </Tab>
               ))}
             </TabList>
 

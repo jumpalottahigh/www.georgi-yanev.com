@@ -28,7 +28,7 @@
 }
 
 .header nav.main a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   margin: 0 1rem;
   font-size: 1.2rem;
@@ -37,11 +37,12 @@
 
 .header nav.main a:hover {
   transition: 275ms;
-  border-bottom: 2px solid #000;
+  transform: scale(1.054);
+  border-bottom: 2px solid #fff;
 }
 
 .header nav.main a.blog {
-  color: cornflowerblue;
+  color: #1650bb;
   background-color: #fff;
   border-radius: 3px;
   padding: 0.2rem 1rem;

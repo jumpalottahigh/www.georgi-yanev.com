@@ -7,7 +7,7 @@ import Header from './Header/Header.js'
 import Footer from './Footer/Footer.js'
 import './layout.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -23,8 +23,16 @@ const Layout = ({ children, data }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'I\'m Georgi and I build things on the web with JavaScript, React and Vue. I believe that however we build apps on the web, they always end up in the hands of humans and it\'s crucial that we address web performance and page load times.' },
-            { name: 'keywords', content: 'Georgi Yanev, portfolio, smart home automation, open source software, javascript, web dev, es6, life-long learning, learning, teaching, web development, react, vue, html, css, js' },
+            {
+              name: 'description',
+              content:
+                "I'm Georgi and I build things on the web with JavaScript, React and Vue. I believe that however we build apps on the web, they always end up in the hands of humans and it's crucial that we address web performance and page load times.",
+            },
+            {
+              name: 'keywords',
+              content:
+                'Georgi Yanev, portfolio, smart home automation, open source software, javascript, web dev, es6, life-long learning, learning, teaching, web development, react, vue, html, css, js',
+            },
           ]}
         />
         <Header siteTitle={data.site.siteMetadata.title} />
