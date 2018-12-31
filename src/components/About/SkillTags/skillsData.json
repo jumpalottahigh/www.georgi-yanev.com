@@ -91,7 +91,7 @@
     "url": "http://introjs.com/"
   },
   {
-    "experience": "3 years",
+    "experience": "4 years",
     "level": 100,
     "name": "Handlebars.js",
     "type": "Framework",
@@ -154,14 +154,21 @@
     "url": "https://git-scm.com/"
   },
   {
-    "experience": "3 years",
+    "experience": "4 years",
     "level": 100,
     "name": "Trello",
     "type": "Tools",
     "url": "https://www.trello.com/"
   },
   {
-    "experience": "2 years",
+    "experience": "6 months",
+    "level": 100,
+    "name": "Notion",
+    "type": "Tools",
+    "url": "https://www.notion.so/"
+  },
+  {
+    "experience": "3 years",
     "level": 85,
     "name": "JIRA",
     "type": "Tools",
@@ -231,6 +238,13 @@
     "url": "https://getmdl.io/"
   },
   {
+    "experience": "6 months",
+    "level": 100,
+    "name": "Material-UI",
+    "type": "Library",
+    "url": "https://material-ui.com/getting-started/installation/"
+  },
+  {
     "experience": "1 year",
     "level": 80,
     "name": "Hover.css",
@@ -245,21 +259,21 @@
     "url": "https://daneden.github.io/animate.css/"
   },
   {
-    "experience": "2 years",
+    "experience": "3 years",
     "level": 100,
     "name": "Slack",
     "type": "Tools",
     "url": "https://slack.com"
   },
   {
-    "experience": "3 years",
+    "experience": "4 years",
     "level": 100,
     "name": "Assemble",
     "type": "Framework",
     "url": "http://assemble.io/"
   },
   {
-    "experience": "3 years",
+    "experience": "4 years",
     "level": 100,
     "name": "Liferay",
     "type": "CMS",
@@ -294,21 +308,21 @@
     "url": "https://www.blender.org/"
   },
   {
-    "experience": "1 year",
+    "experience": "1.5 years",
     "level": 90,
     "name": "Google Analytics",
     "type": "Service",
     "url": "https://analytics.google.com/analytics/web/"
   },
   {
-    "experience": "5 years",
+    "experience": "6 years",
     "level": 100,
     "name": "JSON",
     "type": "Language",
     "url": "http://www.json.org/"
   },
   {
-    "experience": "1 year",
+    "experience": "2 years",
     "level": 70,
     "name": "Scrum",
     "type": "Methodologies",
@@ -350,7 +364,7 @@
     "url": "http://www.eclipse.org/"
   },
   {
-    "experience": "1 year",
+    "experience": "4 years",
     "level": 75,
     "name": "SASS",
     "type": "Framework",
@@ -364,15 +378,15 @@
     "url": "https://developer.mozilla.org/en/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla"
   },
   {
-    "experience": "6 months",
-    "level": 30,
+    "experience": "2 years",
+    "level": 60,
     "name": "Webpack",
     "type": "Tools",
     "url": "https://webpack.js.org/"
   },
   {
-    "experience": "1 year",
-    "level": 80,
+    "experience": "2 years",
+    "level": 95,
     "name": "React.js",
     "type": "Framework",
     "url": "https://facebook.github.io/react/"
@@ -406,7 +420,7 @@
     "url": "https://www.arduino.cc/"
   },
   {
-    "experience": "1 year",
+    "experience": "2 years",
     "level": 90,
     "name": "Home Assistant",
     "type": "Platform",
@@ -434,8 +448,8 @@
     "url": "https://vuejs.org/"
   },
   {
-    "experience": "3 months",
-    "level": 45,
+    "experience": "1 year",
+    "level": 95,
     "name": "Lighthouse",
     "type": "Tools",
     "url": "https://developers.google.com/web/tools/lighthouse/"
@@ -469,8 +483,8 @@
     "url": "https://www.ampproject.org/"
   },
   {
-    "experience": "6 months",
-    "level": 45,
+    "experience": "1 year",
+    "level": 55,
     "name": "GraphQL",
     "type": "Language",
     "url": "http://graphql.org/"
@@ -490,14 +504,14 @@
     "url": "https://www.ascend.ai/"
   },
   {
-    "experience": "6 months",
+    "experience": "1 year",
     "level": 90,
     "name": "Google Tag Manager",
     "type": "Service",
     "url": "https://tagmanager.google.com/"
   },
   {
-    "experience": "2 years",
+    "experience": "3 years",
     "level": 90,
     "name": "Adobe Dynamic Tag Manager",
     "type": "Service",

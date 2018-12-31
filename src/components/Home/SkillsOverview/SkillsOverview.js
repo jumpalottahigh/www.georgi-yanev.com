@@ -11,7 +11,7 @@ export default class SkillsOverview extends Component {
         <p>Other recent worthy mentions:</p>
         <h4>Vue.js, Netlify, Contentful, Firebase, Gulp, Grunt</h4>
         <div>
-          <Link to="/about">
+          <Link to="/about/">
             <Button>Projects and Skills</Button>
           </Link>
         </div>

@@ -6,7 +6,7 @@ import PastProjects from '../components/About/PastProjects/PastProjects.js'
 import Projects from '../components/About/Projects/Projects.js'
 import Portfolio from '../components/About/Portfolio/Portfolio.js'
 import Education from '../components/About/Education/Education.js'
-import SkillTags from '../components/About/SkillTags/SkillTags.js'
+import SkillTagsSimple from '../components/About/SkillTags/SkillTagsSimple.js'
 import Certificates from '../components/About/Certificates/Certificates.js'
 import Uses from '../components/About/Uses/Uses.js'
 import HobbiesEvents from '../components/About/HobbiesEvents/HobbiesEvents.js'
@@ -20,7 +20,7 @@ const AboutPage = () => (
       <PastProjects />
       <Education />
       <Certificates />
-      <SkillTags collapse="yes" />
+      <SkillTagsSimple />
       <Uses />
       <HobbiesEvents />
     </Fragment>
