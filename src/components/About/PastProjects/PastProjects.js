@@ -14,7 +14,11 @@ const PastProjectsContainer = styled.div`
 
   span:after {
     margin: 0.5rem;
-    content: '|';
+    content: '❟ ';
+  }
+
+  span:last-of-type:after {
+    content: '';
   }
 `
 

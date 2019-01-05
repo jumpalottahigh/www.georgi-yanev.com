@@ -17,7 +17,12 @@ const SkillTagsContainer = styled.div`
   }
 
   a {
-    margin: 0 1rem;
+    margin: 0 0.4rem;
+  }
+
+  .skill:after {
+    margin: 0.15rem;
+    content: '❟ ';
   }
 `
 
@@ -31,14 +36,13 @@ export default class SkillTags extends Component {
             {skillTags.map(skill => (
               <React.Fragment key={skill.name}>
                 <a href={skill.url} data-tip data-for={skill.name}>
-                  <span>{skill.name}</span>
+                  <span className="skill">{skill.name}</span>
                 </a>
                 <ReactTooltip id={skill.name}>
                   <div>Experience: {skill.experience}</div>
                   <div>Level: {skill.level} / 100</div>
                   <div>Type: {skill.type}</div>
                 </ReactTooltip>
-                {' | '}
               </React.Fragment>
             ))}
           </SkillTagsContainer>
