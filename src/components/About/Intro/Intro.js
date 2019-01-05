@@ -8,6 +8,7 @@ import Button from '../../elements/Button/Button'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv'
 
 import landingAQuad from './landing-a-quad-1.mp4'
+import landingAQuadWebm from './landing-a-quad-1.webm'
 
 const VideoWrapper = styled.div`
   video {
@@ -76,6 +77,7 @@ export default ({ bgColor }) => (
           </div>
           <VideoWrapper>
             <video autoPlay loop id="video-background" muted playsInline>
+              <source src={landingAQuadWebm} type="video/webm" />
               <source src={landingAQuad} type="video/mp4" />
             </video>
           </VideoWrapper>
