@@ -3,3 +3,6 @@ https://www.gyanev.com/* https://www.georgi-yanev.com/:splat 301!
 
 # Optional: Redirect default Netlify subdomain to primary domain
 https://georgi.netlify.com/* https://www.georgi-yanev.com/:splat 301!
+
+/cv       /CV-Georgi_Yanev-2018.pdf
+/resume   /CV-Georgi_Yanev-2018.pdf
