@@ -22,7 +22,7 @@ class Intro extends Component {
     return (
       <section className="intro">
         <CenteredDiv className="intro__container">
-          <img src={image} alt={name} />
+          <img style={{ borderRadius: '50%' }} src={image} alt={name} />
           <div className="intro__inner">
             <h2>{name}</h2>
             <h4>{position}</h4>

@@ -63,7 +63,13 @@ export default ({ bgColor }) => (
             stream on twitch.
             <br />
             <br />
-            <div style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}>
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '800px',
+                margin: '10px 0',
+              }}
+            >
               <Img
                 fluid={data.allFile.edges[0].node.childImageSharp.fluid}
                 alt="Georgi streaming on twitch screenshot"
@@ -76,7 +82,7 @@ export default ({ bgColor }) => (
             <br />
           </div>
           <VideoWrapper>
-            <video autoPlay loop id="video-background" muted playsInline>
+            <video autoPlay id="video-background" muted playsInline>
               <source src={landingAQuadWebm} type="video/webm" />
               <source src={landingAQuad} type="video/mp4" />
             </video>

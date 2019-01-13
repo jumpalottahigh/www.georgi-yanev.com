@@ -10,6 +10,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+main {
+  min-height: calc(100vh - 132px - 153px);
+}
+
 h1,
 p {
   margin: 0 0 1rem 0;
@@ -64,6 +68,12 @@ a:hover {
 .skillsOverview h4,
 .skillsOverview p {
   margin: 0;
+}
+
+@media (min-width: 600px) {
+  main {
+    min-height: calc(100vh - 82px - 153px);
+  }
 }
 
 @media (min-width: 800px) {
