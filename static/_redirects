@@ -4,6 +4,12 @@ https://www.gyanev.com/* https://www.georgi-yanev.com/:splat 301!
 # Optional: Redirect default Netlify subdomain to primary domain
 https://georgi.netlify.com/* https://www.georgi-yanev.com/:splat 301!
 
-/cv       /CV-Georgi_Yanev-2018.pdf
-/resume   /CV-Georgi_Yanev-2018.pdf
-/blog     https://blog.georgi-yanev.com
+/cv         /CV-Georgi_Yanev-2018.pdf
+/resume     /CV-Georgi_Yanev-2018.pdf
+/blog       https://blog.georgi-yanev.com
+/dot        https://github.com/jumpalottahigh/dotfiles
+/npm        https://www.npmjs.com/package/react-toggle-emoji
+/github     https://github.com/jumpalottahigh
+/twitter    https://twitter.com/jumpalottahigh
+/linkedin   https://www.linkedin.com/in/yanevgeorgi/
+/twitch     https://twitch.tv/jumpalottahigh
