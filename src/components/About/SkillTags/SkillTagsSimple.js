@@ -22,7 +22,7 @@ const SkillTagsContainer = styled.div`
 
   .skill:after {
     margin: 0.15rem;
-    content: '❟ ';
+    content: ', ';
   }
 `
 
