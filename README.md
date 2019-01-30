@@ -1,5 +1,8 @@
 # www.georgi-yanev.com
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/54f635fa-493f-4efd-b4b0-1942cdf0cb35/deploy-status)](https://app.netlify.com/sites/georgi/deploys)
+[![Lighthouse score: 99/100](https://lighthouse-badge.appspot.com/?score=99)](https://github.com/ebidel/lighthouse-badge)
+
 This repository contains the source code for www.georgi-yanev.com.
 The site is a React Progressive Web App built using the create-react-app boilerplate.
 It contains routing, reusable components and was a lot of fun to built.
