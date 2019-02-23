@@ -21,6 +21,18 @@ const linkList = [
   { url: 'https://gyanev.com/twitter', description: 'Twitter profile' },
   { url: 'https://gyanev.com/linkedin', description: 'LinkedIn profile' },
   { url: 'https://gyanev.com/twitch', description: 'Twitch profile' },
+  {
+    url: 'https://gyanev.com/jamstack',
+    description: 'JAMstack with Gatsby and Netlify talk',
+  },
+  {
+    url: 'https://gyanev.com/georgi-codes',
+    description: 'My YouTube coding channel',
+  },
+  {
+    url: 'https://gyanev.com/georgi-fpv',
+    description: 'My YouTube FPV channel',
+  },
 ]
 
 const LinkContainer = styled.section`
