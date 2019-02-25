@@ -33,13 +33,20 @@ const linkList = [
     url: 'https://gyanev.com/georgi-fpv',
     description: 'My YouTube FPV channel',
   },
+  { url: 'https://gyanev.com/references', description: 'References' },
 ]
 
 const LinkContainer = styled.section`
   display: flex;
   flex-direction: column;
 
+  h2 {
+    margin-bottom: 2rem;
+  }
+
   .inner {
+    display: grid;
+    gap: 10px;
     max-width: 80ch;
     margin: 0 auto;
   }
