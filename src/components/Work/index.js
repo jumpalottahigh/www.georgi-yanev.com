@@ -2,13 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import H2 from '../elements/H2/H2'
 
-const work = [
-  {
-    what: 'Python Crawler',
-    implementation: '',
-    result: '',
-  },
-]
+// const work = [
+//   {
+//     what: 'Python Crawler',
+//     implementation: '',
+//     result: '',
+//   },
+// ]
 
 const Container = styled.section`
   display: flex;
@@ -23,11 +23,11 @@ const Container = styled.section`
 const Links = () => (
   <Container>
     <H2>What people have said about me:</H2>
-    <div className="inner">
+    {/* <div className="inner">
       {work.map((link, index) => (
         <div key={index}>&bdquo;{link}&ldquo;</div>
       ))}
-    </div>
+    </div> */}
   </Container>
 )
 
