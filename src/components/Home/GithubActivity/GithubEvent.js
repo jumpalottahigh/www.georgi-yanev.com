@@ -12,7 +12,7 @@ export default class GithubEvent extends Component {
       date: event.created_at,
       actorName: event.actor.display_login,
       repoName: event.repo.name,
-      repoLink: event.repo.url,
+      repoLink: event.repo.url.replace('api.github.com/repos', 'github.com'),
       payloadText: '',
     }
 
@@ -54,7 +54,7 @@ export default class GithubEvent extends Component {
       <Card className="github-event">
         <Moment date={eventData.date} format="Do MMM YYYY HH:mm" />
         <h5>{eventData.actorName}</h5>
-        <p>{eventData.payloadText}</p>
+        <p style={{ wordBreak: 'break-word' }}>{eventData.payloadText}</p>
         <p>
           <a href={eventData.repoLink}>{eventData.repoName}</a>
         </p>
