@@ -53,3 +53,4 @@ public/
 .DS_Store
 yarn-error.log
 .vscode
+cypress/screenshots
