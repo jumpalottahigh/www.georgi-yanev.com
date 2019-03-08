@@ -8,6 +8,7 @@ module.exports = {
     description: `Georgi Yanev's Portfolio`,
   },
   plugins: [
+    `gatsby-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

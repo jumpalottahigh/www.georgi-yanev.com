@@ -16,6 +16,10 @@ const linkList = [
   },
   { url: 'https://gyanev.com/blog', description: 'My blog' },
   { url: 'https://gyanev.com/dot', description: 'Dotfiles' },
+  {
+    url: 'https://gyanev.com/bio',
+    description: 'Short, long bio, motivators, work',
+  },
   { url: 'https://gyanev.com/npm', description: 'My first NPM package' },
   { url: 'https://gyanev.com/github', description: 'GitHub profile' },
   { url: 'https://gyanev.com/twitter', description: 'Twitter profile' },

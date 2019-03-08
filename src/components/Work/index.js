@@ -22,7 +22,7 @@ const Container = styled.section`
 
 const Links = () => (
   <Container>
-    <H2>What people have said about me:</H2>
+    <H2>Work:</H2>
     {/* <div className="inner">
       {work.map((link, index) => (
         <div key={index}>&bdquo;{link}&ldquo;</div>
