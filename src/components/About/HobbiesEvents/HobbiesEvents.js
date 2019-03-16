@@ -117,6 +117,11 @@ export default () => (
           <CenteredDiv>
             <ul>
               <li>
+                Frontend Finland - March 2019 - Helsinki, Finland @{' '}
+                <a href="https://gofore.com/en/home/">Gofore</a><br/>
+                Gave first talk about <a href="https://gyanev.com/jamstack/">`JAMstack with Gatsby and Netlify`</a>
+              </li>
+              <li>
                 HelsinkiJS - Dec 2018 - Helsinki, Finland @{' '}
                 <a href="https://www.citrus.fi/">Citrus</a>
               </li>
