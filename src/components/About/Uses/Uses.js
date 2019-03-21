@@ -17,14 +17,26 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allFile(filter: { relativePath: { regex: "/uses/" } }) {
+        vscode: allFile(filter: { relativePath: { regex: "/uses/vscode/" } }) {
           edges {
             node {
               id
               name
               childImageSharp {
-                # Specify the image processing specifications right in the query.
-                # Makes it trivial to update as your page's design changes.
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+          }
+        }
+
+        desk: allFile(filter: { relativePath: { regex: "/uses/desk/" } }) {
+          edges {
+            node {
+              id
+              name
+              childImageSharp {
                 fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
@@ -43,7 +55,7 @@ export default () => (
         <CenteredDiv>
           <UL>
             <li>
-              <h3>Editor</h3>
+              <h3>Editor, Theme and Font</h3>
               <div>
                 <a
                   href="https://code.visualstudio.com/"
@@ -92,8 +104,8 @@ export default () => (
                   style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}
                 >
                   <Img
-                    fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-                    alt={data.allFile.edges[0].node.name}
+                    fluid={data.vscode.edges[0].node.childImageSharp.fluid}
+                    alt={data.vscode.edges[0].node.name}
                   />
                 </div>
                 <p>
@@ -153,7 +165,14 @@ export default () => (
                 >
                   iTerm 2
                 </a>{' '}
-                as my daily driver for terminal needs.
+                as my daily driver for terminal needs on my mac and{' '}
+                <a
+                  href="https://git-scm.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Git Bash on my windows rig.
+                </a>{' '}
               </p>
             </li>
             <li>
@@ -183,7 +202,28 @@ export default () => (
                   rel="noopener noreferrer"
                 >
                   Trello
-                </a>
+                </a>{' '}
+                - managing projects with kanban boards
+              </p>
+              <p>
+                <a
+                  href="https://www.notion.so/?r=9816c2c5af8044e99eb54030e971857c"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Notion
+                </a>{' '}
+                - Sorting tasks, todos, embedded content and so much more.
+              </p>
+              <p>
+                <a
+                  href="https://workflowy.com/invite/6a2fe7e5.lnx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WorkFlowy
+                </a>{' '}
+                - simple list making app for quick notes
               </p>
               <p>
                 <a
@@ -214,6 +254,12 @@ export default () => (
               </p>
             </li>
           </UL>
+          <div style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}>
+            <Img
+              fluid={data.desk.edges[0].node.childImageSharp.fluid}
+              alt={data.desk.edges[0].node.name}
+            />
+          </div>
         </CenteredDiv>
       </section>
     )}
