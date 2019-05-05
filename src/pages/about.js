@@ -10,6 +10,7 @@ import SkillTagsSimple from '../components/About/SkillTags/SkillTagsSimple.js'
 import Certificates from '../components/About/Certificates/Certificates.js'
 import Uses from '../components/About/Uses/Uses.js'
 import HobbiesEvents from '../components/About/HobbiesEvents/HobbiesEvents.js'
+import Bio from '../components/About/Bio/Bio.js'
 
 const AboutPage = () => (
   <Layout>
@@ -23,6 +24,7 @@ const AboutPage = () => (
       <SkillTagsSimple />
       <Uses />
       <HobbiesEvents />
+      <Bio />
     </Fragment>
   </Layout>
 )

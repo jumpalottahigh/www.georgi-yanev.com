@@ -81,10 +81,3 @@ a:hover {
     max-width: 620px;
   }
 }
-
-@media (min-width: 1100px) {
-  main {
-    display: flex;
-    flex-flow: column wrap;
-  }
-}
