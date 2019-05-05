@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Fade } from 'react-reveal'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
 import Button from '../../elements/Button/Button.js'
@@ -72,7 +73,9 @@ class GithubActivity extends Component {
           </Fragment>
         ) : (
           this.state.githubPublicActivity.map(item => (
-            <GithubEvent key={item.id} data={item} />
+            <Fade key={item.id}>
+              <GithubEvent data={item} />
+            </Fade>
           ))
         )}
       </section>
