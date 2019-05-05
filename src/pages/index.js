@@ -14,7 +14,6 @@ const IndexPage = () => (
       <Intro />
       <SkillsOverview />
       <AboutIntro bgColor="#dedede" />
-      {/* <Statements /> */}
       <GithubActivity />
       <Inspirational />
     </Fragment>
