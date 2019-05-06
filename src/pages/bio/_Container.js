@@ -12,10 +12,32 @@ const StyledContainer = styled.div`
     margin-top: 3rem;
   }
 
-  p,
-  ul li {
+  p {
     max-width: 64ch;
     margin: 1rem auto;
+    padding: 0.2rem 1rem;
+  }
+
+  ul li {
+    max-width: 64ch;
+    padding: 0.2rem 1rem;
+    margin: 0 auto;
+  }
+
+  li > p {
+    display: inline-block;
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
+    list-style-position: inside;
+  }
+
+  @media (min-width: 600px) {
+    ul li {
+      margin: 0 auto;
+    }
   }
 `
 
