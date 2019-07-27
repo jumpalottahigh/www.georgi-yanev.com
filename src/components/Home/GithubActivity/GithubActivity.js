@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { Fade } from 'react-reveal'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
-import Button from '../../elements/Button/Button.js'
 import H2 from '../../elements/H2/H2.js'
 
 class GithubActivity extends Component {
@@ -32,7 +31,8 @@ class GithubActivity extends Component {
     })
   }
 
-  displayMoreItems = () => {
+  displayMoreItems = e => {
+    e.preventDefault()
     // if no data has been fetched yet stop
     if (this.state.githubPublicActivity.length <= 1) return
 
@@ -64,12 +64,17 @@ class GithubActivity extends Component {
             <GithubEvent data={this.state.githubPublicActivity[0]} />
             <GithubEvent data={this.state.githubPublicActivity[1]} />
             <GithubEvent data={this.state.githubPublicActivity[2]} />
-            <Button
-              style={{ gridColumn: '1/-1' }}
+            <a
+              href="#more-activity"
+              style={{
+                gridColumn: '1/-1',
+                textAlign: 'center',
+                textDecoration: 'underline',
+              }}
               onClick={this.displayMoreItems}
             >
-              Show more
-            </Button>
+              Show more activity
+            </a>
           </Fragment>
         ) : (
           this.state.githubPublicActivity.map(item => (

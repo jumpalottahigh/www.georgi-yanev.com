@@ -73,6 +73,14 @@ const portfolioData = {
     link: 'https://streamer-screen.netlify.com/',
     text: 'streamer-screen.netlify.com',
   },
+  digitalLifeTest: {
+    link: 'https://digital-life-test.f-secure.com/en/',
+    text: 'digital-life-test.f-secure.com',
+  },
+  dataDiscoveryPortal: {
+    link: 'https://data-discovery-portal.f-secure.com/en/',
+    text: 'data-discovery-portal.f-secure.com',
+  },
 }
 
 export default () => (
@@ -133,6 +141,14 @@ export default () => (
 
         if (node.name.includes('youtube-screenshot')) {
           node.portfolioData = portfolioData.youtubeScreenshot
+        }
+
+        if (node.name.includes('digital-life-test')) {
+          node.portfolioData = portfolioData.digitalLifeTest
+        }
+
+        if (node.name.includes('data-discovery-portal')) {
+          node.portfolioData = portfolioData.dataDiscoveryPortal
         }
 
         portfolio.push(node)

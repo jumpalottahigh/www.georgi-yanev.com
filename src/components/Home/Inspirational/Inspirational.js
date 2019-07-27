@@ -18,7 +18,7 @@ const Inspirational = () => (
       rel="noreferrer"
       style={{ gridColumn: '1/-1', textAlign: 'center' }}
     >
-      <Button>Resume</Button>
+      <Button>CV (pdf)</Button>
     </a>
   </section>
 )

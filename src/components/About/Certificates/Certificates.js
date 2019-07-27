@@ -42,6 +42,11 @@ const certificateData = {
     link: 'https://academy.exceedlms.com/student/users/1209835',
     text: 'Google Analytics individual qualification',
   },
+  gcp: {
+    link:
+      'https://www.coursera.org/account/accomplishments/certificate/F6JD85D4SK58',
+    text: 'Google Cloud Platform Fundamentals Coursera',
+  },
 }
 
 export default () => (
@@ -73,11 +78,17 @@ export default () => (
         if (node.name.includes('aem')) {
           node.certificateData = certificateData.aem
         }
+
         if (node.name.includes('mobile-web-specialist')) {
           node.certificateData = certificateData.mws
         }
+
         if (node.name.includes('google-analytics')) {
           node.certificateData = certificateData.ga
+        }
+
+        if (node.name.includes('google-cloud-platform')) {
+          node.certificateData = certificateData.gcp
         }
 
         certificates.push(node)
