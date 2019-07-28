@@ -34,11 +34,11 @@ module.exports = {
       // this plugin should be listed before the offline plugin so that it can cache the created manifest.json.
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Georgi Yanev Portfolio',
-        short_name: 'GY Portfolio',
+        name: 'Georgi Yanev',
+        short_name: 'Georgi Yanev',
         start_url: '/',
         background_color: '#f7f0eb',
-        theme_color: '#0275d8',
+        theme_color: '#6495ed',
         display: 'minimal-ui',
         icons: [
           {
