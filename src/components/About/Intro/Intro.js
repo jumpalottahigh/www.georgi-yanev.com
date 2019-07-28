@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Fade } from 'react-reveal'
 import Img from 'gatsby-image'
 import { graphql, StaticQuery } from 'gatsby'
 
@@ -82,10 +83,12 @@ export default ({ bgColor }) => (
             <br />
           </div>
           <VideoWrapper>
-            <video autoPlay id="video-background" muted playsInline>
-              <source src={landingAQuadWebm} type="video/webm" />
-              <source src={landingAQuad} type="video/mp4" />
-            </video>
+            <Fade>
+              <video autoPlay id="video-background" muted playsInline>
+                <source src={landingAQuadWebm} type="video/webm" />
+                <source src={landingAQuad} type="video/mp4" />
+              </video>
+            </Fade>
           </VideoWrapper>
           <br />
           <br />
