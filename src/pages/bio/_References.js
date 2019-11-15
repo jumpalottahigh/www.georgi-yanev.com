@@ -18,7 +18,7 @@ const References = () => {
   const data = useStaticQuery(graphql`
     query {
       references: allFile(
-        filter: { relativePath: { regex: "/bio/" } }
+        filter: { relativePath: { regex: "/references/" } }
         sort: { fields: name, order: ASC }
       ) {
         edges {

@@ -52,7 +52,7 @@ const Intro = () => {
       '📝 Aspiring writer',
       '🏡 Smart Home Automation Enthusiast',
     ],
-    position: 'Web Developer @ F-Secure',
+    position: 'Software Engineer @ Sharper Shape',
     location: 'Helsinki, Finland',
     name: 'Georgi Yanev',
   }
@@ -77,9 +77,9 @@ const Intro = () => {
       <CenteredDiv>
         <p>
           <em>
-            I build websites, web apps, tools and things that solve problems. I
-            am convinced UX and web performance really matter and that
-            high-quality solutions pay off over time. And I like designing
+            I build websites, web apps, apps, tools and things that solve
+            problems. I am convinced UX and web performance really matter and
+            that high-quality solutions pay off over time. And I like designing
             high-quality solutions.
           </em>
         </p>

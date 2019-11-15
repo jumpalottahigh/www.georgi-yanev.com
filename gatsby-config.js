@@ -8,7 +8,6 @@ module.exports = {
     description: `Georgi Yanev's Portfolio`,
   },
   plugins: [
-    `gatsby-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,8 +15,16 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    'gatsby-plugin-mdx',
     'gatsby-transformer-sharp',
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
