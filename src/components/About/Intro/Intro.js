@@ -52,7 +52,7 @@ export default ({ bgColor }) => (
           <div>
             I'm Georgi,{' '}
             <a href="https://blog.georgi-yanev.com/learning/how-i-got-into-software-development/">
-              web developer
+              software engineer
             </a>
             . You can find me on{' '}
             <a href="https://twitter.com/jumpalottahigh">twitter</a>,{' '}

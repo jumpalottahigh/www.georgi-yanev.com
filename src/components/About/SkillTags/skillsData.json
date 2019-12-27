@@ -537,5 +537,33 @@
     "name": "Netlify",
     "type": "Service",
     "url": "https://www.netlify.com/"
+  },
+  {
+    "experience": "3 months",
+    "level": 45,
+    "name": "TypeScript",
+    "type": "Language",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
+    "experience": "3 months",
+    "level": 75,
+    "name": "Redux",
+    "type": "Library",
+    "url": "https://redux.js.org/"
+  },
+  {
+    "experience": "3 months",
+    "level": 70,
+    "name": "Electron",
+    "type": "Framework",
+    "url": "https://electronjs.org/"
+  },
+  {
+    "experience": "3 months",
+    "level": 90,
+    "name": "Wercker",
+    "type": "Tools",
+    "url": "https://app.wercker.com/"
   }
 ]
