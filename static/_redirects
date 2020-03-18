@@ -4,18 +4,18 @@ https://www.gyanev.com/* https://www.georgi-yanev.com/:splat 301!
 # Optional: Redirect default Netlify subdomain to primary domain
 https://georgi.netlify.com/* https://www.georgi-yanev.com/:splat 301!
 
-/cv             /CV-Georgi_Yanev-2019.pdf
-/resume         /CV-Georgi_Yanev-2019.pdf
-/blog           https://blog.georgi-yanev.com
-/dot            https://github.com/jumpalottahigh/dotfiles
-/npm            https://www.npmjs.com/package/react-toggle-emoji
-/github         https://github.com/jumpalottahigh
-/twitter        https://twitter.com/jumpalottahigh
-/linkedin       https://www.linkedin.com/in/yanevgeorgi/
-/twitch         https://twitch.tv/jumpalottahigh
-/jamstack       https://jam-stack-with-gatsby-and-netlify.netlify.com
-/jam            https://www.youtube.com/watch?v=X2HDK28aDic
-/georgi-fpv     https://www.youtube.com/channel/UC2gwYMcfb0Oz_fl9W1uTV2Q
-/georgi-codes   https://www.youtube.com/channel/UCHH7NUqRBkcCUnfT9e60xPw
-/fpvtips        https://www.youtube.com/channel/UCCh3SK2EktDdOQkEOTDmSCg
-/fpv            https://blog.georgi-yanev.com/news/?category=fpv
+/cv             /CV-Georgi_Yanev-2019.pdf                                   301!
+/resume         /CV-Georgi_Yanev-2019.pdf                                   301!
+/blog           https://blog.georgi-yanev.com                               301!
+/dot            https://github.com/jumpalottahigh/dotfiles                  301!
+/npm            https://www.npmjs.com/package/react-toggle-emoji            301!
+/github         https://github.com/jumpalottahigh                           301!
+/twitter        https://twitter.com/jumpalottahigh                          301!
+/linkedin       https://www.linkedin.com/in/yanevgeorgi/                    301!
+/twitch         https://twitch.tv/jumpalottahigh                            301!
+/jamstack       https://jam-stack-with-gatsby-and-netlify.netlify.com       301!
+/jam            https://www.youtube.com/watch?v=X2HDK28aDic                 301!
+/georgi-fpv     https://www.youtube.com/channel/UC2gwYMcfb0Oz_fl9W1uTV2Q    301!
+/georgi-codes   https://www.youtube.com/channel/UCHH7NUqRBkcCUnfT9e60xPw    301!
+/fpvtips        https://www.youtube.com/channel/UCCh3SK2EktDdOQkEOTDmSCg    301!
+/fpv            https://blog.georgi-yanev.com/news/?category=fpv            301!
