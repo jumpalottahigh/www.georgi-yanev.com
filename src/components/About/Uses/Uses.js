@@ -217,6 +217,16 @@ export default () => (
               </p>
               <p>
                 <a
+                  href="https://www.canva.com/join/soldering-reward-scale"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Canva
+                </a>{' '}
+                - Quick image designs.
+              </p>
+              <p>
+                <a
                   href="https://workflowy.com/invite/6a2fe7e5.lnx"
                   target="_blank"
                   rel="noopener noreferrer"
