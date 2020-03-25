@@ -8,8 +8,8 @@ import H2 from '../../elements/H2/H2'
 import Button from '../../elements/Button/Button'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv'
 
-import landingAQuad from './landing-a-quad-1.mp4'
-import landingAQuadWebm from './landing-a-quad-1.webm'
+import videoIntro from './new-blog-intro.mp4'
+import videoIntroWebm from './new-blog-intro.webm'
 
 const VideoWrapper = styled.div`
   video {
@@ -85,8 +85,8 @@ export default ({ bgColor }) => (
           <VideoWrapper>
             <Fade>
               <video autoPlay id="video-background" muted playsInline>
-                <source src={landingAQuadWebm} type="video/webm" />
-                <source src={landingAQuad} type="video/mp4" />
+                <source src={videoIntroWebm} type="video/webm" />
+                <source src={videoIntro} type="video/mp4" />
               </video>
             </Fade>
           </VideoWrapper>

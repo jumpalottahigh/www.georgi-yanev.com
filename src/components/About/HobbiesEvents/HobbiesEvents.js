@@ -65,7 +65,7 @@ export default () => (
                 </a>{' '}
                 and{' '}
                 <a
-                  href="https://www.youtube.com/watch?v=aASDUpVy3zM&list=PLxuusHIzi2UoSYK9fHSvJF_fUiVeo35ka"
+                  href="https://www.youtube.com/channel/UC2gwYMcfb0Oz_fl9W1uTV2Q"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -75,7 +75,7 @@ export default () => (
                   <iframe
                     width="100%"
                     height="315"
-                    src="https://www.youtube.com/embed/W_TeQMJbjgM?rel=0"
+                    src="https://www.youtube.com/embed/sLUk-tq3BE4?rel=0"
                     frameBorder="0"
                     allow="autoplay; encrypted-media"
                     title="Flying FPV quads"
