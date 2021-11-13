@@ -6,7 +6,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
 
-const UL = styled.ul`
+const Ul = styled.ul`
   display: grid;
   grid-gap: 10px;
   padding-left: 20px;
@@ -57,7 +57,7 @@ export default () => (
             I believe strongly in life-long education and therefor regularly
             partake in different courses
           </p>
-          <UL>
+          <Ul>
             <li>
               Udacity's Google Developer Challenge Scholarship holder for Mobile
               Web Specialist nanodegree (2017-2018)
@@ -71,7 +71,7 @@ export default () => (
               Plethora of tutorials and blog posts closely related to: React,
               Vue, JavaScript, WebComponents, Stencil, Polymer, etc.
             </li>
-          </UL>
+          </Ul>
           <Diploma>
             <div className="diploma-image">
               <Img

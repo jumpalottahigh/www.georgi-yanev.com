@@ -49,7 +49,7 @@ const certificateData = {
   },
 }
 
-export default () => (
+const Certificates = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -121,3 +121,5 @@ export default () => (
     }}
   />
 )
+
+export default Certificates

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
 
-const UL = styled.ul`
+const Ul = styled.ul`
   display: grid;
   grid-gap: 10px;
   padding: 0;
@@ -53,7 +53,7 @@ export default () => (
       >
         <H2>&#123; Uses &#125;</H2>
         <CenteredDiv>
-          <UL>
+          <Ul>
             <li>
               <h3>Editor, Theme and Font</h3>
               <div>
@@ -263,7 +263,7 @@ export default () => (
                 </a>
               </p>
             </li>
-          </UL>
+          </Ul>
           <div style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}>
             <Img
               fluid={data.desk.edges[0].node.childImageSharp.fluid}
