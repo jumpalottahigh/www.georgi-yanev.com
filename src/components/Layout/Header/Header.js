@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import './Header.css'
-import logo from './logo.png'
+import logo from './logo.svg'
 import github from './github.svg'
 import twitter from './twitter.svg'
 
@@ -14,7 +14,7 @@ const Header = () => (
   <header className="header">
     <nav className="brand">
       <Link exact="true" to="/">
-        <img src={logo} alt="Georgi Yanev logo" style={{ height: '40px' }} />
+        <img src={logo} alt="Georgi Yanev logo" style={{ height: '60px' }} />
       </Link>
     </nav>
     <nav className="main">
