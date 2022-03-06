@@ -52,7 +52,7 @@ const Intro = () => {
       '📝 Aspiring writer',
       '🏡 Smart Home Automation Enthusiast',
     ],
-    position: 'Software Engineer @ Sharper Shape',
+    position: 'Senior Software Developer @ Elisa Corporation',
     location: 'Helsinki, Finland',
     name: 'Georgi Yanev',
   }
