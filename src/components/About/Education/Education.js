@@ -19,6 +19,7 @@ const Diploma = styled.div`
     width: 74px;
     height: 100px;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   p {
@@ -49,14 +50,27 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <section>
         <H2>&#123; Education &#125;</H2>
         <CenteredDiv>
           <p className="highlight">
             I believe strongly in life-long education and therefor regularly
-            partake in different courses
+            partake in different courses.
           </p>
+          <Diploma>
+            <div className="diploma-image">
+              <Img
+                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+                alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
+              />
+            </div>
+            <p>
+              Master of Engineering (MEng), Information Technology
+              <br />
+              Helsinki Metropolia University of Applied Sciences
+            </p>
+          </Diploma>
           <Ul>
             <li>
               Udacity's Google Developer Challenge Scholarship holder for Mobile

@@ -13,7 +13,7 @@ const Inspirational = () => (
       </em>
     </p>
     <a
-      href="CV-Georgi_Yanev-2021.pdf"
+      href="CV-Georgi_Yanev-2022.pdf"
       target="_blank"
       rel="noreferrer"
       style={{ gridColumn: '1/-1', textAlign: 'center' }}
