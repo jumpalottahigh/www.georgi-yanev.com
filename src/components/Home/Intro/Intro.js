@@ -47,6 +47,7 @@ const Intro = () => {
     image: 'https://avatars2.githubusercontent.com/u/4155121?s=460&v=4',
     bio: [
       '👨‍👦  Father',
+      '🏋️‍♂️ CrossFit athlete',
       '💻 Software Engineer',
       '🚁 FPV drone pilot, blogger, reviewer',
       '📝 Aspiring writer',

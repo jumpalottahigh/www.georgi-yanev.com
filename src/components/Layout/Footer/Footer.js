@@ -17,7 +17,7 @@ export default class Footer extends Component {
         <h5>
           Copyright &copy; 2013-{new Date().getFullYear()} Georgi Yanev.
           <br />
-          Dedicated to Sofi and little Anton{' '}
+          Dedicated to little Anton{' '}
           <span role="img" aria-label="heart">
             ❤️
           </span>
