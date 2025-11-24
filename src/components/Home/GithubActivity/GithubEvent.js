@@ -17,27 +17,19 @@ const GithubEvent = ({ data }) => {
 
   switch (event.type) {
     case 'PushEvent':
-      eventData.payloadText = `pushed commit '${
-        event.payload.commits[0].message
-      }' to`
+      eventData.payloadText = `pushed a commit to`
       break
     case 'IssueCommentEvent':
-      eventData.payloadText = `commented: "${
-        event.payload.comment.body
-      }" in issue ${event.payload.issue.title} in`
+      eventData.payloadText = `commented: "${event.payload.comment.body}" in issue ${event.payload.issue.title} in`
       break
     case 'CreateEvent':
       eventData.payloadText = `created ${event.payload.ref_type}`
       break
     case 'DeleteEvent':
-      eventData.payloadText = `deleted ${event.payload.ref_type} ${
-        event.payload.ref
-      } in`
+      eventData.payloadText = `deleted ${event.payload.ref_type} ${event.payload.ref} in`
       break
     case 'PullRequestEvent':
-      eventData.payloadText = `${event.payload.action} PR #${
-        event.payload.number
-      }: ${event.payload.pull_request.title} in`
+      eventData.payloadText = `${event.payload.action} PR #${event.payload.number}: ${event.payload.pull_request.title} in`
       break
     case 'WatchEvent':
       eventData.payloadText = `${event.payload.action} watching`
