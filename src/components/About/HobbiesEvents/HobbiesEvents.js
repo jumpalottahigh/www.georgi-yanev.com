@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
@@ -32,16 +32,14 @@ export default () => (
       query {
         allFile(
           filter: { relativePath: { regex: "/hobbies/" } }
-          sort: { fields: name, order: ASC }
+          sort: { name: ASC }
         ) {
           edges {
             node {
               id
               name
               childImageSharp {
-                fluid(maxWidth: 700, quality: 75) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 700, quality: 75, formats: [AUTO, WEBP])
               }
             }
           }
@@ -106,7 +104,7 @@ export default () => (
             {data.allFile.edges.map(({ node }) => (
               <div key={node.id} className="grid-image-container">
                 <div className="img-wrapper">
-                  <Img fluid={node.childImageSharp.fluid} alt={node.name} />
+                  <GatsbyImage image={getImage(node.childImageSharp.gatsbyImageData)} alt={node.name} />
                 </div>
               </div>
             ))}

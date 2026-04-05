@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, StaticQuery } from 'gatsby'
 
 import Grid from '../../elements/Grid/Grid'
@@ -95,9 +95,7 @@ export default () => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fluid(maxWidth: 960) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 960, formats: [AUTO, WEBP])
               }
             }
           }
@@ -166,9 +164,9 @@ export default () => (
                 rel="noopener noreferrer"
               >
                 <ImgWrapper>
-                  <Img
+                  <GatsbyImage
                     className="image-container"
-                    fluid={p.childImageSharp.fluid}
+                    image={getImage(p.childImageSharp.gatsbyImageData)}
                     alt={p.name}
                   />
                 </ImgWrapper>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
@@ -23,9 +23,7 @@ export default () => (
               id
               name
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 800, formats: [AUTO, WEBP])
               }
             }
           }
@@ -103,8 +101,8 @@ export default () => (
                 <div
                   style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}
                 >
-                  <Img
-                    fluid={data.vscode.edges[0].node.childImageSharp.fluid}
+                  <GatsbyImage
+                    image={getImage(data.vscode.edges[0].node.childImageSharp.gatsbyImageData)}
                     alt={data.vscode.edges[0].node.name}
                   />
                 </div>
@@ -265,8 +263,8 @@ export default () => (
             </li>
           </Ul>
           <div style={{ width: '100%', maxWidth: '800px', margin: '10px 0' }}>
-            <Img
-              fluid={data.desk.edges[0].node.childImageSharp.fluid}
+            <GatsbyImage
+              image={getImage(data.desk.edges[0].node.childImageSharp.gatsbyImageData)}
               alt={data.desk.edges[0].node.name}
             />
           </div>

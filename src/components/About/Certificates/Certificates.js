@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, StaticQuery } from 'gatsby'
 
 import H2 from '../../elements/H2/H2'
@@ -61,9 +61,7 @@ const Certificates = () => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fluid(maxWidth: 350) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 350, formats: [AUTO, WEBP])
               }
             }
           }
@@ -106,9 +104,9 @@ const Certificates = () => (
                 rel="noopener noreferrer"
               >
                 <ImgWrapper>
-                  <Img
+                  <GatsbyImage
                     className="image-container"
-                    fluid={c.childImageSharp.fluid}
+                    image={getImage(c.childImageSharp.gatsbyImageData)}
                     alt={c.name}
                   />
                 </ImgWrapper>

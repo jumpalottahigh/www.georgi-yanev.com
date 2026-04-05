@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import github from '../Header/github.svg'
 import twitter from '../Header/twitter.svg'
+import instagram from '../Header/instagram.svg'
 import './Footer.css'
 export default class Footer extends Component {
-  render() {
+  render () {
     return (
       <footer>
         <nav className="social">
           <a href="https://github.com/jumpalottahigh">
             <img src={github} alt="GitHub logo" />
+          </a>
+          <a href="https://instagram.com/jumpalottahigh">
+            <img src={instagram} alt="Instagram logo" />
           </a>
           <a href="https://twitter.com/jumpalottahigh">
             <img src={twitter} alt="Twitter logo" />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip'
 
 import H2 from '../../elements/H2/H2.js'
 import CenteredDiv from '../../elements/CenteredDiv/CenteredDiv.js'
@@ -35,14 +35,14 @@ export default class SkillTags extends Component {
           <SkillTagsContainer>
             {skillTags.map(skill => (
               <React.Fragment key={skill.name}>
-                <a href={skill.url} data-tip data-for={skill.name}>
+                <a href={skill.url} data-tooltip-id={skill.name}>
                   <span className="skill">{skill.name}</span>
                 </a>
-                <ReactTooltip id={skill.name}>
+                <Tooltip id={skill.name}>
                   <div>Experience: {skill.experience}</div>
                   <div>Level: {skill.level} / 100</div>
                   <div>Type: {skill.type}</div>
-                </ReactTooltip>
+                </Tooltip>
               </React.Fragment>
             ))}
           </SkillTagsContainer>

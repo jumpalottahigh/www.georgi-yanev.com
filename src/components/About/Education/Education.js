@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, StaticQuery } from 'gatsby'
 
 import H2 from '../../elements/H2/H2.js'
@@ -41,9 +41,7 @@ export default () => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fluid(maxWidth: 74) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 74, formats: [AUTO, WEBP])
               }
             }
           }
@@ -60,8 +58,8 @@ export default () => (
           </p>
           <Diploma>
             <div className="diploma-image">
-              <Img
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.allFile.edges[0].node.childImageSharp.gatsbyImageData)}
                 alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
               />
             </div>
@@ -88,8 +86,8 @@ export default () => (
           </Ul>
           <Diploma>
             <div className="diploma-image">
-              <Img
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.allFile.edges[0].node.childImageSharp.gatsbyImageData)}
                 alt="Georgi Yanev Bachelor Diploma from Helsinki Metropolia University of Applied Sciences"
               />
             </div>

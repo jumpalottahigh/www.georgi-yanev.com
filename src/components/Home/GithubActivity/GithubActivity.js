@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Fade } from 'react-reveal'
+import { motion } from 'framer-motion'
 import GithubEvent from './GithubEvent'
 import './GithubActivity.css'
 import H2 from '../../elements/H2/H2.js'
@@ -78,9 +78,9 @@ class GithubActivity extends Component {
           </Fragment>
         ) : (
           this.state.githubPublicActivity.map(item => (
-            <Fade key={item.id}>
+            <motion.div key={item.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }}>
               <GithubEvent data={item} />
-            </Fade>
+            </motion.div>
           ))
         )}
       </section>

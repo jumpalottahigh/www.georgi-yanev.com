@@ -15,38 +15,38 @@ const GithubEvent = ({ data }) => {
     payloadText: '',
   }
 
+
   switch (event.type) {
-    case 'PushEvent':
-      eventData.payloadText = `pushed commit '${
-        event.payload.commits[0].message
-      }' to`
+    case 'PushEvent': {
+      const commitMessage = event.payload.commits?.[0]?.message
+      eventData.payloadText = commitMessage
+        ? `pushed commit '${commitMessage}' to`
+        : `pushed to`
       break
+    }
     case 'IssueCommentEvent':
-      eventData.payloadText = `commented: "${
-        event.payload.comment.body
-      }" in issue ${event.payload.issue.title} in`
+      eventData.payloadText = `commented: "${event.payload.comment?.body || ''
+        }" in issue ${event.payload.issue?.title || 'unknown'} in`
       break
     case 'CreateEvent':
-      eventData.payloadText = `created ${event.payload.ref_type}`
+      eventData.payloadText = `created ${event.payload.ref_type || 'something'}`
       break
     case 'DeleteEvent':
-      eventData.payloadText = `deleted ${event.payload.ref_type} ${
-        event.payload.ref
-      } in`
+      eventData.payloadText = `deleted ${event.payload.ref_type || ''} ${event.payload.ref || ''
+        } in`
       break
     case 'PullRequestEvent':
-      eventData.payloadText = `${event.payload.action} PR #${
-        event.payload.number
-      }: ${event.payload.pull_request.title} in`
+      eventData.payloadText = `${event.payload.action || ''} PR #${event.payload.number || ''
+        }: ${event.payload.pull_request?.title || ''} in`
       break
     case 'WatchEvent':
-      eventData.payloadText = `${event.payload.action} watching`
+      eventData.payloadText = `${event.payload.action || ''} watching`
       break
     case 'ForkEvent':
-      eventData.payloadText = `forked ${event.payload.forkee.name} from`
+      eventData.payloadText = `forked ${event.payload.forkee?.name || ''} from`
       break
     default:
-      eventData.payloadText = `unrecognized event case`
+      eventData.payloadText = `event: ${event.type}`
   }
 
   return (

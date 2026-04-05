@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const StyledReferences = styled.section`
@@ -19,16 +19,14 @@ const References = () => {
     query {
       references: allFile(
         filter: { relativePath: { regex: "/references/" } }
-        sort: { fields: name, order: ASC }
+        sort: { name: ASC }
       ) {
         edges {
           node {
             id
             name
             childImageSharp {
-              fluid(maxWidth: 1024) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
+              gatsbyImageData(width: 1024, formats: [AUTO, WEBP])
             }
           }
         }
@@ -40,7 +38,7 @@ const References = () => {
     <StyledReferences>
       <div className="references">
         {data.references.edges.map(({ node: ref }) => (
-          <Img key={ref.id} fluid={ref.childImageSharp.fluid} alt={ref.name} />
+          <GatsbyImage key={ref.id} image={getImage(ref.childImageSharp.gatsbyImageData)} alt={ref.name} />
         ))}
       </div>
     </StyledReferences>

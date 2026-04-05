@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Fade } from 'react-reveal'
-import Img from 'gatsby-image'
+import { motion } from 'framer-motion'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql, StaticQuery } from 'gatsby'
 
 import H2 from '../../elements/H2/H2'
@@ -36,9 +36,7 @@ export default ({ bgColor }) => (
               childImageSharp {
                 # Specify the image processing specifications right in the query.
                 # Makes it trivial to update as your page's design changes.
-                fluid(maxWidth: 1024) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 1024, formats: [AUTO, WEBP])
               }
             }
           }
@@ -71,8 +69,8 @@ export default ({ bgColor }) => (
                 margin: '10px 0',
               }}
             >
-              <Img
-                fluid={data.allFile.edges[0].node.childImageSharp.fluid}
+              <GatsbyImage
+                image={getImage(data.allFile.edges[0].node.childImageSharp.gatsbyImageData)}
                 alt="Georgi streaming on twitch screenshot"
               />
             </div>
@@ -83,12 +81,12 @@ export default ({ bgColor }) => (
             <br />
           </div>
           <VideoWrapper>
-            <Fade>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
               <video autoPlay id="video-background" muted playsInline>
                 <source src={videoIntroWebm} type="video/webm" />
                 <source src={videoIntro} type="video/mp4" />
               </video>
-            </Fade>
+            </motion.div>
           </VideoWrapper>
           <br />
           <br />

@@ -4,6 +4,7 @@ import './Header.css'
 import logo from './logo.svg'
 import github from './github.svg'
 import twitter from './twitter.svg'
+import instagram from './instagram.svg'
 
 const activeStyle = {
   transform: 'scale(1.054)',
@@ -31,6 +32,9 @@ const Header = () => (
     <nav className="social">
       <a href="https://github.com/jumpalottahigh">
         <img src={github} alt="GitHub logo" />
+      </a>
+      <a href="https://instagram.com/jumpalottahigh">
+        <img src={instagram} alt="Instagram logo" />
       </a>
       <a href="https://twitter.com/jumpalottahigh">
         <img src={twitter} alt="Twitter logo" />
